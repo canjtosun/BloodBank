@@ -1,0 +1,15 @@
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\BloodBank.exe.config
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\BloodBank.exe
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\BloodBank.pdb
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\MySql.Data.dll
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\Google.Protobuf.dll
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\Renci.SshNet.dll
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\bin\Debug\MySql.Data.xml
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.csprojAssemblyReference.cache
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.Properties.Resources.resources
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.csproj.GenerateResource.cache
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.csproj.CopyComplete
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.exe
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.pdb
