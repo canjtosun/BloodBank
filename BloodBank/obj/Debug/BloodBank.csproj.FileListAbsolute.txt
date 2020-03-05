@@ -13,3 +13,4 @@ C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.cspro
 C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.csproj.CopyComplete
 C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.exe
 C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.pdb
+C:\Users\canto\Desktop\UWB Classes\BloodBank\BloodBank\obj\Debug\BloodBank.Form1.resources
