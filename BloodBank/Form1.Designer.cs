@@ -48,7 +48,7 @@
             this.NursePhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.DonationInfoBox = new System.Windows.Forms.GroupBox();
             this.DonationDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.DonorValidationTextBox = new System.Windows.Forms.TextBox();
             this.DonationBloodTypeTextBox = new System.Windows.Forms.TextBox();
             this.DonationDescription = new System.Windows.Forms.Label();
             this.DonationValidation = new System.Windows.Forms.Label();
@@ -229,7 +229,7 @@
             // DonationInfoBox
             // 
             this.DonationInfoBox.Controls.Add(this.DonationDescriptionTextBox);
-            this.DonationInfoBox.Controls.Add(this.textBox3);
+            this.DonationInfoBox.Controls.Add(this.DonorValidationTextBox);
             this.DonationInfoBox.Controls.Add(this.DonationBloodTypeTextBox);
             this.DonationInfoBox.Controls.Add(this.DonationDescription);
             this.DonationInfoBox.Controls.Add(this.DonationValidation);
@@ -250,12 +250,12 @@
             this.DonationDescriptionTextBox.Size = new System.Drawing.Size(168, 32);
             this.DonationDescriptionTextBox.TabIndex = 6;
             // 
-            // textBox3
+            // DonorValidationTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(266, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 32);
-            this.textBox3.TabIndex = 5;
+            this.DonorValidationTextBox.Location = new System.Drawing.Point(266, 92);
+            this.DonorValidationTextBox.Name = "DonorValidationTextBox";
+            this.DonorValidationTextBox.Size = new System.Drawing.Size(168, 32);
+            this.DonorValidationTextBox.TabIndex = 5;
             // 
             // DonationBloodTypeTextBox
             // 
@@ -344,7 +344,7 @@
         private System.Windows.Forms.TextBox NurseFirstNameTextBox;
         private System.Windows.Forms.GroupBox DonationInfoBox;
         private System.Windows.Forms.TextBox DonationDescriptionTextBox;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox DonorValidationTextBox;
         private System.Windows.Forms.TextBox DonationBloodTypeTextBox;
         private System.Windows.Forms.Label DonationDescription;
         private System.Windows.Forms.Label DonationValidation;
