@@ -50,7 +50,7 @@
             this.DonationDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.DonationBloodTypeTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.DonationDescription = new System.Windows.Forms.Label();
             this.DonationValidation = new System.Windows.Forms.Label();
             this.DonationBloodType = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
@@ -231,7 +231,7 @@
             this.DonationInfoBox.Controls.Add(this.DonationDescriptionTextBox);
             this.DonationInfoBox.Controls.Add(this.textBox3);
             this.DonationInfoBox.Controls.Add(this.DonationBloodTypeTextBox);
-            this.DonationInfoBox.Controls.Add(this.label2);
+            this.DonationInfoBox.Controls.Add(this.DonationDescription);
             this.DonationInfoBox.Controls.Add(this.DonationValidation);
             this.DonationInfoBox.Controls.Add(this.DonationBloodType);
             this.DonationInfoBox.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,14 +264,14 @@
             this.DonationBloodTypeTextBox.Size = new System.Drawing.Size(168, 32);
             this.DonationBloodTypeTextBox.TabIndex = 4;
             // 
-            // label2
+            // DonationDescription
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Donation Description";
+            this.DonationDescription.AutoSize = true;
+            this.DonationDescription.Location = new System.Drawing.Point(6, 145);
+            this.DonationDescription.Name = "DonationDescription";
+            this.DonationDescription.Size = new System.Drawing.Size(223, 25);
+            this.DonationDescription.TabIndex = 2;
+            this.DonationDescription.Text = "Donation Description";
             // 
             // DonationValidation
             // 
@@ -346,7 +346,7 @@
         private System.Windows.Forms.TextBox DonationDescriptionTextBox;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox DonationBloodTypeTextBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label DonationDescription;
         private System.Windows.Forms.Label DonationValidation;
         private System.Windows.Forms.Label DonationBloodType;
         private System.Windows.Forms.Button AddButton;
