@@ -16,24 +16,21 @@ namespace BloodBank
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string connetionString = null;
-            MySqlConnection cnn;
-            connetionString = "server=remotemysql.com;port=3306;database=Kg788Sv4Ht;uid=Kg788Sv4Ht;pwd=NDOIFG2Huc;";
-            cnn = new MySqlConnection(connetionString);
+            
             try
             {
+                MySqlConnection cnn;
+                string connetionString = "SERVER=remotemysql.com;PORT=3306;DATABASE=N0hLjLJLCL;UID=N0hLjLJLCL;PASSWORD=oKQxuqRKgj";
+                cnn = new MySqlConnection(connetionString);
                 cnn.Open();
                 MessageBox.Show("Connection Open ! ");
                 cnn.Close();
             }
-            catch (Exception ex)
+            catch (MySql.Data.MySqlClient.MySqlException ex)
             {
                 MessageBox.Show("Can not open connection ! ");
             }
         }
+
     }
 }
