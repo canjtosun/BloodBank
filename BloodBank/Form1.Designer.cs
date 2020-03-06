@@ -38,14 +38,14 @@
             this.DonorMiddleName = new System.Windows.Forms.Label();
             this.DonorFirstName = new System.Windows.Forms.Label();
             this.NurseInfoBox = new System.Windows.Forms.GroupBox();
-            this.NurseFirstName = new System.Windows.Forms.Label();
-            this.NurseMiddleName = new System.Windows.Forms.Label();
-            this.NurseLastName = new System.Windows.Forms.Label();
-            this.NursePhoneNumber = new System.Windows.Forms.Label();
-            this.NurseFirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.NurseMiddleNameTextBox = new System.Windows.Forms.TextBox();
-            this.NurseLastNameTextBox = new System.Windows.Forms.TextBox();
             this.NursePhoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.NurseLastNameTextBox = new System.Windows.Forms.TextBox();
+            this.NurseMiddleNameTextBox = new System.Windows.Forms.TextBox();
+            this.NurseFirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.NursePhoneNumber = new System.Windows.Forms.Label();
+            this.NurseLastName = new System.Windows.Forms.Label();
+            this.NurseMiddleName = new System.Windows.Forms.Label();
+            this.NurseFirstName = new System.Windows.Forms.Label();
             this.DonationInfoBox = new System.Windows.Forms.GroupBox();
             this.DonationDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.DonorValidationTextBox = new System.Windows.Forms.TextBox();
@@ -54,6 +54,10 @@
             this.DonationValidation = new System.Windows.Forms.Label();
             this.DonationBloodType = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
+            this.DonationDateandTime = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ViewButton = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.DonorInfoBox.SuspendLayout();
             this.NurseInfoBox.SuspendLayout();
             this.DonationInfoBox.SuspendLayout();
@@ -104,6 +108,7 @@
             this.DonorFirstNameTextBox.Name = "DonorFirstNameTextBox";
             this.DonorFirstNameTextBox.Size = new System.Drawing.Size(157, 32);
             this.DonorFirstNameTextBox.TabIndex = 4;
+            this.DonorFirstNameTextBox.TextChanged += new System.EventHandler(this.DonorFirstNameTextBox_TextChanged);
             // 
             // DonorPhoneNumber
             // 
@@ -161,33 +166,33 @@
             this.NurseInfoBox.TabStop = false;
             this.NurseInfoBox.Text = "Nurse Information";
             // 
-            // NurseFirstName
+            // NursePhoneNumberTextBox
             // 
-            this.NurseFirstName.AutoSize = true;
-            this.NurseFirstName.Location = new System.Drawing.Point(6, 55);
-            this.NurseFirstName.Name = "NurseFirstName";
-            this.NurseFirstName.Size = new System.Drawing.Size(122, 25);
-            this.NurseFirstName.TabIndex = 0;
-            this.NurseFirstName.Text = "First Name";
-            this.NurseFirstName.Click += new System.EventHandler(this.label1_Click_1);
+            this.NursePhoneNumberTextBox.Location = new System.Drawing.Point(266, 188);
+            this.NursePhoneNumberTextBox.Name = "NursePhoneNumberTextBox";
+            this.NursePhoneNumberTextBox.Size = new System.Drawing.Size(168, 32);
+            this.NursePhoneNumberTextBox.TabIndex = 7;
             // 
-            // NurseMiddleName
+            // NurseLastNameTextBox
             // 
-            this.NurseMiddleName.AutoSize = true;
-            this.NurseMiddleName.Location = new System.Drawing.Point(6, 103);
-            this.NurseMiddleName.Name = "NurseMiddleName";
-            this.NurseMiddleName.Size = new System.Drawing.Size(142, 25);
-            this.NurseMiddleName.TabIndex = 1;
-            this.NurseMiddleName.Text = "Middle Name";
+            this.NurseLastNameTextBox.Location = new System.Drawing.Point(266, 147);
+            this.NurseLastNameTextBox.Name = "NurseLastNameTextBox";
+            this.NurseLastNameTextBox.Size = new System.Drawing.Size(168, 32);
+            this.NurseLastNameTextBox.TabIndex = 6;
             // 
-            // NurseLastName
+            // NurseMiddleNameTextBox
             // 
-            this.NurseLastName.AutoSize = true;
-            this.NurseLastName.Location = new System.Drawing.Point(6, 149);
-            this.NurseLastName.Name = "NurseLastName";
-            this.NurseLastName.Size = new System.Drawing.Size(118, 25);
-            this.NurseLastName.TabIndex = 2;
-            this.NurseLastName.Text = "Last Name";
+            this.NurseMiddleNameTextBox.Location = new System.Drawing.Point(266, 101);
+            this.NurseMiddleNameTextBox.Name = "NurseMiddleNameTextBox";
+            this.NurseMiddleNameTextBox.Size = new System.Drawing.Size(168, 32);
+            this.NurseMiddleNameTextBox.TabIndex = 5;
+            // 
+            // NurseFirstNameTextBox
+            // 
+            this.NurseFirstNameTextBox.Location = new System.Drawing.Point(266, 53);
+            this.NurseFirstNameTextBox.Name = "NurseFirstNameTextBox";
+            this.NurseFirstNameTextBox.Size = new System.Drawing.Size(168, 32);
+            this.NurseFirstNameTextBox.TabIndex = 4;
             // 
             // NursePhoneNumber
             // 
@@ -198,36 +203,38 @@
             this.NursePhoneNumber.TabIndex = 3;
             this.NursePhoneNumber.Text = "Phone Number";
             // 
-            // NurseFirstNameTextBox
+            // NurseLastName
             // 
-            this.NurseFirstNameTextBox.Location = new System.Drawing.Point(266, 53);
-            this.NurseFirstNameTextBox.Name = "NurseFirstNameTextBox";
-            this.NurseFirstNameTextBox.Size = new System.Drawing.Size(168, 32);
-            this.NurseFirstNameTextBox.TabIndex = 4;
+            this.NurseLastName.AutoSize = true;
+            this.NurseLastName.Location = new System.Drawing.Point(6, 149);
+            this.NurseLastName.Name = "NurseLastName";
+            this.NurseLastName.Size = new System.Drawing.Size(118, 25);
+            this.NurseLastName.TabIndex = 2;
+            this.NurseLastName.Text = "Last Name";
             // 
-            // NurseMiddleNameTextBox
+            // NurseMiddleName
             // 
-            this.NurseMiddleNameTextBox.Location = new System.Drawing.Point(266, 101);
-            this.NurseMiddleNameTextBox.Name = "NurseMiddleNameTextBox";
-            this.NurseMiddleNameTextBox.Size = new System.Drawing.Size(168, 32);
-            this.NurseMiddleNameTextBox.TabIndex = 5;
+            this.NurseMiddleName.AutoSize = true;
+            this.NurseMiddleName.Location = new System.Drawing.Point(6, 103);
+            this.NurseMiddleName.Name = "NurseMiddleName";
+            this.NurseMiddleName.Size = new System.Drawing.Size(142, 25);
+            this.NurseMiddleName.TabIndex = 1;
+            this.NurseMiddleName.Text = "Middle Name";
             // 
-            // NurseLastNameTextBox
+            // NurseFirstName
             // 
-            this.NurseLastNameTextBox.Location = new System.Drawing.Point(266, 147);
-            this.NurseLastNameTextBox.Name = "NurseLastNameTextBox";
-            this.NurseLastNameTextBox.Size = new System.Drawing.Size(168, 32);
-            this.NurseLastNameTextBox.TabIndex = 6;
-            // 
-            // NursePhoneNumberTextBox
-            // 
-            this.NursePhoneNumberTextBox.Location = new System.Drawing.Point(266, 188);
-            this.NursePhoneNumberTextBox.Name = "NursePhoneNumberTextBox";
-            this.NursePhoneNumberTextBox.Size = new System.Drawing.Size(168, 32);
-            this.NursePhoneNumberTextBox.TabIndex = 7;
+            this.NurseFirstName.AutoSize = true;
+            this.NurseFirstName.Location = new System.Drawing.Point(6, 55);
+            this.NurseFirstName.Name = "NurseFirstName";
+            this.NurseFirstName.Size = new System.Drawing.Size(122, 25);
+            this.NurseFirstName.TabIndex = 0;
+            this.NurseFirstName.Text = "First Name";
+            this.NurseFirstName.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // DonationInfoBox
             // 
+            this.DonationInfoBox.Controls.Add(this.dateTimePicker1);
+            this.DonationInfoBox.Controls.Add(this.DonationDateandTime);
             this.DonationInfoBox.Controls.Add(this.DonationDescriptionTextBox);
             this.DonationInfoBox.Controls.Add(this.DonorValidationTextBox);
             this.DonationInfoBox.Controls.Add(this.DonationBloodTypeTextBox);
@@ -293,12 +300,48 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(1385, 586);
+            this.AddButton.Location = new System.Drawing.Point(1110, 645);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(112, 57);
             this.AddButton.TabIndex = 3;
             this.AddButton.Text = "ADD";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // DonationDateandTime
+            // 
+            this.DonationDateandTime.AutoSize = true;
+            this.DonationDateandTime.Location = new System.Drawing.Point(6, 188);
+            this.DonationDateandTime.Name = "DonationDateandTime";
+            this.DonationDateandTime.Size = new System.Drawing.Size(159, 25);
+            this.DonationDateandTime.TabIndex = 7;
+            this.DonationDateandTime.Text = "Date and Time";
+            this.DonationDateandTime.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(266, 185);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(168, 32);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // ViewButton
+            // 
+            this.ViewButton.Location = new System.Drawing.Point(1242, 645);
+            this.ViewButton.Name = "ViewButton";
+            this.ViewButton.Size = new System.Drawing.Size(112, 57);
+            this.ViewButton.TabIndex = 4;
+            this.ViewButton.Text = "VIEW";
+            this.ViewButton.UseVisualStyleBackColor = true;
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Location = new System.Drawing.Point(1382, 645);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(112, 57);
+            this.UpdateButton.TabIndex = 5;
+            this.UpdateButton.Text = "UPDATE";
+            this.UpdateButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -306,6 +349,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1537, 793);
+            this.Controls.Add(this.UpdateButton);
+            this.Controls.Add(this.ViewButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.DonationInfoBox);
             this.Controls.Add(this.NurseInfoBox);
@@ -350,6 +395,10 @@
         private System.Windows.Forms.Label DonationValidation;
         private System.Windows.Forms.Label DonationBloodType;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Label DonationDateandTime;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button ViewButton;
+        private System.Windows.Forms.Button UpdateButton;
     }
 }
 
