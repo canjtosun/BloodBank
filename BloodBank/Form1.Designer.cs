@@ -47,6 +47,8 @@
             this.NurseMiddleName = new System.Windows.Forms.Label();
             this.NurseFirstName = new System.Windows.Forms.Label();
             this.DonationInfoBox = new System.Windows.Forms.GroupBox();
+            this.DateAndTimeBox = new System.Windows.Forms.DateTimePicker();
+            this.DonationDateandTime = new System.Windows.Forms.Label();
             this.DonationDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.DonorValidationTextBox = new System.Windows.Forms.TextBox();
             this.DonationBloodTypeTextBox = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@
             this.DonationValidation = new System.Windows.Forms.Label();
             this.DonationBloodType = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
-            this.DonationDateandTime = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ViewButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DonorInfoBox.SuspendLayout();
@@ -233,7 +233,7 @@
             // 
             // DonationInfoBox
             // 
-            this.DonationInfoBox.Controls.Add(this.dateTimePicker1);
+            this.DonationInfoBox.Controls.Add(this.DateAndTimeBox);
             this.DonationInfoBox.Controls.Add(this.DonationDateandTime);
             this.DonationInfoBox.Controls.Add(this.DonationDescriptionTextBox);
             this.DonationInfoBox.Controls.Add(this.DonorValidationTextBox);
@@ -249,6 +249,23 @@
             this.DonationInfoBox.TabIndex = 2;
             this.DonationInfoBox.TabStop = false;
             this.DonationInfoBox.Text = "Donation Information";
+            // 
+            // DateAndTimeBox
+            // 
+            this.DateAndTimeBox.Location = new System.Drawing.Point(266, 185);
+            this.DateAndTimeBox.Name = "DateAndTimeBox";
+            this.DateAndTimeBox.Size = new System.Drawing.Size(168, 32);
+            this.DateAndTimeBox.TabIndex = 8;
+            // 
+            // DonationDateandTime
+            // 
+            this.DonationDateandTime.AutoSize = true;
+            this.DonationDateandTime.Location = new System.Drawing.Point(6, 188);
+            this.DonationDateandTime.Name = "DonationDateandTime";
+            this.DonationDateandTime.Size = new System.Drawing.Size(159, 25);
+            this.DonationDateandTime.TabIndex = 7;
+            this.DonationDateandTime.Text = "Date and Time";
+            this.DonationDateandTime.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // DonationDescriptionTextBox
             // 
@@ -307,23 +324,6 @@
             this.AddButton.Text = "ADD";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // DonationDateandTime
-            // 
-            this.DonationDateandTime.AutoSize = true;
-            this.DonationDateandTime.Location = new System.Drawing.Point(6, 188);
-            this.DonationDateandTime.Name = "DonationDateandTime";
-            this.DonationDateandTime.Size = new System.Drawing.Size(159, 25);
-            this.DonationDateandTime.TabIndex = 7;
-            this.DonationDateandTime.Text = "Date and Time";
-            this.DonationDateandTime.Click += new System.EventHandler(this.label1_Click_2);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(266, 185);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 32);
-            this.dateTimePicker1.TabIndex = 8;
             // 
             // ViewButton
             // 
@@ -396,7 +396,7 @@
         private System.Windows.Forms.Label DonationBloodType;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label DonationDateandTime;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DateAndTimeBox;
         private System.Windows.Forms.Button ViewButton;
         private System.Windows.Forms.Button UpdateButton;
     }

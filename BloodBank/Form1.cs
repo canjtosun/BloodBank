@@ -59,6 +59,17 @@ namespace BloodBank
                 string add = "INSERT INTO Person (FirstName,MiddleName,LastName,PhoneNumber) " + " VALUES(" + DonorFirstNameTextBox.Text.ToString() +
                     "," + DonorMiddleNameTextBox.Text.ToString() + "," + DonorLastNameTextBox.Text.ToString() + "," + DonorPhoneNumberTextBox.Text.ToString() + ");";
 
+                string add2 = "INSERT INTO Person (FirstName,MiddleName,LastName,PhoneNumber) " + " VALUES(" + NurseFirstNameTextBox.Text.ToString() +
+                    "," + NurseMiddleNameTextBox.Text.ToString() + "," + NurseLastNameTextBox.Text.ToString() + "," + NursePhoneNumberTextBox.Text.ToString() + ");";
+
+                string add3 = "INSERT INTO Blood (Type,ValidBlood) " + " VALUES(" + DonationBloodTypeTextBox.Text.ToString() +
+                    "," + DonorValidationTextBox.Text.ToString() + ");";
+
+                string add4 = "INSERT INTO DonationType (Description) " + " VALUES(" + DonationDescriptionTextBox.Text.ToString() + ");";
+
+                string add5 = "INSERT INTO Donation (DateTime) " + " VALUES(" + DateAndTimeBox.Text.ToString() + ");";
+
+
                 MySqlCommand cmd = new MySqlCommand(add, conn);
                 cmd.ExecuteNonQuery();
             }
