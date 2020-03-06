@@ -57,10 +57,7 @@ namespace BloodBank
 
                 string add = "INSERT INTO Person (FirstName,MiddleName,LastName,PhoneNumber) " + " VALUES(" + DonorFirstNameTextBox.Text.ToString() +
                     "," + DonorMiddleNameTextBox.Text.ToString() + "," + DonorLastNameTextBox.Text.ToString() + "," + DonorPhoneNumberTextBox.Text.ToString() + ");";
-                //like that ? + nurse calls another entity to add first last name. fuu**k
-                //Honeslty tell your group to come up with the query's just go hard on the UI and guilt them into doing the work
-                //well so far i did everything. they did not even touch anything. anyway i need to figure it out. my sqlite is rusty right now lol
-                //Ask them, just ask, be direct and let them know you need help or else you'll delete everything lol
+
                 MySqlCommand cmd = new MySqlCommand(add, conn);
                 cmd.ExecuteNonQuery();
             }
