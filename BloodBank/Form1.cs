@@ -55,6 +55,7 @@ namespace BloodBank
                 MySqlConnection conn = new MySqlConnection(connectionString);
                 conn.Open();
 
+                //the quary is not correct. somwthing wrong on our database. before changes here, we need to talk
                 string add = "INSERT INTO Person (FirstName,MiddleName,LastName,PhoneNumber) " + " VALUES(" + DonorFirstNameTextBox.Text.ToString() +
                     "," + DonorMiddleNameTextBox.Text.ToString() + "," + DonorLastNameTextBox.Text.ToString() + "," + DonorPhoneNumberTextBox.Text.ToString() + ");";
 
