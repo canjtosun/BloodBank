@@ -15,7 +15,12 @@ namespace BloodBank
     public partial class Form1 : Form
     {
 
-        string connectionString = "SERVER=remotemysql.com;PORT=3306;DATABASE=N0hLjLJLCL;UID=N0hLjLJLCL;PASSWORD=oKQxuqRKgj"; 
+        static string connectionString = "SERVER=remotemysql.com;PORT=3306;DATABASE=N0hLjLJLCL;UID=N0hLjLJLCL;PASSWORD=oKQxuqRKgj"; 
+        static string localConnectionString = "SERVER=127.0.0.1;PORT=3306;DATABASE=bloodbank;username=admin;password=12345;";
+        
+
+        MySqlConnection conn = new MySqlConnection(localConnectionString);
+        MySqlCommand cmd;
 
         public Form1()
         {
@@ -50,34 +55,89 @@ namespace BloodBank
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+           
             try
             {
-                MySqlConnection conn = new MySqlConnection(connectionString);
                 conn.Open();
+                DateTime aDate = DateTime.Now;
+                cmd = conn.CreateCommand();
 
-                //the quary is not correct. somwthing wrong on our database. before changes here, we need to talk
-                string add = "INSERT INTO Person (FirstName,MiddleName,LastName,PhoneNumber) " + " VALUES(" + DonorFirstNameTextBox.Text.ToString() +
-                    "," + DonorMiddleNameTextBox.Text.ToString() + "," + DonorLastNameTextBox.Text.ToString() + "," + DonorPhoneNumberTextBox.Text.ToString() + ");";
+                if(DonorFirstNameTextBox.Text == "" || DonorLastNameTextBox.Text == "" ||
+                    NurseFirstNameTextBox.Text == "" || NurseLastNameTextBox.Text == "" ||
+                    DonationBloodTypeTextBox.Text == "" || DonorValidationTextBox.Text == "" ||
+                    DonationDescriptionTextBox.Text == "")
+                {
+                    MessageBox.Show("First Name, Last Name, Blood Type, Validation or Description can not be empty");
+                    conn.Close();
+                }
 
-                string add2 = "INSERT INTO Person (FirstName,MiddleName,LastName,PhoneNumber) " + " VALUES(" + NurseFirstNameTextBox.Text.ToString() +
-                    "," + NurseMiddleNameTextBox.Text.ToString() + "," + NurseLastNameTextBox.Text.ToString() + "," + NursePhoneNumberTextBox.Text.ToString() + ");";
+                else
+                {
+                    cmd.CommandText = "INSERT INTO person (FirstName,MiddleName,LastName,PhoneNumber)" + " VALUES('" +
+                        DonorFirstNameTextBox.Text.ToString() + "','" +
+                        DonorMiddleNameTextBox.Text.ToString() + "','" +
+                        DonorLastNameTextBox.Text.ToString() + "','" +
+                        DonorPhoneNumberTextBox.Text.ToString() + "');" +
 
-                string add3 = "INSERT INTO Blood (Type,ValidBlood) " + " VALUES(" + DonationBloodTypeTextBox.Text.ToString() +
-                    "," + DonorValidationTextBox.Text.ToString() + ");";
+                        "INSERT INTO person (FirstName,MiddleName,LastName,PhoneNumber)" + " VALUES('" +
+                        NurseFirstNameTextBox.Text.ToString() + "','" +
+                        NurseMiddleNameTextBox.Text.ToString() + "','" +
+                        NurseLastNameTextBox.Text.ToString() + "','" +
+                        NursePhoneNumberTextBox.Text.ToString() + "');" +
 
-                string add4 = "INSERT INTO DonationType (Description) " + " VALUES(" + DonationDescriptionTextBox.Text.ToString() + ");";
+                        "INSERT INTO blood (Type,ValidBlood)" + " VALUES('" +
+                        DonationBloodTypeTextBox.Text.ToString() + "','" +
+                        DonorValidationTextBox.Text.ToString() + "');" +
 
-                string add5 = "INSERT INTO Donation (DateTime) " + " VALUES(" + DateAndTimeBox.Text.ToString() + ");";
+                        "INSERT INTO DonationType (Description)" + " VALUES('" +
+                        DonationDescriptionTextBox.Text.ToString() + "');" +
+
+                        "INSERT INTO Donation (DateTime)" + " VALUES('" +
+                        aDate.ToString("yyyy-MM-dd HH:mm:ss") + "');";
 
 
-                MySqlCommand cmd = new MySqlCommand(add, conn);
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Added");
+                    conn.Close();
+                }
             }
+
             catch(MySql.Data.MySqlClient.MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
         }
+        
+        //this is test method
+        private void ShowTableButton_Click(object sender, EventArgs e)
+        {
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM person";
+
+            try
+            {
+                conn.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listBox1.Items.Add(reader["id"].ToString());
+                    listBox1.Items.Add(reader["firstname"].ToString());
+                    listBox1.Items.Add(reader["middlename"].ToString());
+                    listBox1.Items.Add(reader["lastname"].ToString());
+                    listBox1.Items.Add(reader["phonenumber"].ToString());
+
+                }
+
+                conn.Close();
+            }
+
+            catch(MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

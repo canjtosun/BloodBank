@@ -47,8 +47,6 @@
             this.NurseMiddleName = new System.Windows.Forms.Label();
             this.NurseFirstName = new System.Windows.Forms.Label();
             this.DonationInfoBox = new System.Windows.Forms.GroupBox();
-            this.DateAndTimeBox = new System.Windows.Forms.DateTimePicker();
-            this.DonationDateandTime = new System.Windows.Forms.Label();
             this.DonationDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.DonorValidationTextBox = new System.Windows.Forms.TextBox();
             this.DonationBloodTypeTextBox = new System.Windows.Forms.TextBox();
@@ -58,6 +56,8 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.ViewButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ShowTableButton = new System.Windows.Forms.Button();
             this.DonorInfoBox.SuspendLayout();
             this.NurseInfoBox.SuspendLayout();
             this.DonationInfoBox.SuspendLayout();
@@ -233,8 +233,6 @@
             // 
             // DonationInfoBox
             // 
-            this.DonationInfoBox.Controls.Add(this.DateAndTimeBox);
-            this.DonationInfoBox.Controls.Add(this.DonationDateandTime);
             this.DonationInfoBox.Controls.Add(this.DonationDescriptionTextBox);
             this.DonationInfoBox.Controls.Add(this.DonorValidationTextBox);
             this.DonationInfoBox.Controls.Add(this.DonationBloodTypeTextBox);
@@ -249,23 +247,6 @@
             this.DonationInfoBox.TabIndex = 2;
             this.DonationInfoBox.TabStop = false;
             this.DonationInfoBox.Text = "Donation Information";
-            // 
-            // DateAndTimeBox
-            // 
-            this.DateAndTimeBox.Location = new System.Drawing.Point(266, 185);
-            this.DateAndTimeBox.Name = "DateAndTimeBox";
-            this.DateAndTimeBox.Size = new System.Drawing.Size(168, 32);
-            this.DateAndTimeBox.TabIndex = 8;
-            // 
-            // DonationDateandTime
-            // 
-            this.DonationDateandTime.AutoSize = true;
-            this.DonationDateandTime.Location = new System.Drawing.Point(6, 188);
-            this.DonationDateandTime.Name = "DonationDateandTime";
-            this.DonationDateandTime.Size = new System.Drawing.Size(159, 25);
-            this.DonationDateandTime.TabIndex = 7;
-            this.DonationDateandTime.Text = "Date and Time";
-            this.DonationDateandTime.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // DonationDescriptionTextBox
             // 
@@ -343,12 +324,33 @@
             this.UpdateButton.Text = "UPDATE";
             this.UpdateButton.UseVisualStyleBackColor = true;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(318, 854);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(736, 464);
+            this.listBox1.TabIndex = 6;
+            // 
+            // ShowTableButton
+            // 
+            this.ShowTableButton.Location = new System.Drawing.Point(1110, 1002);
+            this.ShowTableButton.Name = "ShowTableButton";
+            this.ShowTableButton.Size = new System.Drawing.Size(176, 104);
+            this.ShowTableButton.TabIndex = 7;
+            this.ShowTableButton.Text = "ShowTable";
+            this.ShowTableButton.UseVisualStyleBackColor = true;
+            this.ShowTableButton.Click += new System.EventHandler(this.ShowTableButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1537, 793);
+            this.ClientSize = new System.Drawing.Size(1563, 1375);
+            this.Controls.Add(this.ShowTableButton);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.ViewButton);
             this.Controls.Add(this.AddButton);
@@ -395,10 +397,10 @@
         private System.Windows.Forms.Label DonationValidation;
         private System.Windows.Forms.Label DonationBloodType;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Label DonationDateandTime;
-        private System.Windows.Forms.DateTimePicker DateAndTimeBox;
         private System.Windows.Forms.Button ViewButton;
         private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button ShowTableButton;
     }
 }
 
