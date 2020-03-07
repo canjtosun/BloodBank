@@ -15,11 +15,11 @@ namespace BloodBank
     public partial class Form1 : Form
     {
 
-        static string connectionString = "SERVER=remotemysql.com;PORT=3306;DATABASE=N0hLjLJLCL;UID=N0hLjLJLCL;PASSWORD=oKQxuqRKgj"; 
-        static string localConnectionString = "SERVER=127.0.0.1;PORT=3306;DATABASE=bloodbank;username=admin;password=12345;";
+        static string connectionString = "SERVER=sql3.freemysqlhosting.net;PORT=3306;DATABASE=sql3326494;UID=sql3326494;PASSWORD=qwlhf4VVam"; 
+        //static string localConnectionString = "SERVER=127.0.0.1;PORT=3306;DATABASE=bloodbank;username=admin;password=12345;";
         
 
-        MySqlConnection conn = new MySqlConnection(localConnectionString);
+        MySqlConnection conn = new MySqlConnection(connectionString);
         MySqlCommand cmd;
 
         public Form1()
