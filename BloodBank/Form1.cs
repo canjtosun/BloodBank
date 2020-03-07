@@ -28,31 +28,6 @@ namespace BloodBank
     
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DonorFirstNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
            
@@ -65,35 +40,61 @@ namespace BloodBank
                 if(DonorFirstNameTextBox.Text == "" || DonorLastNameTextBox.Text == "" ||
                     NurseFirstNameTextBox.Text == "" || NurseLastNameTextBox.Text == "" ||
                     DonationBloodTypeTextBox.Text == "" || DonorValidationTextBox.Text == "" ||
-                    DonationDescriptionTextBox.Text == "")
+                    DonationDescriptionTextBox.Text == "" || FacilityAddress1TextBox.Text == "" ||
+                    FacilityCityTextBox.Text == "" || FacilityStateTextBox.Text == "" ||
+                    FacilityZipCodeTextBox.Text == "")
                 {
-                    MessageBox.Show("First Name, Last Name, Blood Type, Validation or Description can not be empty");
+                    MessageBox.Show("Please fill up all information!");
                     conn.Close();
                 }
 
                 else
-                {
-                    cmd.CommandText = "INSERT INTO person (FirstName,MiddleName,LastName,PhoneNumber)" + " VALUES('" +
-                        DonorFirstNameTextBox.Text.ToString() + "','" +
-                        DonorMiddleNameTextBox.Text.ToString() + "','" +
-                        DonorLastNameTextBox.Text.ToString() + "','" +
-                        DonorPhoneNumberTextBox.Text.ToString() + "');" +
+                {   
+                    cmd.CommandText =
+                    //insert donor to person table
+                    "INSERT INTO Person (FirstName,MiddleName,LastName,PhoneNumber)" + " VALUES('" +
+                    DonorFirstNameTextBox.Text.ToString() + "','" +
+                    DonorMiddleNameTextBox.Text.ToString() + "','" +
+                    DonorLastNameTextBox.Text.ToString() + "','" +
+                    DonorPhoneNumberTextBox.Text.ToString() + "');" +
 
-                        "INSERT INTO person (FirstName,MiddleName,LastName,PhoneNumber)" + " VALUES('" +
-                        NurseFirstNameTextBox.Text.ToString() + "','" +
-                        NurseMiddleNameTextBox.Text.ToString() + "','" +
-                        NurseLastNameTextBox.Text.ToString() + "','" +
-                        NursePhoneNumberTextBox.Text.ToString() + "');" +
+                    //assign that person is a donor
+                    "INSERT INTO Donor (PersonID)" + " VALUES((SELECT Person.ID FROM Person WHERE Lastname = '" + 
+                    DonorLastNameTextBox.Text.ToString() + "'));" +
 
-                        "INSERT INTO blood (Type,ValidBlood)" + " VALUES('" +
-                        DonationBloodTypeTextBox.Text.ToString() + "','" +
-                        DonorValidationTextBox.Text.ToString() + "');" +
+                    //insert nurse to a person. well nurse is person too!
+                    "INSERT INTO Person (FirstName,MiddleName,LastName,PhoneNumber)" + " VALUES('" +
+                    NurseFirstNameTextBox.Text.ToString() + "','" +
+                    NurseMiddleNameTextBox.Text.ToString() + "','" +
+                    NurseLastNameTextBox.Text.ToString() + "','" +
+                    NursePhoneNumberTextBox.Text.ToString() + "');" +
 
-                        "INSERT INTO DonationType (Description)" + " VALUES('" +
-                        DonationDescriptionTextBox.Text.ToString() + "');" +
+                    //assign that person is a nurse
+                    "INSERT INTO Nurse (PersonID)" + " VALUES((SELECT Person.ID FROM Person WHERE Lastname = '" +
+                    NurseLastNameTextBox.Text.ToString() + "'));" +
 
-                        "INSERT INTO Donation (DateTime)" + " VALUES('" +
-                        aDate.ToString("yyyy-MM-dd HH:mm:ss") + "');";
+                    //insert blood type and validation
+                    "INSERT INTO Blood (Type,ValidBlood)" + " VALUES('" +
+                    DonationBloodTypeTextBox.Text.ToString() + "','" +
+                    DonorValidationTextBox.Text.ToString() + "');" +
+
+
+                    //insert description to donation type table
+                    "INSERT INTO DonationType (Description)" + " VALUES('" +
+                    DonationDescriptionTextBox.Text.ToString() + "');" +
+
+                    //insert info to facility table
+                    "INSERT INTO Facility (Address1,Address2,City,State,ZipCode,FacilityPhone)" + " VALUES('" +
+                    FacilityAddress1TextBox.Text.ToString() + "','" +
+                    FacilityAddress2TextBox.Text.ToString() + "','" +
+                    FacilityCityTextBox.Text.ToString() + "','" +
+                    FacilityStateTextBox.Text.ToString() + "','" +
+                    FacilityZipCodeTextBox.Text.ToString() + "','" +
+                    FacilityPhoneNumberTextBox.Text.ToString() + "');" +
+
+                    //insert donation time when we add everything to the system
+                    "INSERT INTO Donation (DateTime)" + " VALUES('" +
+                    aDate.ToString("yyyy-MM-dd HH:mm:ss") + "');";
 
 
                     cmd.ExecuteNonQuery();
@@ -113,7 +114,7 @@ namespace BloodBank
         private void ShowTableButton_Click(object sender, EventArgs e)
         {
             cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT * FROM person";
+            cmd.CommandText = "SELECT * FROM nurse join person on(person.id=nurse.personid)";
 
             try
             {
