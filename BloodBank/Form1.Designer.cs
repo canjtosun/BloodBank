@@ -1,6 +1,6 @@
 ﻿namespace BloodBank
 {
-    partial class Form1
+    partial class ResultBox
     {
         /// <summary>
         /// Required designer variable.
@@ -28,471 +28,523 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DonorInfoBox = new System.Windows.Forms.GroupBox();
-            this.DonorMiddleNameTextBox = new System.Windows.Forms.TextBox();
+            this.DonorBox = new System.Windows.Forms.GroupBox();
+            this.DonorLookUpIdButton = new System.Windows.Forms.Button();
+            this.DonorUpdateButton = new System.Windows.Forms.Button();
+            this.DonorAddButton = new System.Windows.Forms.Button();
+            this.DonorBloodTypeBox = new System.Windows.Forms.ComboBox();
+            this.DonorBloodType = new System.Windows.Forms.Label();
             this.DonorPhoneNumberTextBox = new System.Windows.Forms.TextBox();
-            this.DonorFirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.DonorLastNameTextBox = new System.Windows.Forms.TextBox();
-            this.NurseInfoBox = new System.Windows.Forms.GroupBox();
-            this.NursePhoneNumberTextBox = new System.Windows.Forms.TextBox();
-            this.NurseLastNameTextBox = new System.Windows.Forms.TextBox();
-            this.NurseMiddleNameTextBox = new System.Windows.Forms.TextBox();
-            this.NurseFirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.DonationInfoBox = new System.Windows.Forms.GroupBox();
-            this.DonationBloodTypeTextBox = new System.Windows.Forms.ComboBox();
-            this.DonationDescriptionTextBox = new System.Windows.Forms.ComboBox();
-            this.DonorValidationTextBox = new System.Windows.Forms.ComboBox();
-            this.DonationDescription = new System.Windows.Forms.Label();
-            this.DonationValidation = new System.Windows.Forms.Label();
-            this.DonationBloodType = new System.Windows.Forms.Label();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.ViewButton = new System.Windows.Forms.Button();
-            this.UpdateButton = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.ShowTableButton = new System.Windows.Forms.Button();
             this.DonorPhoneNumber = new System.Windows.Forms.Label();
+            this.DonorLastNameTextBox = new System.Windows.Forms.TextBox();
             this.DonorLastName = new System.Windows.Forms.Label();
+            this.DonorMiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.DonorMiddleName = new System.Windows.Forms.Label();
+            this.DonorFirstNameTextBox = new System.Windows.Forms.TextBox();
             this.DonorFirstName = new System.Windows.Forms.Label();
+            this.NurseBox = new System.Windows.Forms.GroupBox();
+            this.NurseLookUpIdButton = new System.Windows.Forms.Button();
+            this.NurseUpdateButton = new System.Windows.Forms.Button();
+            this.NurseAddButton = new System.Windows.Forms.Button();
+            this.NursePhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.NursePhoneNumber = new System.Windows.Forms.Label();
+            this.NurseLastNameTextBox = new System.Windows.Forms.TextBox();
             this.NurseLastName = new System.Windows.Forms.Label();
+            this.NurseMiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.NurseMiddleName = new System.Windows.Forms.Label();
+            this.NurseFirstNameTextBox = new System.Windows.Forms.TextBox();
             this.NurseFirstName = new System.Windows.Forms.Label();
-            this.FacilityInfoBox = new System.Windows.Forms.GroupBox();
-            this.FacilityAddress1TextBox = new System.Windows.Forms.TextBox();
-            this.Address1 = new System.Windows.Forms.Label();
-            this.FacilityAddress2TextBox = new System.Windows.Forms.TextBox();
-            this.Address2 = new System.Windows.Forms.Label();
-            this.FacilityCityTextBox = new System.Windows.Forms.TextBox();
-            this.City = new System.Windows.Forms.Label();
-            this.State = new System.Windows.Forms.Label();
-            this.FacilityPhoneNumberTextBox = new System.Windows.Forms.TextBox();
-            this.FacilityPhone = new System.Windows.Forms.Label();
-            this.FacilityZipCodeTextBox = new System.Windows.Forms.TextBox();
-            this.ZipCode = new System.Windows.Forms.Label();
-            this.FacilityStateTextBox = new System.Windows.Forms.ComboBox();
-            this.DonorInfoBox.SuspendLayout();
-            this.NurseInfoBox.SuspendLayout();
-            this.DonationInfoBox.SuspendLayout();
-            this.FacilityInfoBox.SuspendLayout();
+            this.DonationBox = new System.Windows.Forms.GroupBox();
+            this.DonationLookUpIdButton = new System.Windows.Forms.Button();
+            this.DonationUpdateButton = new System.Windows.Forms.Button();
+            this.DonationAddButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DonationBloodBagId = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DonationFacilityId = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.DonationNurseId = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.DonationDonorId = new System.Windows.Forms.Label();
+            this.FacilityBox = new System.Windows.Forms.GroupBox();
+            this.FacilityStateBox = new System.Windows.Forms.ComboBox();
+            this.FacilityLookUpIdButton = new System.Windows.Forms.Button();
+            this.FacilityAddButton = new System.Windows.Forms.Button();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.FacilityInventoryId = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.FacilityFacilityPhone = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.FacilityZipCode = new System.Windows.Forms.Label();
+            this.FacilityState = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.FacilityCity = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.FacilityAddress2 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.FacilityAddress1 = new System.Windows.Forms.Label();
+            this.Result = new System.Windows.Forms.ListBox();
+            this.Explanation1View = new System.Windows.Forms.Button();
+            this.Explanation2View = new System.Windows.Forms.Button();
+            this.Explanation3View = new System.Windows.Forms.Button();
+            this.Explanation4View = new System.Windows.Forms.Button();
+            this.Explanation5View = new System.Windows.Forms.Button();
+            this.Explanation6View = new System.Windows.Forms.Button();
+            this.ExplanationBox1 = new System.Windows.Forms.RichTextBox();
+            this.BloodTypeView = new System.Windows.Forms.Label();
+            this.BloodTypeViewTextBox = new System.Windows.Forms.ComboBox();
+            this.ExplanationBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.FacilityIdViewTextBox = new System.Windows.Forms.TextBox();
+            this.FacilityIdView3 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.DescriptionView = new System.Windows.Forms.Label();
+            this.DescriptionViewTextBox = new System.Windows.Forms.ComboBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.FacilityIdView5 = new System.Windows.Forms.Label();
+            this.DateView = new System.Windows.Forms.DateTimePicker();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.BloodTypeViewTextBox6 = new System.Windows.Forms.ComboBox();
+            this.BloodTypeView6 = new System.Windows.Forms.Label();
+            this.DonorBox.SuspendLayout();
+            this.NurseBox.SuspendLayout();
+            this.DonationBox.SuspendLayout();
+            this.FacilityBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DonorInfoBox
+            // DonorBox
             // 
-            this.DonorInfoBox.Controls.Add(this.DonorPhoneNumber);
-            this.DonorInfoBox.Controls.Add(this.DonorMiddleNameTextBox);
-            this.DonorInfoBox.Controls.Add(this.DonorLastName);
-            this.DonorInfoBox.Controls.Add(this.DonorPhoneNumberTextBox);
-            this.DonorInfoBox.Controls.Add(this.DonorMiddleName);
-            this.DonorInfoBox.Controls.Add(this.DonorFirstNameTextBox);
-            this.DonorInfoBox.Controls.Add(this.DonorFirstName);
-            this.DonorInfoBox.Controls.Add(this.DonorLastNameTextBox);
-            this.DonorInfoBox.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonorInfoBox.Location = new System.Drawing.Point(47, 128);
-            this.DonorInfoBox.Name = "DonorInfoBox";
-            this.DonorInfoBox.Size = new System.Drawing.Size(440, 262);
-            this.DonorInfoBox.TabIndex = 0;
-            this.DonorInfoBox.TabStop = false;
-            this.DonorInfoBox.Text = "Donor Information";
+            this.DonorBox.Controls.Add(this.DonorLookUpIdButton);
+            this.DonorBox.Controls.Add(this.DonorUpdateButton);
+            this.DonorBox.Controls.Add(this.DonorAddButton);
+            this.DonorBox.Controls.Add(this.DonorBloodTypeBox);
+            this.DonorBox.Controls.Add(this.DonorBloodType);
+            this.DonorBox.Controls.Add(this.DonorPhoneNumberTextBox);
+            this.DonorBox.Controls.Add(this.DonorPhoneNumber);
+            this.DonorBox.Controls.Add(this.DonorLastNameTextBox);
+            this.DonorBox.Controls.Add(this.DonorLastName);
+            this.DonorBox.Controls.Add(this.DonorMiddleNameTextBox);
+            this.DonorBox.Controls.Add(this.DonorMiddleName);
+            this.DonorBox.Controls.Add(this.DonorFirstNameTextBox);
+            this.DonorBox.Controls.Add(this.DonorFirstName);
+            this.DonorBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonorBox.Location = new System.Drawing.Point(65, 99);
+            this.DonorBox.Name = "DonorBox";
+            this.DonorBox.Size = new System.Drawing.Size(405, 412);
+            this.DonorBox.TabIndex = 0;
+            this.DonorBox.TabStop = false;
+            this.DonorBox.Text = "Donor";
             // 
-            // DonorMiddleNameTextBox
+            // DonorLookUpIdButton
             // 
-            this.DonorMiddleNameTextBox.Location = new System.Drawing.Point(277, 103);
-            this.DonorMiddleNameTextBox.Name = "DonorMiddleNameTextBox";
-            this.DonorMiddleNameTextBox.Size = new System.Drawing.Size(157, 32);
-            this.DonorMiddleNameTextBox.TabIndex = 11;
+            this.DonorLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorLookUpIdButton.Location = new System.Drawing.Point(271, 349);
+            this.DonorLookUpIdButton.Name = "DonorLookUpIdButton";
+            this.DonorLookUpIdButton.Size = new System.Drawing.Size(120, 39);
+            this.DonorLookUpIdButton.TabIndex = 12;
+            this.DonorLookUpIdButton.Text = "Look Up ID";
+            this.DonorLookUpIdButton.UseVisualStyleBackColor = true;
             // 
-            // DonorPhoneNumberTextBox
+            // DonorUpdateButton
             // 
-            this.DonorPhoneNumberTextBox.Location = new System.Drawing.Point(277, 196);
-            this.DonorPhoneNumberTextBox.Name = "DonorPhoneNumberTextBox";
-            this.DonorPhoneNumberTextBox.Size = new System.Drawing.Size(157, 32);
-            this.DonorPhoneNumberTextBox.TabIndex = 10;
+            this.DonorUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorUpdateButton.Location = new System.Drawing.Point(132, 349);
+            this.DonorUpdateButton.Name = "DonorUpdateButton";
+            this.DonorUpdateButton.Size = new System.Drawing.Size(98, 39);
+            this.DonorUpdateButton.TabIndex = 11;
+            this.DonorUpdateButton.Text = "Update";
+            this.DonorUpdateButton.UseVisualStyleBackColor = true;
             // 
-            // DonorFirstNameTextBox
+            // DonorAddButton
             // 
-            this.DonorFirstNameTextBox.Location = new System.Drawing.Point(277, 52);
-            this.DonorFirstNameTextBox.Name = "DonorFirstNameTextBox";
-            this.DonorFirstNameTextBox.Size = new System.Drawing.Size(157, 32);
-            this.DonorFirstNameTextBox.TabIndex = 9;
+            this.DonorAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorAddButton.Location = new System.Drawing.Point(11, 349);
+            this.DonorAddButton.Name = "DonorAddButton";
+            this.DonorAddButton.Size = new System.Drawing.Size(82, 39);
+            this.DonorAddButton.TabIndex = 10;
+            this.DonorAddButton.Text = "Add";
+            this.DonorAddButton.UseVisualStyleBackColor = true;
             // 
-            // DonorLastNameTextBox
+            // DonorBloodTypeBox
             // 
-            this.DonorLastNameTextBox.Location = new System.Drawing.Point(277, 148);
-            this.DonorLastNameTextBox.Name = "DonorLastNameTextBox";
-            this.DonorLastNameTextBox.Size = new System.Drawing.Size(157, 32);
-            this.DonorLastNameTextBox.TabIndex = 9;
-            // 
-            // NurseInfoBox
-            // 
-            this.NurseInfoBox.Controls.Add(this.NursePhoneNumber);
-            this.NurseInfoBox.Controls.Add(this.NursePhoneNumberTextBox);
-            this.NurseInfoBox.Controls.Add(this.NurseLastName);
-            this.NurseInfoBox.Controls.Add(this.NurseLastNameTextBox);
-            this.NurseInfoBox.Controls.Add(this.NurseMiddleName);
-            this.NurseInfoBox.Controls.Add(this.NurseMiddleNameTextBox);
-            this.NurseInfoBox.Controls.Add(this.NurseFirstName);
-            this.NurseInfoBox.Controls.Add(this.NurseFirstNameTextBox);
-            this.NurseInfoBox.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NurseInfoBox.Location = new System.Drawing.Point(556, 128);
-            this.NurseInfoBox.Name = "NurseInfoBox";
-            this.NurseInfoBox.Size = new System.Drawing.Size(440, 262);
-            this.NurseInfoBox.TabIndex = 1;
-            this.NurseInfoBox.TabStop = false;
-            this.NurseInfoBox.Text = "Nurse Information";
-            // 
-            // NursePhoneNumberTextBox
-            // 
-            this.NursePhoneNumberTextBox.Location = new System.Drawing.Point(266, 188);
-            this.NursePhoneNumberTextBox.Name = "NursePhoneNumberTextBox";
-            this.NursePhoneNumberTextBox.Size = new System.Drawing.Size(168, 32);
-            this.NursePhoneNumberTextBox.TabIndex = 7;
-            // 
-            // NurseLastNameTextBox
-            // 
-            this.NurseLastNameTextBox.Location = new System.Drawing.Point(266, 147);
-            this.NurseLastNameTextBox.Name = "NurseLastNameTextBox";
-            this.NurseLastNameTextBox.Size = new System.Drawing.Size(168, 32);
-            this.NurseLastNameTextBox.TabIndex = 6;
-            // 
-            // NurseMiddleNameTextBox
-            // 
-            this.NurseMiddleNameTextBox.Location = new System.Drawing.Point(266, 101);
-            this.NurseMiddleNameTextBox.Name = "NurseMiddleNameTextBox";
-            this.NurseMiddleNameTextBox.Size = new System.Drawing.Size(168, 32);
-            this.NurseMiddleNameTextBox.TabIndex = 5;
-            // 
-            // NurseFirstNameTextBox
-            // 
-            this.NurseFirstNameTextBox.Location = new System.Drawing.Point(266, 53);
-            this.NurseFirstNameTextBox.Name = "NurseFirstNameTextBox";
-            this.NurseFirstNameTextBox.Size = new System.Drawing.Size(168, 32);
-            this.NurseFirstNameTextBox.TabIndex = 4;
-            // 
-            // DonationInfoBox
-            // 
-            this.DonationInfoBox.Controls.Add(this.DonationBloodTypeTextBox);
-            this.DonationInfoBox.Controls.Add(this.DonationDescriptionTextBox);
-            this.DonationInfoBox.Controls.Add(this.DonorValidationTextBox);
-            this.DonationInfoBox.Controls.Add(this.DonationDescription);
-            this.DonationInfoBox.Controls.Add(this.DonationValidation);
-            this.DonationInfoBox.Controls.Add(this.DonationBloodType);
-            this.DonationInfoBox.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonationInfoBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DonationInfoBox.Location = new System.Drawing.Point(1063, 128);
-            this.DonationInfoBox.Name = "DonationInfoBox";
-            this.DonationInfoBox.Size = new System.Drawing.Size(440, 262);
-            this.DonationInfoBox.TabIndex = 2;
-            this.DonationInfoBox.TabStop = false;
-            this.DonationInfoBox.Text = "Donation Information";
-            // 
-            // DonationBloodTypeTextBox
-            // 
-            this.DonationBloodTypeTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DonationBloodTypeTextBox.FormattingEnabled = true;
-            this.DonationBloodTypeTextBox.Items.AddRange(new object[] {
-            "O-",
-            "O+",
+            this.DonorBloodTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DonorBloodTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorBloodTypeBox.FormattingEnabled = true;
+            this.DonorBloodTypeBox.Items.AddRange(new object[] {
             "A-",
             "A+",
             "B-",
             "B+",
             "AB-",
-            "AB+"});
-            this.DonationBloodTypeTextBox.Location = new System.Drawing.Point(266, 43);
-            this.DonationBloodTypeTextBox.Name = "DonationBloodTypeTextBox";
-            this.DonationBloodTypeTextBox.Size = new System.Drawing.Size(168, 33);
-            this.DonationBloodTypeTextBox.TabIndex = 10;
+            "AB+",
+            "O-",
+            "O+"});
+            this.DonorBloodTypeBox.Location = new System.Drawing.Point(169, 292);
+            this.DonorBloodTypeBox.Name = "DonorBloodTypeBox";
+            this.DonorBloodTypeBox.Size = new System.Drawing.Size(222, 33);
+            this.DonorBloodTypeBox.TabIndex = 9;
             // 
-            // DonationDescriptionTextBox
+            // DonorBloodType
             // 
-            this.DonationDescriptionTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DonationDescriptionTextBox.FormattingEnabled = true;
-            this.DonationDescriptionTextBox.Items.AddRange(new object[] {
-            "Platelet",
-            "Whole Blood",
-            "Plasma",
-            "Power Red"});
-            this.DonationDescriptionTextBox.Location = new System.Drawing.Point(266, 141);
-            this.DonationDescriptionTextBox.Name = "DonationDescriptionTextBox";
-            this.DonationDescriptionTextBox.Size = new System.Drawing.Size(168, 33);
-            this.DonationDescriptionTextBox.TabIndex = 10;
+            this.DonorBloodType.AutoSize = true;
+            this.DonorBloodType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorBloodType.Location = new System.Drawing.Point(6, 292);
+            this.DonorBloodType.Name = "DonorBloodType";
+            this.DonorBloodType.Size = new System.Drawing.Size(112, 25);
+            this.DonorBloodType.TabIndex = 8;
+            this.DonorBloodType.Text = "Blood Type";
             // 
-            // DonorValidationTextBox
+            // DonorPhoneNumberTextBox
             // 
-            this.DonorValidationTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DonorValidationTextBox.FormattingEnabled = true;
-            this.DonorValidationTextBox.Items.AddRange(new object[] {
-            "Valid",
-            "Not Valid",
-            "Unknown"});
-            this.DonorValidationTextBox.Location = new System.Drawing.Point(266, 91);
-            this.DonorValidationTextBox.Name = "DonorValidationTextBox";
-            this.DonorValidationTextBox.Size = new System.Drawing.Size(168, 33);
-            this.DonorValidationTextBox.TabIndex = 9;
-            // 
-            // DonationDescription
-            // 
-            this.DonationDescription.AutoSize = true;
-            this.DonationDescription.Location = new System.Drawing.Point(6, 145);
-            this.DonationDescription.Name = "DonationDescription";
-            this.DonationDescription.Size = new System.Drawing.Size(223, 25);
-            this.DonationDescription.TabIndex = 2;
-            this.DonationDescription.Text = "Donation Description";
-            // 
-            // DonationValidation
-            // 
-            this.DonationValidation.AutoSize = true;
-            this.DonationValidation.Location = new System.Drawing.Point(6, 99);
-            this.DonationValidation.Name = "DonationValidation";
-            this.DonationValidation.Size = new System.Drawing.Size(112, 25);
-            this.DonationValidation.TabIndex = 1;
-            this.DonationValidation.Text = "Validation";
-            // 
-            // DonationBloodType
-            // 
-            this.DonationBloodType.AutoSize = true;
-            this.DonationBloodType.Location = new System.Drawing.Point(6, 51);
-            this.DonationBloodType.Name = "DonationBloodType";
-            this.DonationBloodType.Size = new System.Drawing.Size(121, 25);
-            this.DonationBloodType.TabIndex = 0;
-            this.DonationBloodType.Text = "Blood Type";
-            // 
-            // AddButton
-            // 
-            this.AddButton.Location = new System.Drawing.Point(1110, 645);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(112, 57);
-            this.AddButton.TabIndex = 3;
-            this.AddButton.Text = "ADD";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // ViewButton
-            // 
-            this.ViewButton.Location = new System.Drawing.Point(1242, 645);
-            this.ViewButton.Name = "ViewButton";
-            this.ViewButton.Size = new System.Drawing.Size(112, 57);
-            this.ViewButton.TabIndex = 4;
-            this.ViewButton.Text = "VIEW";
-            this.ViewButton.UseVisualStyleBackColor = true;
-            // 
-            // UpdateButton
-            // 
-            this.UpdateButton.Location = new System.Drawing.Point(1382, 645);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(112, 57);
-            this.UpdateButton.TabIndex = 5;
-            this.UpdateButton.Text = "UPDATE";
-            this.UpdateButton.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(641, 1002);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(463, 344);
-            this.listBox1.TabIndex = 6;
-            // 
-            // ShowTableButton
-            // 
-            this.ShowTableButton.Location = new System.Drawing.Point(1110, 1002);
-            this.ShowTableButton.Name = "ShowTableButton";
-            this.ShowTableButton.Size = new System.Drawing.Size(176, 104);
-            this.ShowTableButton.TabIndex = 7;
-            this.ShowTableButton.Text = "ShowTable";
-            this.ShowTableButton.UseVisualStyleBackColor = true;
-            this.ShowTableButton.Click += new System.EventHandler(this.ShowTableButton_Click);
+            this.DonorPhoneNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorPhoneNumberTextBox.Location = new System.Drawing.Point(169, 236);
+            this.DonorPhoneNumberTextBox.Name = "DonorPhoneNumberTextBox";
+            this.DonorPhoneNumberTextBox.Size = new System.Drawing.Size(222, 30);
+            this.DonorPhoneNumberTextBox.TabIndex = 7;
             // 
             // DonorPhoneNumber
             // 
             this.DonorPhoneNumber.AutoSize = true;
-            this.DonorPhoneNumber.Location = new System.Drawing.Point(6, 197);
+            this.DonorPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorPhoneNumber.Location = new System.Drawing.Point(6, 236);
             this.DonorPhoneNumber.Name = "DonorPhoneNumber";
-            this.DonorPhoneNumber.Size = new System.Drawing.Size(161, 25);
-            this.DonorPhoneNumber.TabIndex = 11;
+            this.DonorPhoneNumber.Size = new System.Drawing.Size(143, 25);
+            this.DonorPhoneNumber.TabIndex = 6;
             this.DonorPhoneNumber.Text = "Phone Number";
+            // 
+            // DonorLastNameTextBox
+            // 
+            this.DonorLastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorLastNameTextBox.Location = new System.Drawing.Point(169, 180);
+            this.DonorLastNameTextBox.Name = "DonorLastNameTextBox";
+            this.DonorLastNameTextBox.Size = new System.Drawing.Size(222, 30);
+            this.DonorLastNameTextBox.TabIndex = 5;
             // 
             // DonorLastName
             // 
             this.DonorLastName.AutoSize = true;
-            this.DonorLastName.Location = new System.Drawing.Point(6, 149);
+            this.DonorLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorLastName.Location = new System.Drawing.Point(6, 180);
             this.DonorLastName.Name = "DonorLastName";
-            this.DonorLastName.Size = new System.Drawing.Size(118, 25);
-            this.DonorLastName.TabIndex = 10;
+            this.DonorLastName.Size = new System.Drawing.Size(106, 25);
+            this.DonorLastName.TabIndex = 4;
             this.DonorLastName.Text = "Last Name";
+            // 
+            // DonorMiddleNameTextBox
+            // 
+            this.DonorMiddleNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorMiddleNameTextBox.Location = new System.Drawing.Point(169, 128);
+            this.DonorMiddleNameTextBox.Name = "DonorMiddleNameTextBox";
+            this.DonorMiddleNameTextBox.Size = new System.Drawing.Size(222, 30);
+            this.DonorMiddleNameTextBox.TabIndex = 3;
             // 
             // DonorMiddleName
             // 
             this.DonorMiddleName.AutoSize = true;
-            this.DonorMiddleName.Location = new System.Drawing.Point(6, 103);
+            this.DonorMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorMiddleName.Location = new System.Drawing.Point(6, 128);
             this.DonorMiddleName.Name = "DonorMiddleName";
-            this.DonorMiddleName.Size = new System.Drawing.Size(142, 25);
-            this.DonorMiddleName.TabIndex = 9;
-            this.DonorMiddleName.Text = "Middle Name";
+            this.DonorMiddleName.Size = new System.Drawing.Size(122, 25);
+            this.DonorMiddleName.TabIndex = 2;
+            this.DonorMiddleName.Text = "MiddleName";
+            // 
+            // DonorFirstNameTextBox
+            // 
+            this.DonorFirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorFirstNameTextBox.Location = new System.Drawing.Point(169, 73);
+            this.DonorFirstNameTextBox.Name = "DonorFirstNameTextBox";
+            this.DonorFirstNameTextBox.Size = new System.Drawing.Size(222, 30);
+            this.DonorFirstNameTextBox.TabIndex = 1;
             // 
             // DonorFirstName
             // 
             this.DonorFirstName.AutoSize = true;
-            this.DonorFirstName.Location = new System.Drawing.Point(6, 55);
+            this.DonorFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonorFirstName.Location = new System.Drawing.Point(6, 73);
             this.DonorFirstName.Name = "DonorFirstName";
-            this.DonorFirstName.Size = new System.Drawing.Size(122, 25);
-            this.DonorFirstName.TabIndex = 8;
+            this.DonorFirstName.Size = new System.Drawing.Size(106, 25);
+            this.DonorFirstName.TabIndex = 0;
             this.DonorFirstName.Text = "First Name";
+            // 
+            // NurseBox
+            // 
+            this.NurseBox.Controls.Add(this.NurseLookUpIdButton);
+            this.NurseBox.Controls.Add(this.NurseUpdateButton);
+            this.NurseBox.Controls.Add(this.NurseAddButton);
+            this.NurseBox.Controls.Add(this.NursePhoneNumberTextBox);
+            this.NurseBox.Controls.Add(this.NursePhoneNumber);
+            this.NurseBox.Controls.Add(this.NurseLastNameTextBox);
+            this.NurseBox.Controls.Add(this.NurseLastName);
+            this.NurseBox.Controls.Add(this.NurseMiddleNameTextBox);
+            this.NurseBox.Controls.Add(this.NurseMiddleName);
+            this.NurseBox.Controls.Add(this.NurseFirstNameTextBox);
+            this.NurseBox.Controls.Add(this.NurseFirstName);
+            this.NurseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NurseBox.Location = new System.Drawing.Point(539, 99);
+            this.NurseBox.Name = "NurseBox";
+            this.NurseBox.Size = new System.Drawing.Size(405, 412);
+            this.NurseBox.TabIndex = 1;
+            this.NurseBox.TabStop = false;
+            this.NurseBox.Text = "Nurse";
+            // 
+            // NurseLookUpIdButton
+            // 
+            this.NurseLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseLookUpIdButton.Location = new System.Drawing.Point(271, 349);
+            this.NurseLookUpIdButton.Name = "NurseLookUpIdButton";
+            this.NurseLookUpIdButton.Size = new System.Drawing.Size(120, 39);
+            this.NurseLookUpIdButton.TabIndex = 12;
+            this.NurseLookUpIdButton.Text = "Look Up ID";
+            this.NurseLookUpIdButton.UseVisualStyleBackColor = true;
+            // 
+            // NurseUpdateButton
+            // 
+            this.NurseUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseUpdateButton.Location = new System.Drawing.Point(132, 349);
+            this.NurseUpdateButton.Name = "NurseUpdateButton";
+            this.NurseUpdateButton.Size = new System.Drawing.Size(98, 39);
+            this.NurseUpdateButton.TabIndex = 11;
+            this.NurseUpdateButton.Text = "Update";
+            this.NurseUpdateButton.UseVisualStyleBackColor = true;
+            // 
+            // NurseAddButton
+            // 
+            this.NurseAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseAddButton.Location = new System.Drawing.Point(11, 349);
+            this.NurseAddButton.Name = "NurseAddButton";
+            this.NurseAddButton.Size = new System.Drawing.Size(82, 39);
+            this.NurseAddButton.TabIndex = 10;
+            this.NurseAddButton.Text = "Add";
+            this.NurseAddButton.UseVisualStyleBackColor = true;
+            // 
+            // NursePhoneNumberTextBox
+            // 
+            this.NursePhoneNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NursePhoneNumberTextBox.Location = new System.Drawing.Point(169, 236);
+            this.NursePhoneNumberTextBox.Name = "NursePhoneNumberTextBox";
+            this.NursePhoneNumberTextBox.Size = new System.Drawing.Size(222, 30);
+            this.NursePhoneNumberTextBox.TabIndex = 7;
             // 
             // NursePhoneNumber
             // 
             this.NursePhoneNumber.AutoSize = true;
-            this.NursePhoneNumber.Location = new System.Drawing.Point(6, 201);
+            this.NursePhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NursePhoneNumber.Location = new System.Drawing.Point(6, 236);
             this.NursePhoneNumber.Name = "NursePhoneNumber";
-            this.NursePhoneNumber.Size = new System.Drawing.Size(161, 25);
-            this.NursePhoneNumber.TabIndex = 11;
+            this.NursePhoneNumber.Size = new System.Drawing.Size(143, 25);
+            this.NursePhoneNumber.TabIndex = 6;
             this.NursePhoneNumber.Text = "Phone Number";
+            // 
+            // NurseLastNameTextBox
+            // 
+            this.NurseLastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseLastNameTextBox.Location = new System.Drawing.Point(169, 180);
+            this.NurseLastNameTextBox.Name = "NurseLastNameTextBox";
+            this.NurseLastNameTextBox.Size = new System.Drawing.Size(222, 30);
+            this.NurseLastNameTextBox.TabIndex = 5;
             // 
             // NurseLastName
             // 
             this.NurseLastName.AutoSize = true;
-            this.NurseLastName.Location = new System.Drawing.Point(6, 154);
+            this.NurseLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseLastName.Location = new System.Drawing.Point(6, 180);
             this.NurseLastName.Name = "NurseLastName";
-            this.NurseLastName.Size = new System.Drawing.Size(118, 25);
-            this.NurseLastName.TabIndex = 10;
+            this.NurseLastName.Size = new System.Drawing.Size(106, 25);
+            this.NurseLastName.TabIndex = 4;
             this.NurseLastName.Text = "Last Name";
+            // 
+            // NurseMiddleNameTextBox
+            // 
+            this.NurseMiddleNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseMiddleNameTextBox.Location = new System.Drawing.Point(169, 128);
+            this.NurseMiddleNameTextBox.Name = "NurseMiddleNameTextBox";
+            this.NurseMiddleNameTextBox.Size = new System.Drawing.Size(222, 30);
+            this.NurseMiddleNameTextBox.TabIndex = 3;
             // 
             // NurseMiddleName
             // 
             this.NurseMiddleName.AutoSize = true;
-            this.NurseMiddleName.Location = new System.Drawing.Point(6, 108);
+            this.NurseMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseMiddleName.Location = new System.Drawing.Point(6, 128);
             this.NurseMiddleName.Name = "NurseMiddleName";
-            this.NurseMiddleName.Size = new System.Drawing.Size(142, 25);
-            this.NurseMiddleName.TabIndex = 9;
-            this.NurseMiddleName.Text = "Middle Name";
+            this.NurseMiddleName.Size = new System.Drawing.Size(122, 25);
+            this.NurseMiddleName.TabIndex = 2;
+            this.NurseMiddleName.Text = "MiddleName";
+            // 
+            // NurseFirstNameTextBox
+            // 
+            this.NurseFirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseFirstNameTextBox.Location = new System.Drawing.Point(169, 73);
+            this.NurseFirstNameTextBox.Name = "NurseFirstNameTextBox";
+            this.NurseFirstNameTextBox.Size = new System.Drawing.Size(222, 30);
+            this.NurseFirstNameTextBox.TabIndex = 1;
             // 
             // NurseFirstName
             // 
             this.NurseFirstName.AutoSize = true;
-            this.NurseFirstName.Location = new System.Drawing.Point(6, 60);
+            this.NurseFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NurseFirstName.Location = new System.Drawing.Point(6, 73);
             this.NurseFirstName.Name = "NurseFirstName";
-            this.NurseFirstName.Size = new System.Drawing.Size(122, 25);
-            this.NurseFirstName.TabIndex = 8;
+            this.NurseFirstName.Size = new System.Drawing.Size(106, 25);
+            this.NurseFirstName.TabIndex = 0;
             this.NurseFirstName.Text = "First Name";
             // 
-            // FacilityInfoBox
+            // DonationBox
             // 
-            this.FacilityInfoBox.Controls.Add(this.FacilityStateTextBox);
-            this.FacilityInfoBox.Controls.Add(this.FacilityZipCodeTextBox);
-            this.FacilityInfoBox.Controls.Add(this.ZipCode);
-            this.FacilityInfoBox.Controls.Add(this.FacilityPhoneNumberTextBox);
-            this.FacilityInfoBox.Controls.Add(this.FacilityPhone);
-            this.FacilityInfoBox.Controls.Add(this.State);
-            this.FacilityInfoBox.Controls.Add(this.FacilityCityTextBox);
-            this.FacilityInfoBox.Controls.Add(this.City);
-            this.FacilityInfoBox.Controls.Add(this.FacilityAddress2TextBox);
-            this.FacilityInfoBox.Controls.Add(this.Address2);
-            this.FacilityInfoBox.Controls.Add(this.FacilityAddress1TextBox);
-            this.FacilityInfoBox.Controls.Add(this.Address1);
-            this.FacilityInfoBox.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FacilityInfoBox.Location = new System.Drawing.Point(47, 430);
-            this.FacilityInfoBox.Name = "FacilityInfoBox";
-            this.FacilityInfoBox.Size = new System.Drawing.Size(1456, 209);
-            this.FacilityInfoBox.TabIndex = 8;
-            this.FacilityInfoBox.TabStop = false;
-            this.FacilityInfoBox.Text = "Facility Information";
+            this.DonationBox.Controls.Add(this.DonationLookUpIdButton);
+            this.DonationBox.Controls.Add(this.DonationUpdateButton);
+            this.DonationBox.Controls.Add(this.DonationAddButton);
+            this.DonationBox.Controls.Add(this.textBox1);
+            this.DonationBox.Controls.Add(this.DonationBloodBagId);
+            this.DonationBox.Controls.Add(this.textBox2);
+            this.DonationBox.Controls.Add(this.DonationFacilityId);
+            this.DonationBox.Controls.Add(this.textBox3);
+            this.DonationBox.Controls.Add(this.DonationNurseId);
+            this.DonationBox.Controls.Add(this.textBox4);
+            this.DonationBox.Controls.Add(this.DonationDonorId);
+            this.DonationBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonationBox.Location = new System.Drawing.Point(1006, 99);
+            this.DonationBox.Name = "DonationBox";
+            this.DonationBox.Size = new System.Drawing.Size(405, 412);
+            this.DonationBox.TabIndex = 2;
+            this.DonationBox.TabStop = false;
+            this.DonationBox.Text = "Donation";
             // 
-            // FacilityAddress1TextBox
+            // DonationLookUpIdButton
             // 
-            this.FacilityAddress1TextBox.Location = new System.Drawing.Point(183, 55);
-            this.FacilityAddress1TextBox.Name = "FacilityAddress1TextBox";
-            this.FacilityAddress1TextBox.Size = new System.Drawing.Size(300, 32);
-            this.FacilityAddress1TextBox.TabIndex = 9;
+            this.DonationLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationLookUpIdButton.Location = new System.Drawing.Point(271, 349);
+            this.DonationLookUpIdButton.Name = "DonationLookUpIdButton";
+            this.DonationLookUpIdButton.Size = new System.Drawing.Size(120, 39);
+            this.DonationLookUpIdButton.TabIndex = 12;
+            this.DonationLookUpIdButton.Text = "Look Up ID";
+            this.DonationLookUpIdButton.UseVisualStyleBackColor = true;
             // 
-            // Address1
+            // DonationUpdateButton
             // 
-            this.Address1.AutoSize = true;
-            this.Address1.Location = new System.Drawing.Point(6, 55);
-            this.Address1.Name = "Address1";
-            this.Address1.Size = new System.Drawing.Size(104, 25);
-            this.Address1.TabIndex = 8;
-            this.Address1.Text = "Address1";
+            this.DonationUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationUpdateButton.Location = new System.Drawing.Point(132, 349);
+            this.DonationUpdateButton.Name = "DonationUpdateButton";
+            this.DonationUpdateButton.Size = new System.Drawing.Size(98, 39);
+            this.DonationUpdateButton.TabIndex = 11;
+            this.DonationUpdateButton.Text = "Update";
+            this.DonationUpdateButton.UseVisualStyleBackColor = true;
             // 
-            // FacilityAddress2TextBox
+            // DonationAddButton
             // 
-            this.FacilityAddress2TextBox.Location = new System.Drawing.Point(183, 100);
-            this.FacilityAddress2TextBox.Name = "FacilityAddress2TextBox";
-            this.FacilityAddress2TextBox.Size = new System.Drawing.Size(300, 32);
-            this.FacilityAddress2TextBox.TabIndex = 13;
+            this.DonationAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationAddButton.Location = new System.Drawing.Point(11, 349);
+            this.DonationAddButton.Name = "DonationAddButton";
+            this.DonationAddButton.Size = new System.Drawing.Size(82, 39);
+            this.DonationAddButton.TabIndex = 10;
+            this.DonationAddButton.Text = "Add";
+            this.DonationAddButton.UseVisualStyleBackColor = true;
             // 
-            // Address2
+            // textBox1
             // 
-            this.Address2.AutoSize = true;
-            this.Address2.Location = new System.Drawing.Point(6, 104);
-            this.Address2.Name = "Address2";
-            this.Address2.Size = new System.Drawing.Size(104, 25);
-            this.Address2.TabIndex = 12;
-            this.Address2.Text = "Address2";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox1.Location = new System.Drawing.Point(169, 236);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(222, 30);
+            this.textBox1.TabIndex = 7;
             // 
-            // FacilityCityTextBox
+            // DonationBloodBagId
             // 
-            this.FacilityCityTextBox.Location = new System.Drawing.Point(617, 55);
-            this.FacilityCityTextBox.Name = "FacilityCityTextBox";
-            this.FacilityCityTextBox.Size = new System.Drawing.Size(142, 32);
-            this.FacilityCityTextBox.TabIndex = 15;
+            this.DonationBloodBagId.AutoSize = true;
+            this.DonationBloodBagId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationBloodBagId.Location = new System.Drawing.Point(6, 236);
+            this.DonationBloodBagId.Name = "DonationBloodBagId";
+            this.DonationBloodBagId.Size = new System.Drawing.Size(126, 25);
+            this.DonationBloodBagId.TabIndex = 6;
+            this.DonationBloodBagId.Text = "Blood Bag ID";
             // 
-            // City
+            // textBox2
             // 
-            this.City.AutoSize = true;
-            this.City.Location = new System.Drawing.Point(517, 58);
-            this.City.Name = "City";
-            this.City.Size = new System.Drawing.Size(52, 25);
-            this.City.TabIndex = 14;
-            this.City.Text = "City";
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox2.Location = new System.Drawing.Point(169, 180);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(222, 30);
+            this.textBox2.TabIndex = 5;
             // 
-            // State
+            // DonationFacilityId
             // 
-            this.State.AutoSize = true;
-            this.State.Location = new System.Drawing.Point(517, 103);
-            this.State.Name = "State";
-            this.State.Size = new System.Drawing.Size(66, 25);
-            this.State.TabIndex = 16;
-            this.State.Text = "State";
+            this.DonationFacilityId.AutoSize = true;
+            this.DonationFacilityId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationFacilityId.Location = new System.Drawing.Point(6, 180);
+            this.DonationFacilityId.Name = "DonationFacilityId";
+            this.DonationFacilityId.Size = new System.Drawing.Size(96, 25);
+            this.DonationFacilityId.TabIndex = 4;
+            this.DonationFacilityId.Text = "Facility ID";
             // 
-            // FacilityPhoneNumberTextBox
+            // textBox3
             // 
-            this.FacilityPhoneNumberTextBox.Location = new System.Drawing.Point(183, 144);
-            this.FacilityPhoneNumberTextBox.Name = "FacilityPhoneNumberTextBox";
-            this.FacilityPhoneNumberTextBox.Size = new System.Drawing.Size(300, 32);
-            this.FacilityPhoneNumberTextBox.TabIndex = 19;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox3.Location = new System.Drawing.Point(169, 128);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(222, 30);
+            this.textBox3.TabIndex = 3;
             // 
-            // FacilityPhone
+            // DonationNurseId
             // 
-            this.FacilityPhone.AutoSize = true;
-            this.FacilityPhone.Location = new System.Drawing.Point(6, 148);
-            this.FacilityPhone.Name = "FacilityPhone";
-            this.FacilityPhone.Size = new System.Drawing.Size(161, 25);
-            this.FacilityPhone.TabIndex = 18;
-            this.FacilityPhone.Text = "Phone Number";
+            this.DonationNurseId.AutoSize = true;
+            this.DonationNurseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationNurseId.Location = new System.Drawing.Point(6, 128);
+            this.DonationNurseId.Name = "DonationNurseId";
+            this.DonationNurseId.Size = new System.Drawing.Size(83, 25);
+            this.DonationNurseId.TabIndex = 2;
+            this.DonationNurseId.Text = "NurseID";
             // 
-            // FacilityZipCodeTextBox
+            // textBox4
             // 
-            this.FacilityZipCodeTextBox.Location = new System.Drawing.Point(617, 144);
-            this.FacilityZipCodeTextBox.Name = "FacilityZipCodeTextBox";
-            this.FacilityZipCodeTextBox.Size = new System.Drawing.Size(142, 32);
-            this.FacilityZipCodeTextBox.TabIndex = 21;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox4.Location = new System.Drawing.Point(169, 73);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(222, 30);
+            this.textBox4.TabIndex = 1;
             // 
-            // ZipCode
+            // DonationDonorId
             // 
-            this.ZipCode.AutoSize = true;
-            this.ZipCode.Location = new System.Drawing.Point(517, 147);
-            this.ZipCode.Name = "ZipCode";
-            this.ZipCode.Size = new System.Drawing.Size(94, 25);
-            this.ZipCode.TabIndex = 20;
-            this.ZipCode.Text = "ZipCode";
+            this.DonationDonorId.AutoSize = true;
+            this.DonationDonorId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonationDonorId.Location = new System.Drawing.Point(6, 73);
+            this.DonationDonorId.Name = "DonationDonorId";
+            this.DonationDonorId.Size = new System.Drawing.Size(89, 25);
+            this.DonationDonorId.TabIndex = 0;
+            this.DonationDonorId.Text = "Donor ID";
             // 
-            // FacilityStateTextBox
+            // FacilityBox
             // 
-            this.FacilityStateTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FacilityStateTextBox.FormattingEnabled = true;
-            this.FacilityStateTextBox.Items.AddRange(new object[] {
+            this.FacilityBox.Controls.Add(this.FacilityStateBox);
+            this.FacilityBox.Controls.Add(this.FacilityLookUpIdButton);
+            this.FacilityBox.Controls.Add(this.FacilityAddButton);
+            this.FacilityBox.Controls.Add(this.textBox9);
+            this.FacilityBox.Controls.Add(this.FacilityInventoryId);
+            this.FacilityBox.Controls.Add(this.textBox10);
+            this.FacilityBox.Controls.Add(this.FacilityFacilityPhone);
+            this.FacilityBox.Controls.Add(this.textBox11);
+            this.FacilityBox.Controls.Add(this.FacilityZipCode);
+            this.FacilityBox.Controls.Add(this.FacilityState);
+            this.FacilityBox.Controls.Add(this.textBox6);
+            this.FacilityBox.Controls.Add(this.FacilityCity);
+            this.FacilityBox.Controls.Add(this.textBox7);
+            this.FacilityBox.Controls.Add(this.FacilityAddress2);
+            this.FacilityBox.Controls.Add(this.textBox8);
+            this.FacilityBox.Controls.Add(this.FacilityAddress1);
+            this.FacilityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.FacilityBox.Location = new System.Drawing.Point(65, 537);
+            this.FacilityBox.Name = "FacilityBox";
+            this.FacilityBox.Size = new System.Drawing.Size(405, 559);
+            this.FacilityBox.TabIndex = 3;
+            this.FacilityBox.TabStop = false;
+            this.FacilityBox.Text = "Facility";
+            // 
+            // FacilityStateBox
+            // 
+            this.FacilityStateBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FacilityStateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityStateBox.FormattingEnabled = true;
+            this.FacilityStateBox.Items.AddRange(new object[] {
             "AL",
             "AK",
             "AZ",
@@ -538,91 +590,522 @@
             "TN",
             "TX",
             "UT",
-            "VT",
             "VA",
+            "VT",
             "WA",
             "WV",
             "WI",
             "WY"});
-            this.FacilityStateTextBox.Location = new System.Drawing.Point(617, 100);
-            this.FacilityStateTextBox.Name = "FacilityStateTextBox";
-            this.FacilityStateTextBox.Size = new System.Drawing.Size(142, 33);
-            this.FacilityStateTextBox.TabIndex = 22;
+            this.FacilityStateBox.Location = new System.Drawing.Point(169, 238);
+            this.FacilityStateBox.Name = "FacilityStateBox";
+            this.FacilityStateBox.Size = new System.Drawing.Size(222, 33);
+            this.FacilityStateBox.TabIndex = 24;
             // 
-            // Form1
+            // FacilityLookUpIdButton
+            // 
+            this.FacilityLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityLookUpIdButton.Location = new System.Drawing.Point(197, 501);
+            this.FacilityLookUpIdButton.Name = "FacilityLookUpIdButton";
+            this.FacilityLookUpIdButton.Size = new System.Drawing.Size(120, 39);
+            this.FacilityLookUpIdButton.TabIndex = 23;
+            this.FacilityLookUpIdButton.Text = "Look Up ID";
+            this.FacilityLookUpIdButton.UseVisualStyleBackColor = true;
+            // 
+            // FacilityAddButton
+            // 
+            this.FacilityAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityAddButton.Location = new System.Drawing.Point(67, 501);
+            this.FacilityAddButton.Name = "FacilityAddButton";
+            this.FacilityAddButton.Size = new System.Drawing.Size(82, 39);
+            this.FacilityAddButton.TabIndex = 22;
+            this.FacilityAddButton.Text = "Add";
+            this.FacilityAddButton.UseVisualStyleBackColor = true;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox9.Location = new System.Drawing.Point(169, 404);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(222, 30);
+            this.textBox9.TabIndex = 21;
+            // 
+            // FacilityInventoryId
+            // 
+            this.FacilityInventoryId.AutoSize = true;
+            this.FacilityInventoryId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityInventoryId.Location = new System.Drawing.Point(6, 404);
+            this.FacilityInventoryId.Name = "FacilityInventoryId";
+            this.FacilityInventoryId.Size = new System.Drawing.Size(116, 25);
+            this.FacilityInventoryId.TabIndex = 20;
+            this.FacilityInventoryId.Text = "Inventory ID";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox10.Location = new System.Drawing.Point(169, 348);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(222, 30);
+            this.textBox10.TabIndex = 19;
+            // 
+            // FacilityFacilityPhone
+            // 
+            this.FacilityFacilityPhone.AutoSize = true;
+            this.FacilityFacilityPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityFacilityPhone.Location = new System.Drawing.Point(6, 348);
+            this.FacilityFacilityPhone.Name = "FacilityFacilityPhone";
+            this.FacilityFacilityPhone.Size = new System.Drawing.Size(134, 25);
+            this.FacilityFacilityPhone.TabIndex = 18;
+            this.FacilityFacilityPhone.Text = "Facility Phone";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox11.Location = new System.Drawing.Point(169, 296);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(222, 30);
+            this.textBox11.TabIndex = 17;
+            // 
+            // FacilityZipCode
+            // 
+            this.FacilityZipCode.AutoSize = true;
+            this.FacilityZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityZipCode.Location = new System.Drawing.Point(6, 296);
+            this.FacilityZipCode.Name = "FacilityZipCode";
+            this.FacilityZipCode.Size = new System.Drawing.Size(87, 25);
+            this.FacilityZipCode.TabIndex = 16;
+            this.FacilityZipCode.Text = "ZipCode";
+            // 
+            // FacilityState
+            // 
+            this.FacilityState.AutoSize = true;
+            this.FacilityState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityState.Location = new System.Drawing.Point(6, 241);
+            this.FacilityState.Name = "FacilityState";
+            this.FacilityState.Size = new System.Drawing.Size(58, 25);
+            this.FacilityState.TabIndex = 14;
+            this.FacilityState.Text = "State";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox6.Location = new System.Drawing.Point(169, 185);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(222, 30);
+            this.textBox6.TabIndex = 13;
+            // 
+            // FacilityCity
+            // 
+            this.FacilityCity.AutoSize = true;
+            this.FacilityCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityCity.Location = new System.Drawing.Point(6, 185);
+            this.FacilityCity.Name = "FacilityCity";
+            this.FacilityCity.Size = new System.Drawing.Size(46, 25);
+            this.FacilityCity.TabIndex = 12;
+            this.FacilityCity.Text = "City";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox7.Location = new System.Drawing.Point(169, 133);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(222, 30);
+            this.textBox7.TabIndex = 11;
+            // 
+            // FacilityAddress2
+            // 
+            this.FacilityAddress2.AutoSize = true;
+            this.FacilityAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityAddress2.Location = new System.Drawing.Point(6, 133);
+            this.FacilityAddress2.Name = "FacilityAddress2";
+            this.FacilityAddress2.Size = new System.Drawing.Size(96, 25);
+            this.FacilityAddress2.TabIndex = 10;
+            this.FacilityAddress2.Text = "Address2";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox8.Location = new System.Drawing.Point(169, 78);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(222, 30);
+            this.textBox8.TabIndex = 9;
+            // 
+            // FacilityAddress1
+            // 
+            this.FacilityAddress1.AutoSize = true;
+            this.FacilityAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FacilityAddress1.Location = new System.Drawing.Point(6, 78);
+            this.FacilityAddress1.Name = "FacilityAddress1";
+            this.FacilityAddress1.Size = new System.Drawing.Size(96, 25);
+            this.FacilityAddress1.TabIndex = 8;
+            this.FacilityAddress1.Text = "Address1";
+            // 
+            // Result
+            // 
+            this.Result.FormattingEnabled = true;
+            this.Result.ItemHeight = 20;
+            this.Result.Location = new System.Drawing.Point(1138, 552);
+            this.Result.Name = "Result";
+            this.Result.Size = new System.Drawing.Size(574, 544);
+            this.Result.TabIndex = 4;
+            // 
+            // Explanation1View
+            // 
+            this.Explanation1View.Location = new System.Drawing.Point(1003, 552);
+            this.Explanation1View.Name = "Explanation1View";
+            this.Explanation1View.Size = new System.Drawing.Size(120, 50);
+            this.Explanation1View.TabIndex = 5;
+            this.Explanation1View.Text = "View";
+            this.Explanation1View.UseVisualStyleBackColor = true;
+            // 
+            // Explanation2View
+            // 
+            this.Explanation2View.Location = new System.Drawing.Point(1003, 656);
+            this.Explanation2View.Name = "Explanation2View";
+            this.Explanation2View.Size = new System.Drawing.Size(120, 50);
+            this.Explanation2View.TabIndex = 6;
+            this.Explanation2View.Text = "View";
+            this.Explanation2View.UseVisualStyleBackColor = true;
+            // 
+            // Explanation3View
+            // 
+            this.Explanation3View.Location = new System.Drawing.Point(1003, 753);
+            this.Explanation3View.Name = "Explanation3View";
+            this.Explanation3View.Size = new System.Drawing.Size(120, 50);
+            this.Explanation3View.TabIndex = 7;
+            this.Explanation3View.Text = "View";
+            this.Explanation3View.UseVisualStyleBackColor = true;
+            // 
+            // Explanation4View
+            // 
+            this.Explanation4View.Location = new System.Drawing.Point(1003, 851);
+            this.Explanation4View.Name = "Explanation4View";
+            this.Explanation4View.Size = new System.Drawing.Size(120, 50);
+            this.Explanation4View.TabIndex = 8;
+            this.Explanation4View.Text = "button4";
+            this.Explanation4View.UseVisualStyleBackColor = true;
+            // 
+            // Explanation5View
+            // 
+            this.Explanation5View.Location = new System.Drawing.Point(1003, 950);
+            this.Explanation5View.Name = "Explanation5View";
+            this.Explanation5View.Size = new System.Drawing.Size(120, 50);
+            this.Explanation5View.TabIndex = 9;
+            this.Explanation5View.Text = "View";
+            this.Explanation5View.UseVisualStyleBackColor = true;
+            // 
+            // Explanation6View
+            // 
+            this.Explanation6View.Location = new System.Drawing.Point(1006, 1046);
+            this.Explanation6View.Name = "Explanation6View";
+            this.Explanation6View.Size = new System.Drawing.Size(120, 50);
+            this.Explanation6View.TabIndex = 10;
+            this.Explanation6View.Text = "View";
+            this.Explanation6View.UseVisualStyleBackColor = true;
+            // 
+            // ExplanationBox1
+            // 
+            this.ExplanationBox1.Location = new System.Drawing.Point(539, 552);
+            this.ExplanationBox1.Name = "ExplanationBox1";
+            this.ExplanationBox1.Size = new System.Drawing.Size(230, 50);
+            this.ExplanationBox1.TabIndex = 11;
+            this.ExplanationBox1.Text = "Donors with phone numbers for bloodtype";
+            // 
+            // BloodTypeView
+            // 
+            this.BloodTypeView.AutoSize = true;
+            this.BloodTypeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeView.Location = new System.Drawing.Point(775, 563);
+            this.BloodTypeView.Name = "BloodTypeView";
+            this.BloodTypeView.Size = new System.Drawing.Size(112, 25);
+            this.BloodTypeView.TabIndex = 12;
+            this.BloodTypeView.Text = "Blood Type";
+            // 
+            // BloodTypeViewTextBox
+            // 
+            this.BloodTypeViewTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BloodTypeViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeViewTextBox.FormattingEnabled = true;
+            this.BloodTypeViewTextBox.Items.AddRange(new object[] {
+            "A-",
+            "A+",
+            "B-",
+            "B+",
+            "AB-",
+            "AB+",
+            "O-",
+            "O+"});
+            this.BloodTypeViewTextBox.Location = new System.Drawing.Point(893, 560);
+            this.BloodTypeViewTextBox.Name = "BloodTypeViewTextBox";
+            this.BloodTypeViewTextBox.Size = new System.Drawing.Size(87, 33);
+            this.BloodTypeViewTextBox.TabIndex = 13;
+            // 
+            // ExplanationBox2
+            // 
+            this.ExplanationBox2.Location = new System.Drawing.Point(539, 656);
+            this.ExplanationBox2.Name = "ExplanationBox2";
+            this.ExplanationBox2.Size = new System.Drawing.Size(230, 50);
+            this.ExplanationBox2.TabIndex = 14;
+            this.ExplanationBox2.Text = "Blood donation facilities\n";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(539, 753);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(230, 50);
+            this.richTextBox1.TabIndex = 15;
+            this.richTextBox1.Text = "Inventory for Facility ID";
+            // 
+            // FacilityIdViewTextBox
+            // 
+            this.FacilityIdViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityIdViewTextBox.Location = new System.Drawing.Point(893, 759);
+            this.FacilityIdViewTextBox.Name = "FacilityIdViewTextBox";
+            this.FacilityIdViewTextBox.Size = new System.Drawing.Size(87, 30);
+            this.FacilityIdViewTextBox.TabIndex = 17;
+            // 
+            // FacilityIdView3
+            // 
+            this.FacilityIdView3.AutoSize = true;
+            this.FacilityIdView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityIdView3.Location = new System.Drawing.Point(775, 759);
+            this.FacilityIdView3.Name = "FacilityIdView3";
+            this.FacilityIdView3.Size = new System.Drawing.Size(96, 25);
+            this.FacilityIdView3.TabIndex = 16;
+            this.FacilityIdView3.Text = "Facility ID";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(539, 851);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(230, 50);
+            this.richTextBox2.TabIndex = 18;
+            this.richTextBox2.Text = "All Blood Donations for Donation Type Description";
+            // 
+            // DescriptionView
+            // 
+            this.DescriptionView.AutoSize = true;
+            this.DescriptionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DescriptionView.Location = new System.Drawing.Point(775, 862);
+            this.DescriptionView.Name = "DescriptionView";
+            this.DescriptionView.Size = new System.Drawing.Size(109, 25);
+            this.DescriptionView.TabIndex = 19;
+            this.DescriptionView.Text = "Description";
+            // 
+            // DescriptionViewTextBox
+            // 
+            this.DescriptionViewTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DescriptionViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DescriptionViewTextBox.FormattingEnabled = true;
+            this.DescriptionViewTextBox.Items.AddRange(new object[] {
+            "Plasma",
+            "Platelet",
+            "Power Red",
+            "Whole Blood"});
+            this.DescriptionViewTextBox.Location = new System.Drawing.Point(893, 859);
+            this.DescriptionViewTextBox.Name = "DescriptionViewTextBox";
+            this.DescriptionViewTextBox.Size = new System.Drawing.Size(87, 33);
+            this.DescriptionViewTextBox.TabIndex = 20;
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(539, 950);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(230, 50);
+            this.richTextBox3.TabIndex = 21;
+            this.richTextBox3.Text = "All Blood Donations for Specific Date and Facility";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox5.Location = new System.Drawing.Point(893, 950);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(87, 30);
+            this.textBox5.TabIndex = 23;
+            // 
+            // FacilityIdView5
+            // 
+            this.FacilityIdView5.AutoSize = true;
+            this.FacilityIdView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityIdView5.Location = new System.Drawing.Point(775, 950);
+            this.FacilityIdView5.Name = "FacilityIdView5";
+            this.FacilityIdView5.Size = new System.Drawing.Size(96, 25);
+            this.FacilityIdView5.TabIndex = 22;
+            this.FacilityIdView5.Text = "Facility ID";
+            // 
+            // DateView
+            // 
+            this.DateView.Location = new System.Drawing.Point(780, 985);
+            this.DateView.Name = "DateView";
+            this.DateView.Size = new System.Drawing.Size(200, 26);
+            this.DateView.TabIndex = 24;
+            this.DateView.Value = new System.DateTime(2020, 3, 8, 0, 50, 1, 0);
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Location = new System.Drawing.Point(539, 1046);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(230, 50);
+            this.richTextBox4.TabIndex = 25;
+            this.richTextBox4.Text = "All Blood Donations for Blood Type";
+            // 
+            // BloodTypeViewTextBox6
+            // 
+            this.BloodTypeViewTextBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BloodTypeViewTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeViewTextBox6.FormattingEnabled = true;
+            this.BloodTypeViewTextBox6.Items.AddRange(new object[] {
+            "A-",
+            "A+",
+            "B-",
+            "B+",
+            "AB-",
+            "AB+",
+            "O-",
+            "O+"});
+            this.BloodTypeViewTextBox6.Location = new System.Drawing.Point(893, 1054);
+            this.BloodTypeViewTextBox6.Name = "BloodTypeViewTextBox6";
+            this.BloodTypeViewTextBox6.Size = new System.Drawing.Size(87, 33);
+            this.BloodTypeViewTextBox6.TabIndex = 27;
+            // 
+            // BloodTypeView6
+            // 
+            this.BloodTypeView6.AutoSize = true;
+            this.BloodTypeView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeView6.Location = new System.Drawing.Point(775, 1057);
+            this.BloodTypeView6.Name = "BloodTypeView6";
+            this.BloodTypeView6.Size = new System.Drawing.Size(112, 25);
+            this.BloodTypeView6.TabIndex = 26;
+            this.BloodTypeView6.Text = "Blood Type";
+            // 
+            // ResultBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1563, 1375);
-            this.Controls.Add(this.FacilityInfoBox);
-            this.Controls.Add(this.ShowTableButton);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.UpdateButton);
-            this.Controls.Add(this.ViewButton);
-            this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.DonationInfoBox);
-            this.Controls.Add(this.NurseInfoBox);
-            this.Controls.Add(this.DonorInfoBox);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(1772, 1165);
+            this.Controls.Add(this.BloodTypeViewTextBox6);
+            this.Controls.Add(this.BloodTypeView6);
+            this.Controls.Add(this.richTextBox4);
+            this.Controls.Add(this.DateView);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.FacilityIdView5);
+            this.Controls.Add(this.richTextBox3);
+            this.Controls.Add(this.DescriptionViewTextBox);
+            this.Controls.Add(this.DescriptionView);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.FacilityIdViewTextBox);
+            this.Controls.Add(this.FacilityIdView3);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ExplanationBox2);
+            this.Controls.Add(this.BloodTypeViewTextBox);
+            this.Controls.Add(this.BloodTypeView);
+            this.Controls.Add(this.ExplanationBox1);
+            this.Controls.Add(this.Explanation6View);
+            this.Controls.Add(this.Explanation5View);
+            this.Controls.Add(this.Explanation4View);
+            this.Controls.Add(this.Explanation3View);
+            this.Controls.Add(this.Explanation2View);
+            this.Controls.Add(this.Explanation1View);
+            this.Controls.Add(this.Result);
+            this.Controls.Add(this.FacilityBox);
+            this.Controls.Add(this.DonationBox);
+            this.Controls.Add(this.NurseBox);
+            this.Controls.Add(this.DonorBox);
+            this.Name = "ResultBox";
             this.Text = "Form1";
-            this.DonorInfoBox.ResumeLayout(false);
-            this.DonorInfoBox.PerformLayout();
-            this.NurseInfoBox.ResumeLayout(false);
-            this.NurseInfoBox.PerformLayout();
-            this.DonationInfoBox.ResumeLayout(false);
-            this.DonationInfoBox.PerformLayout();
-            this.FacilityInfoBox.ResumeLayout(false);
-            this.FacilityInfoBox.PerformLayout();
+            this.DonorBox.ResumeLayout(false);
+            this.DonorBox.PerformLayout();
+            this.NurseBox.ResumeLayout(false);
+            this.NurseBox.PerformLayout();
+            this.DonationBox.ResumeLayout(false);
+            this.DonationBox.PerformLayout();
+            this.FacilityBox.ResumeLayout(false);
+            this.FacilityBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox DonorInfoBox;
-        private System.Windows.Forms.GroupBox NurseInfoBox;
-        private System.Windows.Forms.TextBox NursePhoneNumberTextBox;
-        private System.Windows.Forms.TextBox NurseLastNameTextBox;
-        private System.Windows.Forms.TextBox NurseMiddleNameTextBox;
-        private System.Windows.Forms.TextBox NurseFirstNameTextBox;
-        private System.Windows.Forms.GroupBox DonationInfoBox;
-        private System.Windows.Forms.Label DonationDescription;
-        private System.Windows.Forms.Label DonationValidation;
-        private System.Windows.Forms.Label DonationBloodType;
-        private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Button ViewButton;
-        private System.Windows.Forms.Button UpdateButton;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button ShowTableButton;
-        private System.Windows.Forms.ComboBox DonorValidationTextBox;
-        private System.Windows.Forms.ComboBox DonationDescriptionTextBox;
-        private System.Windows.Forms.ComboBox DonationBloodTypeTextBox;
-        private System.Windows.Forms.TextBox DonorFirstNameTextBox;
-        private System.Windows.Forms.TextBox DonorMiddleNameTextBox;
+        private System.Windows.Forms.GroupBox DonorBox;
+        private System.Windows.Forms.Label DonorBloodType;
         private System.Windows.Forms.TextBox DonorPhoneNumberTextBox;
-        private System.Windows.Forms.TextBox DonorLastNameTextBox;
         private System.Windows.Forms.Label DonorPhoneNumber;
+        private System.Windows.Forms.TextBox DonorLastNameTextBox;
         private System.Windows.Forms.Label DonorLastName;
+        private System.Windows.Forms.TextBox DonorMiddleNameTextBox;
         private System.Windows.Forms.Label DonorMiddleName;
+        private System.Windows.Forms.TextBox DonorFirstNameTextBox;
         private System.Windows.Forms.Label DonorFirstName;
+        private System.Windows.Forms.ComboBox DonorBloodTypeBox;
+        private System.Windows.Forms.Button DonorLookUpIdButton;
+        private System.Windows.Forms.Button DonorUpdateButton;
+        private System.Windows.Forms.Button DonorAddButton;
+        private System.Windows.Forms.GroupBox NurseBox;
+        private System.Windows.Forms.Button NurseLookUpIdButton;
+        private System.Windows.Forms.Button NurseUpdateButton;
+        private System.Windows.Forms.Button NurseAddButton;
+        private System.Windows.Forms.TextBox NursePhoneNumberTextBox;
         private System.Windows.Forms.Label NursePhoneNumber;
+        private System.Windows.Forms.TextBox NurseLastNameTextBox;
         private System.Windows.Forms.Label NurseLastName;
+        private System.Windows.Forms.TextBox NurseMiddleNameTextBox;
         private System.Windows.Forms.Label NurseMiddleName;
+        private System.Windows.Forms.TextBox NurseFirstNameTextBox;
         private System.Windows.Forms.Label NurseFirstName;
-        private System.Windows.Forms.GroupBox FacilityInfoBox;
-        private System.Windows.Forms.TextBox FacilityCityTextBox;
-        private System.Windows.Forms.Label City;
-        private System.Windows.Forms.TextBox FacilityAddress2TextBox;
-        private System.Windows.Forms.Label Address2;
-        private System.Windows.Forms.TextBox FacilityAddress1TextBox;
-        private System.Windows.Forms.Label Address1;
-        private System.Windows.Forms.TextBox FacilityZipCodeTextBox;
-        private System.Windows.Forms.Label ZipCode;
-        private System.Windows.Forms.TextBox FacilityPhoneNumberTextBox;
-        private System.Windows.Forms.Label FacilityPhone;
-        private System.Windows.Forms.Label State;
-        private System.Windows.Forms.ComboBox FacilityStateTextBox;
+        private System.Windows.Forms.GroupBox DonationBox;
+        private System.Windows.Forms.Button DonationLookUpIdButton;
+        private System.Windows.Forms.Button DonationUpdateButton;
+        private System.Windows.Forms.Button DonationAddButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label DonationBloodBagId;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label DonationFacilityId;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label DonationNurseId;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label DonationDonorId;
+        private System.Windows.Forms.GroupBox FacilityBox;
+        private System.Windows.Forms.ComboBox FacilityStateBox;
+        private System.Windows.Forms.Button FacilityLookUpIdButton;
+        private System.Windows.Forms.Button FacilityAddButton;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label FacilityInventoryId;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label FacilityFacilityPhone;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label FacilityZipCode;
+        private System.Windows.Forms.Label FacilityState;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label FacilityCity;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label FacilityAddress2;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label FacilityAddress1;
+        private System.Windows.Forms.ListBox Result;
+        private System.Windows.Forms.Button Explanation1View;
+        private System.Windows.Forms.Button Explanation2View;
+        private System.Windows.Forms.Button Explanation3View;
+        private System.Windows.Forms.Button Explanation4View;
+        private System.Windows.Forms.Button Explanation5View;
+        private System.Windows.Forms.Button Explanation6View;
+        private System.Windows.Forms.RichTextBox ExplanationBox1;
+        private System.Windows.Forms.Label BloodTypeView;
+        private System.Windows.Forms.ComboBox BloodTypeViewTextBox;
+        private System.Windows.Forms.RichTextBox ExplanationBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox FacilityIdViewTextBox;
+        private System.Windows.Forms.Label FacilityIdView3;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label DescriptionView;
+        private System.Windows.Forms.ComboBox DescriptionViewTextBox;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label FacilityIdView5;
+        private System.Windows.Forms.DateTimePicker DateView;
+        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.ComboBox BloodTypeViewTextBox6;
+        private System.Windows.Forms.Label BloodTypeView6;
     }
 }
 
