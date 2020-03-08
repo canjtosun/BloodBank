@@ -67,21 +67,21 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.DonationDonorId = new System.Windows.Forms.Label();
             this.FacilityBox = new System.Windows.Forms.GroupBox();
-            this.FacilityStateBox = new System.Windows.Forms.ComboBox();
+            this.FacilityStateTextBox = new System.Windows.Forms.ComboBox();
             this.FacilityLookUpIdButton = new System.Windows.Forms.Button();
             this.FacilityAddButton = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.FacilityInverntoryIdTextBox = new System.Windows.Forms.TextBox();
             this.FacilityInventoryId = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.FacilityFacilityPhoneTextBox = new System.Windows.Forms.TextBox();
             this.FacilityFacilityPhone = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.FacilityZipCodeTextBox = new System.Windows.Forms.TextBox();
             this.FacilityZipCode = new System.Windows.Forms.Label();
             this.FacilityState = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.FacilityCityTextBox = new System.Windows.Forms.TextBox();
             this.FacilityCity = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.FacilityAddress2TextBox = new System.Windows.Forms.TextBox();
             this.FacilityAddress2 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.FacilityAddress1TextBox = new System.Windows.Forms.TextBox();
             this.FacilityAddress1 = new System.Windows.Forms.Label();
             this.Result = new System.Windows.Forms.ListBox();
             this.Explanation1View = new System.Windows.Forms.Button();
@@ -165,6 +165,7 @@
             this.DonorAddButton.TabIndex = 10;
             this.DonorAddButton.Text = "Add";
             this.DonorAddButton.UseVisualStyleBackColor = true;
+            this.DonorAddButton.Click += new System.EventHandler(this.DonorAddButton_Click);
             // 
             // DonorBloodTypeBox
             // 
@@ -317,6 +318,7 @@
             this.NurseAddButton.TabIndex = 10;
             this.NurseAddButton.Text = "Add";
             this.NurseAddButton.UseVisualStyleBackColor = true;
+            this.NurseAddButton.Click += new System.EventHandler(this.NurseAddButton_Click);
             // 
             // NursePhoneNumberTextBox
             // 
@@ -515,21 +517,21 @@
             // 
             // FacilityBox
             // 
-            this.FacilityBox.Controls.Add(this.FacilityStateBox);
+            this.FacilityBox.Controls.Add(this.FacilityStateTextBox);
             this.FacilityBox.Controls.Add(this.FacilityLookUpIdButton);
             this.FacilityBox.Controls.Add(this.FacilityAddButton);
-            this.FacilityBox.Controls.Add(this.textBox9);
+            this.FacilityBox.Controls.Add(this.FacilityInverntoryIdTextBox);
             this.FacilityBox.Controls.Add(this.FacilityInventoryId);
-            this.FacilityBox.Controls.Add(this.textBox10);
+            this.FacilityBox.Controls.Add(this.FacilityFacilityPhoneTextBox);
             this.FacilityBox.Controls.Add(this.FacilityFacilityPhone);
-            this.FacilityBox.Controls.Add(this.textBox11);
+            this.FacilityBox.Controls.Add(this.FacilityZipCodeTextBox);
             this.FacilityBox.Controls.Add(this.FacilityZipCode);
             this.FacilityBox.Controls.Add(this.FacilityState);
-            this.FacilityBox.Controls.Add(this.textBox6);
+            this.FacilityBox.Controls.Add(this.FacilityCityTextBox);
             this.FacilityBox.Controls.Add(this.FacilityCity);
-            this.FacilityBox.Controls.Add(this.textBox7);
+            this.FacilityBox.Controls.Add(this.FacilityAddress2TextBox);
             this.FacilityBox.Controls.Add(this.FacilityAddress2);
-            this.FacilityBox.Controls.Add(this.textBox8);
+            this.FacilityBox.Controls.Add(this.FacilityAddress1TextBox);
             this.FacilityBox.Controls.Add(this.FacilityAddress1);
             this.FacilityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.FacilityBox.Location = new System.Drawing.Point(65, 537);
@@ -539,12 +541,12 @@
             this.FacilityBox.TabStop = false;
             this.FacilityBox.Text = "Facility";
             // 
-            // FacilityStateBox
+            // FacilityStateTextBox
             // 
-            this.FacilityStateBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FacilityStateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityStateBox.FormattingEnabled = true;
-            this.FacilityStateBox.Items.AddRange(new object[] {
+            this.FacilityStateTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FacilityStateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityStateTextBox.FormattingEnabled = true;
+            this.FacilityStateTextBox.Items.AddRange(new object[] {
             "AL",
             "AK",
             "AZ",
@@ -596,10 +598,10 @@
             "WV",
             "WI",
             "WY"});
-            this.FacilityStateBox.Location = new System.Drawing.Point(169, 238);
-            this.FacilityStateBox.Name = "FacilityStateBox";
-            this.FacilityStateBox.Size = new System.Drawing.Size(222, 33);
-            this.FacilityStateBox.TabIndex = 24;
+            this.FacilityStateTextBox.Location = new System.Drawing.Point(169, 238);
+            this.FacilityStateTextBox.Name = "FacilityStateTextBox";
+            this.FacilityStateTextBox.Size = new System.Drawing.Size(222, 33);
+            this.FacilityStateTextBox.TabIndex = 24;
             // 
             // FacilityLookUpIdButton
             // 
@@ -620,14 +622,15 @@
             this.FacilityAddButton.TabIndex = 22;
             this.FacilityAddButton.Text = "Add";
             this.FacilityAddButton.UseVisualStyleBackColor = true;
+            this.FacilityAddButton.Click += new System.EventHandler(this.FacilityAddButton_Click);
             // 
-            // textBox9
+            // FacilityInverntoryIdTextBox
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox9.Location = new System.Drawing.Point(169, 404);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(222, 30);
-            this.textBox9.TabIndex = 21;
+            this.FacilityInverntoryIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityInverntoryIdTextBox.Location = new System.Drawing.Point(169, 404);
+            this.FacilityInverntoryIdTextBox.Name = "FacilityInverntoryIdTextBox";
+            this.FacilityInverntoryIdTextBox.Size = new System.Drawing.Size(222, 30);
+            this.FacilityInverntoryIdTextBox.TabIndex = 21;
             // 
             // FacilityInventoryId
             // 
@@ -639,13 +642,13 @@
             this.FacilityInventoryId.TabIndex = 20;
             this.FacilityInventoryId.Text = "Inventory ID";
             // 
-            // textBox10
+            // FacilityFacilityPhoneTextBox
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox10.Location = new System.Drawing.Point(169, 348);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(222, 30);
-            this.textBox10.TabIndex = 19;
+            this.FacilityFacilityPhoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityFacilityPhoneTextBox.Location = new System.Drawing.Point(169, 348);
+            this.FacilityFacilityPhoneTextBox.Name = "FacilityFacilityPhoneTextBox";
+            this.FacilityFacilityPhoneTextBox.Size = new System.Drawing.Size(222, 30);
+            this.FacilityFacilityPhoneTextBox.TabIndex = 19;
             // 
             // FacilityFacilityPhone
             // 
@@ -657,13 +660,13 @@
             this.FacilityFacilityPhone.TabIndex = 18;
             this.FacilityFacilityPhone.Text = "Facility Phone";
             // 
-            // textBox11
+            // FacilityZipCodeTextBox
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox11.Location = new System.Drawing.Point(169, 296);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(222, 30);
-            this.textBox11.TabIndex = 17;
+            this.FacilityZipCodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityZipCodeTextBox.Location = new System.Drawing.Point(169, 296);
+            this.FacilityZipCodeTextBox.Name = "FacilityZipCodeTextBox";
+            this.FacilityZipCodeTextBox.Size = new System.Drawing.Size(222, 30);
+            this.FacilityZipCodeTextBox.TabIndex = 17;
             // 
             // FacilityZipCode
             // 
@@ -685,13 +688,13 @@
             this.FacilityState.TabIndex = 14;
             this.FacilityState.Text = "State";
             // 
-            // textBox6
+            // FacilityCityTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox6.Location = new System.Drawing.Point(169, 185);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(222, 30);
-            this.textBox6.TabIndex = 13;
+            this.FacilityCityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityCityTextBox.Location = new System.Drawing.Point(169, 185);
+            this.FacilityCityTextBox.Name = "FacilityCityTextBox";
+            this.FacilityCityTextBox.Size = new System.Drawing.Size(222, 30);
+            this.FacilityCityTextBox.TabIndex = 13;
             // 
             // FacilityCity
             // 
@@ -703,13 +706,13 @@
             this.FacilityCity.TabIndex = 12;
             this.FacilityCity.Text = "City";
             // 
-            // textBox7
+            // FacilityAddress2TextBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox7.Location = new System.Drawing.Point(169, 133);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(222, 30);
-            this.textBox7.TabIndex = 11;
+            this.FacilityAddress2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityAddress2TextBox.Location = new System.Drawing.Point(169, 133);
+            this.FacilityAddress2TextBox.Name = "FacilityAddress2TextBox";
+            this.FacilityAddress2TextBox.Size = new System.Drawing.Size(222, 30);
+            this.FacilityAddress2TextBox.TabIndex = 11;
             // 
             // FacilityAddress2
             // 
@@ -721,13 +724,13 @@
             this.FacilityAddress2.TabIndex = 10;
             this.FacilityAddress2.Text = "Address2";
             // 
-            // textBox8
+            // FacilityAddress1TextBox
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox8.Location = new System.Drawing.Point(169, 78);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(222, 30);
-            this.textBox8.TabIndex = 9;
+            this.FacilityAddress1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityAddress1TextBox.Location = new System.Drawing.Point(169, 78);
+            this.FacilityAddress1TextBox.Name = "FacilityAddress1TextBox";
+            this.FacilityAddress1TextBox.Size = new System.Drawing.Size(222, 30);
+            this.FacilityAddress1TextBox.TabIndex = 9;
             // 
             // FacilityAddress1
             // 
@@ -781,7 +784,7 @@
             this.Explanation4View.Name = "Explanation4View";
             this.Explanation4View.Size = new System.Drawing.Size(120, 50);
             this.Explanation4View.TabIndex = 8;
-            this.Explanation4View.Text = "button4";
+            this.Explanation4View.Text = "View";
             this.Explanation4View.UseVisualStyleBackColor = true;
             // 
             // Explanation5View
@@ -1066,21 +1069,21 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label DonationDonorId;
         private System.Windows.Forms.GroupBox FacilityBox;
-        private System.Windows.Forms.ComboBox FacilityStateBox;
+        private System.Windows.Forms.ComboBox FacilityStateTextBox;
         private System.Windows.Forms.Button FacilityLookUpIdButton;
         private System.Windows.Forms.Button FacilityAddButton;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox FacilityInverntoryIdTextBox;
         private System.Windows.Forms.Label FacilityInventoryId;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox FacilityFacilityPhoneTextBox;
         private System.Windows.Forms.Label FacilityFacilityPhone;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox FacilityZipCodeTextBox;
         private System.Windows.Forms.Label FacilityZipCode;
         private System.Windows.Forms.Label FacilityState;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox FacilityCityTextBox;
         private System.Windows.Forms.Label FacilityCity;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox FacilityAddress2TextBox;
         private System.Windows.Forms.Label FacilityAddress2;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox FacilityAddress1TextBox;
         private System.Windows.Forms.Label FacilityAddress1;
         private System.Windows.Forms.ListBox Result;
         private System.Windows.Forms.Button Explanation1View;
