@@ -49,11 +49,6 @@ namespace BloodBank
                     //insert blood type **dont forget to delete validation**
                     "INSERT INTO Blood (Type)" + " VALUES('" +
                     DonorBloodTypeBox.Text.ToString() + "','" +
-
-                    //insert donation time when we add everything to the system
-                    "INSERT INTO Donation (DateTime)" + " VALUES('" +
-                    aDate.ToString("yyyy-MM-dd HH:mm:ss") + "');";
-
                     
                     cmd.ExecuteNonQuery(); //execute
                     MessageBox.Show("Successful"); //promp user that success

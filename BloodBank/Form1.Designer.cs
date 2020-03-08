@@ -58,13 +58,13 @@
             this.DonationLookUpIdButton = new System.Windows.Forms.Button();
             this.DonationUpdateButton = new System.Windows.Forms.Button();
             this.DonationAddButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DonationBloodBagIdTextBox = new System.Windows.Forms.TextBox();
             this.DonationBloodBagId = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DonationFacilityIdTextBox = new System.Windows.Forms.TextBox();
             this.DonationFacilityId = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.DonationNurseIdTextBox = new System.Windows.Forms.TextBox();
             this.DonationNurseId = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.DonationDonorIdTextBox = new System.Windows.Forms.TextBox();
             this.DonationDonorId = new System.Windows.Forms.Label();
             this.FacilityBox = new System.Windows.Forms.GroupBox();
             this.FacilityStateTextBox = new System.Windows.Forms.ComboBox();
@@ -180,7 +180,8 @@
             "AB-",
             "AB+",
             "O-",
-            "O+"});
+            "O+",
+            "Unknown"});
             this.DonorBloodTypeBox.Location = new System.Drawing.Point(169, 292);
             this.DonorBloodTypeBox.Name = "DonorBloodTypeBox";
             this.DonorBloodTypeBox.Size = new System.Drawing.Size(222, 33);
@@ -397,13 +398,13 @@
             this.DonationBox.Controls.Add(this.DonationLookUpIdButton);
             this.DonationBox.Controls.Add(this.DonationUpdateButton);
             this.DonationBox.Controls.Add(this.DonationAddButton);
-            this.DonationBox.Controls.Add(this.textBox1);
+            this.DonationBox.Controls.Add(this.DonationBloodBagIdTextBox);
             this.DonationBox.Controls.Add(this.DonationBloodBagId);
-            this.DonationBox.Controls.Add(this.textBox2);
+            this.DonationBox.Controls.Add(this.DonationFacilityIdTextBox);
             this.DonationBox.Controls.Add(this.DonationFacilityId);
-            this.DonationBox.Controls.Add(this.textBox3);
+            this.DonationBox.Controls.Add(this.DonationNurseIdTextBox);
             this.DonationBox.Controls.Add(this.DonationNurseId);
-            this.DonationBox.Controls.Add(this.textBox4);
+            this.DonationBox.Controls.Add(this.DonationDonorIdTextBox);
             this.DonationBox.Controls.Add(this.DonationDonorId);
             this.DonationBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonationBox.Location = new System.Drawing.Point(1006, 99);
@@ -443,13 +444,13 @@
             this.DonationAddButton.Text = "Add";
             this.DonationAddButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // DonationBloodBagIdTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(169, 236);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 30);
-            this.textBox1.TabIndex = 7;
+            this.DonationBloodBagIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationBloodBagIdTextBox.Location = new System.Drawing.Point(169, 236);
+            this.DonationBloodBagIdTextBox.Name = "DonationBloodBagIdTextBox";
+            this.DonationBloodBagIdTextBox.Size = new System.Drawing.Size(222, 30);
+            this.DonationBloodBagIdTextBox.TabIndex = 7;
             // 
             // DonationBloodBagId
             // 
@@ -461,13 +462,13 @@
             this.DonationBloodBagId.TabIndex = 6;
             this.DonationBloodBagId.Text = "Blood Bag ID";
             // 
-            // textBox2
+            // DonationFacilityIdTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.Location = new System.Drawing.Point(169, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 30);
-            this.textBox2.TabIndex = 5;
+            this.DonationFacilityIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationFacilityIdTextBox.Location = new System.Drawing.Point(169, 180);
+            this.DonationFacilityIdTextBox.Name = "DonationFacilityIdTextBox";
+            this.DonationFacilityIdTextBox.Size = new System.Drawing.Size(222, 30);
+            this.DonationFacilityIdTextBox.TabIndex = 5;
             // 
             // DonationFacilityId
             // 
@@ -479,13 +480,13 @@
             this.DonationFacilityId.TabIndex = 4;
             this.DonationFacilityId.Text = "Facility ID";
             // 
-            // textBox3
+            // DonationNurseIdTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox3.Location = new System.Drawing.Point(169, 128);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 30);
-            this.textBox3.TabIndex = 3;
+            this.DonationNurseIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationNurseIdTextBox.Location = new System.Drawing.Point(169, 128);
+            this.DonationNurseIdTextBox.Name = "DonationNurseIdTextBox";
+            this.DonationNurseIdTextBox.Size = new System.Drawing.Size(222, 30);
+            this.DonationNurseIdTextBox.TabIndex = 3;
             // 
             // DonationNurseId
             // 
@@ -497,13 +498,13 @@
             this.DonationNurseId.TabIndex = 2;
             this.DonationNurseId.Text = "NurseID";
             // 
-            // textBox4
+            // DonationDonorIdTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox4.Location = new System.Drawing.Point(169, 73);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 30);
-            this.textBox4.TabIndex = 1;
+            this.DonationDonorIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationDonorIdTextBox.Location = new System.Drawing.Point(169, 73);
+            this.DonationDonorIdTextBox.Name = "DonationDonorIdTextBox";
+            this.DonationDonorIdTextBox.Size = new System.Drawing.Size(222, 30);
+            this.DonationDonorIdTextBox.TabIndex = 1;
             // 
             // DonationDonorId
             // 
@@ -1060,13 +1061,13 @@
         private System.Windows.Forms.Button DonationLookUpIdButton;
         private System.Windows.Forms.Button DonationUpdateButton;
         private System.Windows.Forms.Button DonationAddButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DonationBloodBagIdTextBox;
         private System.Windows.Forms.Label DonationBloodBagId;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox DonationFacilityIdTextBox;
         private System.Windows.Forms.Label DonationFacilityId;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox DonationNurseIdTextBox;
         private System.Windows.Forms.Label DonationNurseId;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox DonationDonorIdTextBox;
         private System.Windows.Forms.Label DonationDonorId;
         private System.Windows.Forms.GroupBox FacilityBox;
         private System.Windows.Forms.ComboBox FacilityStateTextBox;
