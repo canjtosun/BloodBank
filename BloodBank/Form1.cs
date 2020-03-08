@@ -47,7 +47,7 @@ namespace BloodBank
                     DonorPhoneNumberTextBox.Text.ToString() + "');" +
 
                     //insert blood type **dont forget to delete validation**
-                    "INSERT INTO Blood (Type,ValidBlood)" + " VALUES('" +
+                    "INSERT INTO Blood (Type)" + " VALUES('" +
                     DonorBloodTypeBox.Text.ToString() + "','" +
 
                     //insert donation time when we add everything to the system
