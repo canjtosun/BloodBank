@@ -111,7 +111,7 @@ namespace BloodBank
 
                     if (rowCount > 1)
                     {
-                        throw new Exception("GetPerson resturned too many rows");
+                        throw new Exception("GetPerson returned too many rows");
                     }
 
                     result.ID = (int)rows["ID"];
