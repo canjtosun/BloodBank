@@ -141,10 +141,18 @@ namespace BloodBank
 
         private void NurseAddButton_Click(object sender, EventArgs e)
         {
-
+            AddPerson(DonorFirstNameTextBox.Text,
+                DonorMiddleNameTextBox.Text,
+                DonorLastNameTextBox.Text,
+                DonorPhoneNumberTextBox.Text);
         }
 
         private void FacilityAddButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
