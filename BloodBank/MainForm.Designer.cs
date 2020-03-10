@@ -182,7 +182,8 @@
             "AB-",
             "AB+",
             "O-",
-            "O+"});
+            "O+",
+            "Unknown"});
             this.DonorBloodTypeBox.Location = new System.Drawing.Point(170, 292);
             this.DonorBloodTypeBox.Name = "DonorBloodTypeBox";
             this.DonorBloodTypeBox.Size = new System.Drawing.Size(222, 33);
