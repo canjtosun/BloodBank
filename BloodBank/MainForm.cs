@@ -20,6 +20,12 @@ namespace BloodBank
         private const string INSERT_PERSON_COMMAND =
             "INSERT INTO Person (FirstName, MiddleName, LastName, PhoneNumber) VALUES ('{0}', '{1}', '{2}', '{3}');";
 
+        private const string INSERT_DONOR_COMMAND =
+            "INSERT INTO Donor (PersonID, BloodID) VALUES ('{0}', (SELECT Blood.ID FROM Blood WHERE Blood.Type = '{1}'));";
+
+        private const string INSERT_NURSE_COMMAND =
+            "INSERT INTO Nurse (PersonID) VALUES ('{0}');";
+
         private const string GET_FACILITY_COMMAND =
             "SELECT * FROM Facility WHERE Address1 = '{0}' and Address2 = '{1}' and City = '{2}' and State = '{3}' and ZipCode = '{4}' and FacilityPhone = '{5}';";
 
@@ -92,9 +98,43 @@ namespace BloodBank
             if (result.ID == 0)
             {
                 SQLCommand.CommandText = string.Format(INSERT_PERSON_COMMAND, firstName, middleName, lastName, phoneNumber);
+                SQLCommand.ExecuteNonQuery();     
+                result = GetPerson(firstName, middleName, lastName, phoneNumber);
+                MessageBox.Show("Success");
+            }
+
+            return result.ID;
+        }
+
+        private int AddDonor(string firstName, string middleName, string lastName, string phoneNumber, string bloodType)
+        {
+            Person result = GetPerson(firstName, middleName, lastName, phoneNumber);
+
+            if (result.ID == 0)
+            {
+                SQLCommand.CommandText = string.Format(INSERT_PERSON_COMMAND, firstName, middleName, lastName, phoneNumber);
+                SQLCommand.ExecuteNonQuery();
+                result = GetPerson(firstName, middleName, lastName, phoneNumber);
+                SQLCommand.CommandText = string.Format(INSERT_DONOR_COMMAND, result.ID, bloodType);
                 SQLCommand.ExecuteNonQuery();
                 MessageBox.Show("Success");
+            }
+
+            return result.ID;
+        }
+
+        private int AddNurse(string firstName, string middleName, string lastName, string phoneNumber)
+        {
+            Person result = GetPerson(firstName, middleName, lastName, phoneNumber);
+
+            if (result.ID == 0)
+            {
+                SQLCommand.CommandText = string.Format(INSERT_PERSON_COMMAND, firstName, middleName, lastName, phoneNumber);
+                SQLCommand.ExecuteNonQuery();
                 result = GetPerson(firstName, middleName, lastName, phoneNumber);
+                SQLCommand.CommandText = string.Format(INSERT_NURSE_COMMAND, result.ID);
+                SQLCommand.ExecuteNonQuery();
+                MessageBox.Show("Success");
             }
 
             return result.ID;
@@ -187,10 +227,11 @@ namespace BloodBank
                 DonorPhoneNumberTextBox.Text == "")
                 MessageBox.Show("* field cannot be empty!");
 
-            AddPerson(DonorFirstNameTextBox.Text,
+            AddDonor(DonorFirstNameTextBox.Text,
                 DonorMiddleNameTextBox.Text,
                 DonorLastNameTextBox.Text,
-                DonorPhoneNumberTextBox.Text);
+                DonorPhoneNumberTextBox.Text,
+                DonorBloodTypeBox.Text);
         }
 
         private void NurseAddButton_Click(object sender, EventArgs e)
@@ -200,10 +241,10 @@ namespace BloodBank
                 NursePhoneNumberTextBox.Text == "")
                 MessageBox.Show("* field cannot be empty!");
 
-            AddPerson(DonorFirstNameTextBox.Text,
-                DonorMiddleNameTextBox.Text,
-                DonorLastNameTextBox.Text,
-                DonorPhoneNumberTextBox.Text);
+            AddNurse(NurseFirstNameTextBox.Text,
+                NurseMiddleNameTextBox.Text,
+                NurseLastNameTextBox.Text,
+                NursePhoneNumberTextBox.Text);
         }
 
         private void FacilityAddButton_Click(object sender, EventArgs e)
