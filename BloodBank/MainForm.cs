@@ -32,6 +32,9 @@ namespace BloodBank
         private const string GET_DONOR_COMMAND =
             "SELECT * FROM Donor WHERE ID = '{0}' and PersonID = '{1}' and BloodID = '{2}';";
 
+        private const string GET_BLOOD_COMMAND =
+            "SELECT * FROM Blood WHERE ID = '{0}' and Type = '{1}';";
+
         static string connectionString = "SERVER=sql3.freemysqlhosting.net;PORT=3306;DATABASE=sql3326494;UID=sql3326494;PASSWORD=qwlhf4VVam";
 
         private MySqlConnection dbConnection;
@@ -186,7 +189,7 @@ namespace BloodBank
             int rowCount = 0;
 
             
-                SQLCommand.CommandText = string.Format(GET_DONOR_COMMAND, ID, PersonID, BloodID);
+            SQLCommand.CommandText = string.Format(GET_DONOR_COMMAND, ID, PersonID, BloodID);
 
             using (MySqlDataReader rows = SQLCommand.ExecuteReader())
             {
@@ -313,7 +316,34 @@ namespace BloodBank
             }
         }
 
-     
+        private Blood GetBlood(int ID, string Type)
+        {
+            Blood result = new Blood();
+            int rowCount = 0;
+
+
+            SQLCommand.CommandText = string.Format(GET_BLOOD_COMMAND, ID, Type);
+
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                while (rows.Read())
+                {
+                    rowCount++;
+
+                    if (rowCount > 1)
+                    {
+                        throw new Exception("GetBlood returned too many rows");
+                    }
+
+                    result.ID = (int)rows["ID"];
+                    result.Type = rows["Type"].ToString();
+                }
+            }
+
+            return result;
+        }
+
+
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -321,14 +351,12 @@ namespace BloodBank
 
         private void DonorLookUpIdButton_Click(object sender, EventArgs e)
         {
-            //string get_donor_id =
-            //"SELECT Donor.ID AS DonorID FROM Donor JOIN Person ON(Person.ID = Donor.Personid) WHERE " +
-            //"Person.FirstName = " + DonorFirstNameTextBox.Text +
-            //"AND Person.LastName =" + DonorLastNameTextBox.Text +
-            //"AND Person.PhoneNumber =" + DonorPhoneNumberTextBox.Text +
-            //"AND Donor.BloodID =" + DonorBloodTypeBox + ";";
+            string value = DonorBloodTypeBox.GetItemText(DonorBloodTypeBox.SelectedItem);
+            SQLCommand.CommandText = string.Format(DonorFirstNameTextBox.Text, DonorMiddleNameTextBox.Text, DonorLastNameTextBox.Text, DonorPhoneNumberTextBox.Text);
+
 
             GetPerson(DonorFirstNameTextBox.Text, DonorMiddleNameTextBox.Text, DonorLastNameTextBox.Text, DonorPhoneNumberTextBox.Text);
+            int rowCount = 0;
 
             //push user to fill up not null info      
             if (DonorFirstNameTextBox.Text == "" || DonorLastNameTextBox.Text == "" ||
@@ -343,8 +371,15 @@ namespace BloodBank
                     //fill up small table
                     while (rows.Read())
                     {
-                        //Result.Items.Add("Donor ID: " + rows[AddDonor]).ToString();
-                        Result.Items.Add("First Name: " + rows["FirstName"]).ToString();
+                        rowCount++;
+
+                        if (rowCount > 1)
+                        {
+                            throw new Exception("GetPerson returned too many rows");
+                        }
+
+                        Result.Items.Add("Donor ID: " + rows["Donor.ID"]).ToString();
+                        Result.Items.Add("First Name: " + rows["FirstName1"]).ToString();
                         Result.Items.Add("Middle Name: " +rows["MiddleName"]).ToString();
                         Result.Items.Add("Last Name: "+ rows["LastName"]).ToString();
                         Result.Items.Add("Phone Number: " +rows["PhoneNumber"]).ToString();
