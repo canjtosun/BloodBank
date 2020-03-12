@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.DonorBox = new System.Windows.Forms.GroupBox();
-            this.DonorLookUpIdButton = new System.Windows.Forms.Button();
             this.DonorUpdateButton = new System.Windows.Forms.Button();
             this.DonorAddButton = new System.Windows.Forms.Button();
             this.DonorBloodTypeBox = new System.Windows.Forms.ComboBox();
@@ -109,6 +108,7 @@
             this.ExplanationBox6 = new System.Windows.Forms.RichTextBox();
             this.BloodTypeViewTextBox6 = new System.Windows.Forms.ComboBox();
             this.BloodTypeView6 = new System.Windows.Forms.Label();
+            this.DonorLookUpIdButton = new System.Windows.Forms.Button();
             this.DonorBox.SuspendLayout();
             this.NurseBox.SuspendLayout();
             this.DonationBox.SuspendLayout();
@@ -137,16 +137,6 @@
             this.DonorBox.TabIndex = 0;
             this.DonorBox.TabStop = false;
             this.DonorBox.Text = "Donor";
-            // 
-            // DonorLookUpIdButton
-            // 
-            this.DonorLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorLookUpIdButton.Location = new System.Drawing.Point(272, 349);
-            this.DonorLookUpIdButton.Name = "DonorLookUpIdButton";
-            this.DonorLookUpIdButton.Size = new System.Drawing.Size(120, 38);
-            this.DonorLookUpIdButton.TabIndex = 12;
-            this.DonorLookUpIdButton.Text = "Look Up ID";
-            this.DonorLookUpIdButton.UseVisualStyleBackColor = true;
             // 
             // DonorUpdateButton
             // 
@@ -1003,6 +993,17 @@
             this.BloodTypeView6.TabIndex = 26;
             this.BloodTypeView6.Text = "Blood Type";
             // 
+            // DonorLookUpIdButton
+            // 
+            this.DonorLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorLookUpIdButton.Location = new System.Drawing.Point(269, 349);
+            this.DonorLookUpIdButton.Name = "DonorLookUpIdButton";
+            this.DonorLookUpIdButton.Size = new System.Drawing.Size(123, 38);
+            this.DonorLookUpIdButton.TabIndex = 12;
+            this.DonorLookUpIdButton.Text = "Look Up ID";
+            this.DonorLookUpIdButton.UseVisualStyleBackColor = true;
+            this.DonorLookUpIdButton.Click += new System.EventHandler(this.DonorLookUpIdButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1065,7 +1066,6 @@
         private System.Windows.Forms.TextBox DonorFirstNameTextBox;
         private System.Windows.Forms.Label DonorFirstName;
         private System.Windows.Forms.ComboBox DonorBloodTypeBox;
-        private System.Windows.Forms.Button DonorLookUpIdButton;
         private System.Windows.Forms.Button DonorUpdateButton;
         private System.Windows.Forms.Button DonorAddButton;
         private System.Windows.Forms.GroupBox NurseBox;
@@ -1135,6 +1135,7 @@
         private System.Windows.Forms.Label BloodTypeView6;
         private System.Windows.Forms.TextBox DonationDonationTypeTextBox;
         private System.Windows.Forms.Label DonationDonationType;
+        private System.Windows.Forms.Button DonorLookUpIdButton;
     }
 }
 
