@@ -35,6 +35,84 @@ namespace BloodBank
         private const string GET_NURSE_COMMAND =
         "SELECT Nurse.ID, Nurse.PersonID FROM Nurse JOIN Person ON (Person.ID = Nurse.PersonID) WHERE Person.ID = '{0}';";
 
+        //****** BEGIN View Button Queries  ********* 
+
+        //View blood donation information (WORKS BUT CAN BE REFACTORED)
+        private const string VIEW_DONATION_INFO =
+            "SELECT BInfo.*, DInfo.*, NInfo.*, FInfo.* " +
+            "FROM " +
+            "( " +
+                "SELECT  Donation.DateTime DateTime, BloodBag.Status Status, " +
+                    "DonationType.Description Description " +
+                "FROM Donation " +
+                    "JOIN BloodBag ON (Donation.BloodBagID = BloodBag.ID) " +
+                    "JOIN DonationType ON (BloodBag.DonationtypeID = DonationType.ID) " +
+            ")BInfo, " +
+            "( " +
+                "SELECT  Blood.Type BloodType, Person.FirstName DonorFirstName, " +
+                    "Person.LastName DonorLastName, " +
+                    "Person.PhoneNumber DonorPhone " +
+                "FROM Donation " +
+                    "JOIN Donor ON (Donation.DonorID = Donor.ID) " +
+                    "JOIN Person ON (Donor.PersonID = Person.ID) " +
+                    "JOIN Blood ON (Donor.BloodID = Blood.ID) " +
+            ")DInfo, " +
+            "( " +
+                "SELECT  Person.FirstName NurseFirstName, " +
+                    "Person.LastName NurseLastName, " +
+                    "Person.PhoneNumber NursePhone " +
+                "FROM Donation " +
+                    "JOIN Nurse ON (Donation.NurseID = Nurse.ID) " +
+                    "JOIN Person ON (Nurse.PersonID = Person.ID) " +
+            ")NInfo, " +
+            "( " +
+            "SELECT  Facility.City City, Facility.State State " +
+            "FROM Donation " +
+            "JOIN Facility ON (Donation.FacilityID = Facility.ID) " +
+            ")FInfo; ";
+
+
+        // View blood donations by type (we can add more information as needed, whatever makes sense) 
+        private const string VIEW_DONATIONS_BY_TYPE =
+            "SELECT Blood.Type BloodType, DonationType.Description Description, " +
+                "BloodBag.Status Status, Donation.DateTime DateTime, " +
+                "Person.FirstName, Person.LastName, Person.PhoneNumber, " +
+                "Facility.City City, Facility.State State " +
+            "FROM Donation " +
+                "JOIN Donor ON(Donation.DonorID = Donor.ID) " +
+                "JOIN Person ON(Donor.PersonID = Person.ID) " +
+                "JOIN Blood ON(Donor.BloodID = Blood.ID) " +
+                "JOIN BloodBag ON(Donation.BloodBagID = BloodBag.ID) " +
+                "JOIN DonationType ON(BloodBag.DonationTypeID = DonationType.ID) " +
+                "JOIN Facility ON(Donation.FacilityID = Facility.ID) " +
+            "ORDER BY Blood.Type;";
+
+
+        // View donors by type of blood with phone number (ordered by bloodType).
+        private const string VIEW_DONORS_BY_BLOODTYPE =
+            "SELECT Blood.Type BloodType, Person.FirstName FirstName, " +
+                "Person.MiddleName MiddleName, Person.LastName LastName, " +
+                "Person.PhoneNumber PhoneNumber " +
+            "FROM Donor " +
+                "JOIN Person ON(Donor.PersonID = Person.ID) " +
+                "JOIN Blood ON(Donor.BloodID = Blood.ID) " +
+             "ORDER BY BloodType;";
+
+
+        // View blood donation Facilities
+        private const string VIEW_FACILITIES =
+            "SELECT Facility.Address1 Address1, Facility.Address2 Address2, Facility.City City, " +
+                "Facility.State State, Facility.ZipCode ZipCode, " +
+                "Facility.FacilityPhone FacilityPhone " +
+            "FROM Facility; ";
+
+
+        //View inventory at all facilities (in-progress)
+
+
+        //****** END View Button Queries  ********* 
+
+
         //private const string GET_BLOOD_COMMAND =
         //    "SELECT * FROM Blood WHERE ID = '{0}' and Type = '{1}';";
 
