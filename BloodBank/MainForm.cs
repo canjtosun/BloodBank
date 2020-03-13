@@ -35,41 +35,36 @@ namespace BloodBank
         private const string GET_NURSE_COMMAND =
         "SELECT Nurse.ID, Nurse.PersonID FROM Nurse JOIN Person ON (Person.ID = Nurse.PersonID) WHERE Person.ID = '{0}';";
 
-        //****** BEGIN View Button Queries  ********* 
+        //****** BEGIN VIEW string queries  ********* 
 
-        //View blood donation information (WORKS BUT CAN BE REFACTORED)
+        //View blood donation information
         private const string VIEW_DONATION_INFO =
-            "SELECT BInfo.*, DInfo.*, NInfo.*, FInfo.* " +
+            "SELECT DInfo.*, NInfo.* " +
             "FROM " +
             "( " +
-                "SELECT  Donation.DateTime DateTime, BloodBag.Status Status, " +
-                    "DonationType.Description Description " +
-                "FROM Donation " +
-                    "JOIN BloodBag ON (Donation.BloodBagID = BloodBag.ID) " +
-                    "JOIN DonationType ON (BloodBag.DonationtypeID = DonationType.ID) " +
-            ")BInfo, " +
-            "( " +
-                "SELECT  Blood.Type BloodType, Person.FirstName DonorFirstName, " +
+                "SELECT Donation.DateTime DateTime, BloodBag.Status Status, " +
+                    "DonationType.Description Description, Blood.Type BloodType, " +
+                    "Person.FirstName DonorFirstName, " +
                     "Person.LastName DonorLastName, " +
                     "Person.PhoneNumber DonorPhone " +
                 "FROM Donation " +
                     "JOIN Donor ON (Donation.DonorID = Donor.ID) " +
-                    "JOIN Person ON (Donor.PersonID = Person.ID) " +
-                    "JOIN Blood ON (Donor.BloodID = Blood.ID) " +
+                    "JOIN Person ON(Donor.PersonID = Person.ID) " +
+                    "JOIN Blood ON(Donor.BloodID = Blood.ID) " +
+                    "JOIN BloodBag ON(Donation.BloodBagID = BloodBag.ID) " +
+                    "JOIN DonationType ON(BloodBag.DonationtypeID = DonationType.ID) " +
             ")DInfo, " +
             "( " +
-                "SELECT  Person.FirstName NurseFirstName, " +
+                "SELECT Person.FirstName NurseFirstName, " +
                     "Person.LastName NurseLastName, " +
-                    "Person.PhoneNumber NursePhone " +
+                    "Person.PhoneNumber NursePhone, " +
+                    "Facility.City City, Facility.State State " +
                 "FROM Donation " +
-                    "JOIN Nurse ON (Donation.NurseID = Nurse.ID) " +
-                    "JOIN Person ON (Nurse.PersonID = Person.ID) " +
-            ")NInfo, " +
-            "( " +
-            "SELECT  Facility.City City, Facility.State State " +
-            "FROM Donation " +
-            "JOIN Facility ON (Donation.FacilityID = Facility.ID) " +
-            ")FInfo; ";
+                    "JOIN Nurse ON(Donation.NurseID = Nurse.ID) " +
+                    "JOIN Person ON(Nurse.PersonID = Person.ID) " +
+                    "JOIN Facility ON(Donation.FacilityID = Facility.ID) " +
+            ")NInfo " +
+            "ORDER BY DInfo.Description;";
 
 
         // View blood donations by type (we can add more information as needed, whatever makes sense) 
@@ -107,8 +102,22 @@ namespace BloodBank
             "FROM Facility; ";
 
 
-        //View inventory at all facilities (in-progress)
-
+        //View inventory at all facilities
+        private const string VIEW_FACILITY_INVENTORY =
+            "SELECT COUNT(DonationType.Description) Count, Blood.Type BloodType, " +
+                "DonationType.Description Description, " +
+                "BloodBag.Status Status, Facility.Address1 Address1, " +
+                "Facility.Address2 Address2, Facility.City City, " +
+                "Facility.State State, Facility.ZipCode ZipCode, " +
+                "Facility.FacilityPhone FacilityPhone " +
+            "FROM Facility " +
+                "JOIN Inventory ON(Facility.InventoryID = Inventory.ID) " +
+                "LEFT JOIN BloodBag ON(Inventory.BloodBagID = BloodBag.ID) " +
+                "LEFT JOIN DonationType ON(BloodBag.DonationTypeID = DonationType.ID) " +
+                "LEFT JOIN Donation ON(BloodBag.ID = Donation.BloodBagID) " +
+                "LEFT JOIN Donor ON(Donation.DonorID = Donor.ID) " +
+                "LEFT JOIN Blood ON(Donor.BloodID = Blood.ID) " +
+            "GROUP BY Facility.ID, Blood.Type, DonationType.Description, DonationType.Description;";
 
         //****** END View Button Queries  ********* 
 
