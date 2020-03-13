@@ -72,8 +72,6 @@
             this.FacilityStateTextBox = new System.Windows.Forms.ComboBox();
             this.FacilityLookUpIdButton = new System.Windows.Forms.Button();
             this.FacilityAddButton = new System.Windows.Forms.Button();
-            this.FacilityInverntoryIdTextBox = new System.Windows.Forms.TextBox();
-            this.FacilityInventoryId = new System.Windows.Forms.Label();
             this.FacilityFacilityPhoneTextBox = new System.Windows.Forms.TextBox();
             this.FacilityFacilityPhone = new System.Windows.Forms.Label();
             this.FacilityZipCodeTextBox = new System.Windows.Forms.TextBox();
@@ -302,6 +300,7 @@
             this.NurseLookUpIdButton.TabIndex = 12;
             this.NurseLookUpIdButton.Text = "Look Up ID";
             this.NurseLookUpIdButton.UseVisualStyleBackColor = true;
+            this.NurseLookUpIdButton.Click += new System.EventHandler(this.NurseLookUpIdButton_Click);
             // 
             // NurseUpdateButton
             // 
@@ -544,8 +543,6 @@
             this.FacilityBox.Controls.Add(this.FacilityStateTextBox);
             this.FacilityBox.Controls.Add(this.FacilityLookUpIdButton);
             this.FacilityBox.Controls.Add(this.FacilityAddButton);
-            this.FacilityBox.Controls.Add(this.FacilityInverntoryIdTextBox);
-            this.FacilityBox.Controls.Add(this.FacilityInventoryId);
             this.FacilityBox.Controls.Add(this.FacilityFacilityPhoneTextBox);
             this.FacilityBox.Controls.Add(this.FacilityFacilityPhone);
             this.FacilityBox.Controls.Add(this.FacilityZipCodeTextBox);
@@ -647,24 +644,6 @@
             this.FacilityAddButton.Text = "Add";
             this.FacilityAddButton.UseVisualStyleBackColor = true;
             this.FacilityAddButton.Click += new System.EventHandler(this.FacilityAddButton_Click);
-            // 
-            // FacilityInverntoryIdTextBox
-            // 
-            this.FacilityInverntoryIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityInverntoryIdTextBox.Location = new System.Drawing.Point(170, 405);
-            this.FacilityInverntoryIdTextBox.Name = "FacilityInverntoryIdTextBox";
-            this.FacilityInverntoryIdTextBox.Size = new System.Drawing.Size(222, 30);
-            this.FacilityInverntoryIdTextBox.TabIndex = 21;
-            // 
-            // FacilityInventoryId
-            // 
-            this.FacilityInventoryId.AutoSize = true;
-            this.FacilityInventoryId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityInventoryId.Location = new System.Drawing.Point(6, 405);
-            this.FacilityInventoryId.Name = "FacilityInventoryId";
-            this.FacilityInventoryId.Size = new System.Drawing.Size(116, 25);
-            this.FacilityInventoryId.TabIndex = 20;
-            this.FacilityInventoryId.Text = "Inventory ID";
             // 
             // FacilityFacilityPhoneTextBox
             // 
@@ -1096,8 +1075,6 @@
         private System.Windows.Forms.ComboBox FacilityStateTextBox;
         private System.Windows.Forms.Button FacilityLookUpIdButton;
         private System.Windows.Forms.Button FacilityAddButton;
-        private System.Windows.Forms.TextBox FacilityInverntoryIdTextBox;
-        private System.Windows.Forms.Label FacilityInventoryId;
         private System.Windows.Forms.TextBox FacilityFacilityPhoneTextBox;
         private System.Windows.Forms.Label FacilityFacilityPhone;
         private System.Windows.Forms.TextBox FacilityZipCodeTextBox;

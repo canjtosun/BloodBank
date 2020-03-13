@@ -53,12 +53,14 @@
     <Compile Include="Blood.cs" />
     <Compile Include="Donor.cs" />
     <Compile Include="Facility.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nurse.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
