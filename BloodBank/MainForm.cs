@@ -29,11 +29,14 @@ namespace BloodBank
         private const string GET_FACILITY_COMMAND =
             "SELECT * FROM Facility WHERE Address1 = '{0}' and Address2 = '{1}' and City = '{2}' and State = '{3}' and ZipCode = '{4}' and FacilityPhone = '{5}';";
 
-        private const string GET_DONOR_COMMAND =
-            "SELECT * FROM Donor WHERE ID = '{0}' and PersonID = '{1}' and BloodID = '{2}';";
+        //private const string GET_DONOR_COMMAND =
+        //    "SELECT * FROM Donor WHERE ID = '{0}' and PersonID = '{1}' and BloodID = '{2}';";
 
-        private const string GET_BLOOD_COMMAND =
-            "SELECT * FROM Blood WHERE ID = '{0}' and Type = '{1}';";
+        private const string GET_DONOR_COMMAND =
+       "SELECT Donor.ID, Donor.PersonID, BloodID FROM Donor JOIN Person ON (Person.ID = Donor.PersonID) JOIN Blood ON (Blood.ID = Donor.BloodID) WHERE Person.ID = '{0}' and Blood.Type = '{1}';";
+
+        //private const string GET_BLOOD_COMMAND =
+        //    "SELECT * FROM Blood WHERE ID = '{0}' and Type = '{1}';";
 
         static string connectionString = "SERVER=sql3.freemysqlhosting.net;PORT=3306;DATABASE=sql3326494;UID=sql3326494;PASSWORD=qwlhf4VVam";
 
@@ -183,33 +186,69 @@ namespace BloodBank
             return result;
         }
 
-        private Donor GetDonor(int ID, int PersonID, int BloodID)
+        //private Donor GetDonor(int ID, int PersonID, int BloodID)
+        //{
+        //    Donor result = new Donor();
+        //    int rowCount = 0;
+
+
+        //    SQLCommand.CommandText = string.Format(GET_DONOR_COMMAND, ID, PersonID, BloodID);
+
+        //    using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+        //    {
+        //        while (rows.Read())
+        //        {
+        //            rowCount++;
+
+        //            if (rowCount > 1)
+        //            {
+        //                throw new Exception("GetPerson returned too many rows");
+        //            }
+
+        //            result.ID = (int)rows["ID"];
+        //            result.PersonID = (int)rows["PersonID"];
+        //            result.BloodID = (int)rows["BloodID"];
+
+        //        }
+        //    }
+
+        //    return result;
+        //}
+
+        private Donor GetDonor(string firstName, string middleName, string lastName, string phoneNumber, string bloodType)
         {
-            Donor result = new Donor();
+            Donor donor = new Donor();
             int rowCount = 0;
+            Person person = GetPerson(firstName, middleName, lastName, phoneNumber);
 
-            
-            SQLCommand.CommandText = string.Format(GET_DONOR_COMMAND, ID, PersonID, BloodID);
-
-            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            if (person.ID != 0)
             {
-                while (rows.Read())
+                SQLCommand.CommandText = string.Format(GET_DONOR_COMMAND, person.ID, bloodType);
+
+                using (MySqlDataReader rows = SQLCommand.ExecuteReader())
                 {
-                    rowCount++;
-
-                    if (rowCount > 1)
+                    while (rows.Read())
                     {
-                        throw new Exception("GetPerson returned too many rows");
+                        rowCount++;
+
+                        if (rowCount > 1)
+                        {
+                            throw new Exception("GetDonorID returned too many rows");
+                        }
+
+                        donor.ID = (int)rows["ID"];
+                        donor.PersonID = (int)rows["PersonID"];
+                        donor.BloodID = (int)rows["BloodID"];
                     }
-
-                    result.ID = (int)rows["ID"];
-                    result.PersonID = (int)rows["PersonID"];
-                    result.BloodID = (int)rows["BloodID"];
-
                 }
+                MessageBox.Show("Look up of DonorID is successful. See the output box.");
+            }
+            else
+            {
+                MessageBox.Show("Couldn't find this donor in the database. Please try again!");
             }
 
-            return result;
+            return donor;
         }
 
         private int AddFacility(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
@@ -279,6 +318,29 @@ namespace BloodBank
             
         }
 
+        private void DonorLookUpIdButton_Click(object sender, EventArgs e)
+        {
+            if (DonorFirstNameTextBox.Text == "" || DonorLastNameTextBox.Text == "" ||
+                DonorPhoneNumberTextBox.Text == "")
+                MessageBox.Show("* field cannot be empty!");
+
+            else
+            {
+                Donor donor = GetDonor(DonorFirstNameTextBox.Text,
+                DonorMiddleNameTextBox.Text,
+                DonorLastNameTextBox.Text,
+                DonorPhoneNumberTextBox.Text,
+                DonorBloodTypeBox.Text);
+
+                int donorID = donor.ID;
+                if (donorID != 0)
+                {
+                    Result.Items.Add("Donor ID: " + donorID).ToString();
+                }
+            }
+
+        }
+
         private void NurseAddButton_Click(object sender, EventArgs e)
         {
 
@@ -316,32 +378,32 @@ namespace BloodBank
             }
         }
 
-        private Blood GetBlood(int ID, string Type)
-        {
-            Blood result = new Blood();
-            int rowCount = 0;
+        //private Blood GetBlood(int ID, string Type)
+        //{
+        //    Blood result = new Blood();
+        //    int rowCount = 0;
 
 
-            SQLCommand.CommandText = string.Format(GET_BLOOD_COMMAND, ID, Type);
+        //    SQLCommand.CommandText = string.Format(GET_BLOOD_COMMAND, ID, Type);
 
-            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
-            {
-                while (rows.Read())
-                {
-                    rowCount++;
+        //    using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+        //    {
+        //        while (rows.Read())
+        //        {
+        //            rowCount++;
 
-                    if (rowCount > 1)
-                    {
-                        throw new Exception("GetBlood returned too many rows");
-                    }
+        //            if (rowCount > 1)
+        //            {
+        //                throw new Exception("GetBlood returned too many rows");
+        //            }
 
-                    result.ID = (int)rows["ID"];
-                    result.Type = rows["Type"].ToString();
-                }
-            }
+        //            result.ID = (int)rows["ID"];
+        //            result.Type = rows["Type"].ToString();
+        //        }
+        //    }
 
-            return result;
-        }
+        //    return result;
+        //}
 
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -349,45 +411,45 @@ namespace BloodBank
 
         }
 
-        private void DonorLookUpIdButton_Click(object sender, EventArgs e)
-        {
-            string value = DonorBloodTypeBox.GetItemText(DonorBloodTypeBox.SelectedItem);
-            SQLCommand.CommandText = string.Format(DonorFirstNameTextBox.Text, DonorMiddleNameTextBox.Text, DonorLastNameTextBox.Text, DonorPhoneNumberTextBox.Text);
+        //private void DonorLookUpIdButton_Click(object sender, EventArgs e)
+        //{
+        //    string value = DonorBloodTypeBox.GetItemText(DonorBloodTypeBox.SelectedItem);
+        //    SQLCommand.CommandText = string.Format(DonorFirstNameTextBox.Text, DonorMiddleNameTextBox.Text, DonorLastNameTextBox.Text, DonorPhoneNumberTextBox.Text);
 
 
-            GetPerson(DonorFirstNameTextBox.Text, DonorMiddleNameTextBox.Text, DonorLastNameTextBox.Text, DonorPhoneNumberTextBox.Text);
-            int rowCount = 0;
+        //    GetPerson(DonorFirstNameTextBox.Text, DonorMiddleNameTextBox.Text, DonorLastNameTextBox.Text, DonorPhoneNumberTextBox.Text);
+        //    int rowCount = 0;
 
-            //push user to fill up not null info      
-            if (DonorFirstNameTextBox.Text == "" || DonorLastNameTextBox.Text == "" ||
-                DonorPhoneNumberTextBox.Text == "")
-                MessageBox.Show("* field cannot be empty!");
+        //    //push user to fill up not null info      
+        //    if (DonorFirstNameTextBox.Text == "" || DonorLastNameTextBox.Text == "" ||
+        //        DonorPhoneNumberTextBox.Text == "")
+        //        MessageBox.Show("* field cannot be empty!");
 
-            else
-            {
-                //get the command
-                using (MySqlDataReader rows = SQLCommand.ExecuteReader())
-                {
-                    //fill up small table
-                    while (rows.Read())
-                    {
-                        rowCount++;
+        //    else
+        //    {
+        //        //get the command
+        //        using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+        //        {
+        //            //fill up small table
+        //            while (rows.Read())
+        //            {
+        //                rowCount++;
 
-                        if (rowCount > 1)
-                        {
-                            throw new Exception("GetPerson returned too many rows");
-                        }
+        //                if (rowCount > 1)
+        //                {
+        //                    throw new Exception("GetPerson returned too many rows");
+        //                }
 
-                        Result.Items.Add("Donor ID: " + rows["Donor.ID"]).ToString();
-                        Result.Items.Add("First Name: " + rows["FirstName1"]).ToString();
-                        Result.Items.Add("Middle Name: " +rows["MiddleName"]).ToString();
-                        Result.Items.Add("Last Name: "+ rows["LastName"]).ToString();
-                        Result.Items.Add("Phone Number: " +rows["PhoneNumber"]).ToString();
+        //                Result.Items.Add("Donor ID: " + rows["Donor.ID"]).ToString();
+        //                Result.Items.Add("First Name: " + rows["FirstName1"]).ToString();
+        //                Result.Items.Add("Middle Name: " +rows["MiddleName"]).ToString();
+        //                Result.Items.Add("Last Name: "+ rows["LastName"]).ToString();
+        //                Result.Items.Add("Phone Number: " +rows["PhoneNumber"]).ToString();
                     
-                    }
-                }
+        //            }
+        //        }
 
-            }
-        }
+        //    }
+        //}
     }
 }
