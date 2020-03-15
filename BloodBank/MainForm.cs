@@ -13,6 +13,9 @@ namespace BloodBank
 {
     public partial class MainForm : Form
     {
+       
+
+
         private const string INSERT_PERSON_COMMAND =
             "INSERT INTO Person (FirstName, MiddleName, LastName, PhoneNumber) VALUES ('{0}', '{1}', '{2}', '{3}');";
 
@@ -147,6 +150,12 @@ namespace BloodBank
         public MainForm()
         {
             InitializeComponent();
+            //Default Values fdor dropdown menus
+            DonorBloodTypeBox.Text = "Select Blood Type";
+            FacilityStateTextBox.Text = "Select State";
+            BloodTypeViewTextBox.Text = "Select Blood Type";
+            DescriptionViewTextBox.Text = "Select Description";
+            BloodTypeViewTextBox6.Text = "Select Blood Type";
         }
 
         /// <summary>
@@ -383,7 +392,6 @@ namespace BloodBank
         private Facility GetFacility(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
         {
             Facility facility = new Facility();
-            int rowCount = 0;
 
             SQLCommand.CommandText = string.Format(GET_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
 
@@ -391,15 +399,7 @@ namespace BloodBank
             {
                 while (rows.Read())
                 {
-                    rowCount++;
-
-                    if (rowCount > 1)
-                    {
-                        throw new Exception("GetFacility returned too many rows");
-                    }
-
                     facility.ID = (int)rows["ID"];
-
                 }               
             }
 
@@ -577,8 +577,6 @@ namespace BloodBank
 
 
 
-
-
         //view Buttons
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -588,7 +586,9 @@ namespace BloodBank
 
         private void Explanation1View_Click(object sender, EventArgs e)
         {
-            string value = BloodTypeViewTextBox.SelectedItem.ToString();
+            var value = BloodTypeViewTextBox.SelectedItem.ToString();
+
+
             string get_all_donors_info_with_blood_type =
             "SELECT Donor.ID DonorID, Blood.Type BloodType, Person.FirstName FirstName, Person.MiddleName MiddleName, " +
             "Person.LastName LastName,Person.PhoneNumber PhoneNumber" +
@@ -625,7 +625,30 @@ namespace BloodBank
             }
         }
 
+        private void Explanation2View_Click(object sender, EventArgs e)
+        {
+            string blood_donation_facilities =
+            "SELECT Facility.ID ID, Facility.Address1 Address1, Facility.Address2 Address2, Facility.City City," +
+            " Facility.State State, Facility.ZipCode ZipCode,Facility.FacilityPhone FacilityPhone " +
+            "From Facility; ";
 
+            SQLCommand.CommandText = string.Format(blood_donation_facilities);
 
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                Result.Items.Clear();
+
+                while (rows.Read())
+                {
+                    Result.Items.Add("Facility ID: " + rows["ID"]).ToString();
+                    Result.Items.Add("Adress1: " + rows["Address1"]).ToString();
+                    Result.Items.Add("Adress2: " + rows["Address2"]).ToString();
+                    Result.Items.Add("City: " + rows["City"]).ToString();
+                    Result.Items.Add("ZipCode: " + rows["ZipCode"]).ToString();
+                    Result.Items.Add("Facility Phone: " + rows["FacilityPhone"]).ToString();
+                    Result.Items.Add("---------------------------").ToString();
+                }
+            }
+        }
     }
 }

@@ -174,6 +174,7 @@
             this.DonorBloodTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonorBloodTypeBox.FormattingEnabled = true;
             this.DonorBloodTypeBox.Items.AddRange(new object[] {
+            "Select Blood Type",
             "A-",
             "A+",
             "B-",
@@ -568,6 +569,7 @@
             this.FacilityStateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityStateTextBox.FormattingEnabled = true;
             this.FacilityStateTextBox.Items.AddRange(new object[] {
+            "Select State",
             "AL",
             "AK",
             "AZ",
@@ -752,69 +754,70 @@
             this.Result.ItemHeight = 20;
             this.Result.Location = new System.Drawing.Point(1138, 552);
             this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(574, 544);
+            this.Result.Size = new System.Drawing.Size(273, 544);
             this.Result.TabIndex = 4;
             // 
             // Explanation1View
             // 
-            this.Explanation1View.Location = new System.Drawing.Point(1004, 552);
+            this.Explanation1View.Location = new System.Drawing.Point(1040, 560);
             this.Explanation1View.Name = "Explanation1View";
-            this.Explanation1View.Size = new System.Drawing.Size(120, 49);
+            this.Explanation1View.Size = new System.Drawing.Size(70, 30);
             this.Explanation1View.TabIndex = 5;
-            this.Explanation1View.Text = "View";
+            this.Explanation1View.Text = "Show";
             this.Explanation1View.UseVisualStyleBackColor = true;
             this.Explanation1View.Click += new System.EventHandler(this.Explanation1View_Click);
             // 
             // Explanation2View
             // 
-            this.Explanation2View.Location = new System.Drawing.Point(1004, 655);
+            this.Explanation2View.Location = new System.Drawing.Point(1040, 663);
             this.Explanation2View.Name = "Explanation2View";
-            this.Explanation2View.Size = new System.Drawing.Size(120, 49);
+            this.Explanation2View.Size = new System.Drawing.Size(70, 30);
             this.Explanation2View.TabIndex = 6;
-            this.Explanation2View.Text = "View";
+            this.Explanation2View.Text = "Show";
             this.Explanation2View.UseVisualStyleBackColor = true;
+            this.Explanation2View.Click += new System.EventHandler(this.Explanation2View_Click);
             // 
             // Explanation3View
             // 
-            this.Explanation3View.Location = new System.Drawing.Point(1004, 752);
+            this.Explanation3View.Location = new System.Drawing.Point(1040, 760);
             this.Explanation3View.Name = "Explanation3View";
-            this.Explanation3View.Size = new System.Drawing.Size(120, 49);
+            this.Explanation3View.Size = new System.Drawing.Size(70, 30);
             this.Explanation3View.TabIndex = 7;
-            this.Explanation3View.Text = "View";
+            this.Explanation3View.Text = "Show";
             this.Explanation3View.UseVisualStyleBackColor = true;
             // 
             // Explanation4View
             // 
-            this.Explanation4View.Location = new System.Drawing.Point(1004, 851);
+            this.Explanation4View.Location = new System.Drawing.Point(1040, 859);
             this.Explanation4View.Name = "Explanation4View";
-            this.Explanation4View.Size = new System.Drawing.Size(120, 49);
+            this.Explanation4View.Size = new System.Drawing.Size(70, 30);
             this.Explanation4View.TabIndex = 8;
-            this.Explanation4View.Text = "View";
+            this.Explanation4View.Text = "Show";
             this.Explanation4View.UseVisualStyleBackColor = true;
             // 
             // Explanation5View
             // 
-            this.Explanation5View.Location = new System.Drawing.Point(1004, 949);
+            this.Explanation5View.Location = new System.Drawing.Point(1040, 957);
             this.Explanation5View.Name = "Explanation5View";
-            this.Explanation5View.Size = new System.Drawing.Size(120, 49);
+            this.Explanation5View.Size = new System.Drawing.Size(70, 30);
             this.Explanation5View.TabIndex = 9;
-            this.Explanation5View.Text = "View";
+            this.Explanation5View.Text = "Show";
             this.Explanation5View.UseVisualStyleBackColor = true;
             // 
             // Explanation6View
             // 
-            this.Explanation6View.Location = new System.Drawing.Point(1006, 1046);
+            this.Explanation6View.Location = new System.Drawing.Point(1040, 1054);
             this.Explanation6View.Name = "Explanation6View";
-            this.Explanation6View.Size = new System.Drawing.Size(120, 49);
+            this.Explanation6View.Size = new System.Drawing.Size(70, 30);
             this.Explanation6View.TabIndex = 10;
-            this.Explanation6View.Text = "View";
+            this.Explanation6View.Text = "Show";
             this.Explanation6View.UseVisualStyleBackColor = true;
             // 
             // ExplanationBox1
             // 
             this.ExplanationBox1.Location = new System.Drawing.Point(538, 552);
             this.ExplanationBox1.Name = "ExplanationBox1";
-            this.ExplanationBox1.Size = new System.Drawing.Size(230, 50);
+            this.ExplanationBox1.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox1.TabIndex = 11;
             this.ExplanationBox1.Text = "Donors with phone numbers for bloodtype";
             // 
@@ -822,7 +825,7 @@
             // 
             this.BloodTypeView.AutoSize = true;
             this.BloodTypeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BloodTypeView.Location = new System.Drawing.Point(776, 563);
+            this.BloodTypeView.Location = new System.Drawing.Point(708, 563);
             this.BloodTypeView.Name = "BloodTypeView";
             this.BloodTypeView.Size = new System.Drawing.Size(112, 25);
             this.BloodTypeView.TabIndex = 12;
@@ -834,6 +837,7 @@
             this.BloodTypeViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.BloodTypeViewTextBox.FormattingEnabled = true;
             this.BloodTypeViewTextBox.Items.AddRange(new object[] {
+            "Select Blood Type",
             "A-",
             "A+",
             "B-",
@@ -843,16 +847,16 @@
             "O-",
             "O+",
             "Unknown"});
-            this.BloodTypeViewTextBox.Location = new System.Drawing.Point(892, 560);
+            this.BloodTypeViewTextBox.Location = new System.Drawing.Point(824, 560);
             this.BloodTypeViewTextBox.Name = "BloodTypeViewTextBox";
-            this.BloodTypeViewTextBox.Size = new System.Drawing.Size(86, 33);
+            this.BloodTypeViewTextBox.Size = new System.Drawing.Size(195, 33);
             this.BloodTypeViewTextBox.TabIndex = 13;
             // 
             // ExplanationBox2
             // 
             this.ExplanationBox2.Location = new System.Drawing.Point(538, 655);
             this.ExplanationBox2.Name = "ExplanationBox2";
-            this.ExplanationBox2.Size = new System.Drawing.Size(230, 50);
+            this.ExplanationBox2.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox2.TabIndex = 14;
             this.ExplanationBox2.Text = "Blood donation facilities\n";
             // 
@@ -860,23 +864,23 @@
             // 
             this.ExplanationBox3.Location = new System.Drawing.Point(538, 752);
             this.ExplanationBox3.Name = "ExplanationBox3";
-            this.ExplanationBox3.Size = new System.Drawing.Size(230, 50);
+            this.ExplanationBox3.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox3.TabIndex = 15;
             this.ExplanationBox3.Text = "Inventory for Facility ID";
             // 
             // FacilityIdViewTextBox3
             // 
             this.FacilityIdViewTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdViewTextBox3.Location = new System.Drawing.Point(892, 758);
+            this.FacilityIdViewTextBox3.Location = new System.Drawing.Point(824, 758);
             this.FacilityIdViewTextBox3.Name = "FacilityIdViewTextBox3";
-            this.FacilityIdViewTextBox3.Size = new System.Drawing.Size(86, 30);
+            this.FacilityIdViewTextBox3.Size = new System.Drawing.Size(195, 30);
             this.FacilityIdViewTextBox3.TabIndex = 17;
             // 
             // FacilityIdView3
             // 
             this.FacilityIdView3.AutoSize = true;
             this.FacilityIdView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdView3.Location = new System.Drawing.Point(776, 758);
+            this.FacilityIdView3.Location = new System.Drawing.Point(708, 758);
             this.FacilityIdView3.Name = "FacilityIdView3";
             this.FacilityIdView3.Size = new System.Drawing.Size(96, 25);
             this.FacilityIdView3.TabIndex = 16;
@@ -886,7 +890,7 @@
             // 
             this.ExplanationBox4.Location = new System.Drawing.Point(538, 851);
             this.ExplanationBox4.Name = "ExplanationBox4";
-            this.ExplanationBox4.Size = new System.Drawing.Size(230, 50);
+            this.ExplanationBox4.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox4.TabIndex = 18;
             this.ExplanationBox4.Text = "All Blood Donations for Donation Type Description";
             // 
@@ -894,7 +898,7 @@
             // 
             this.DescriptionView.AutoSize = true;
             this.DescriptionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DescriptionView.Location = new System.Drawing.Point(776, 862);
+            this.DescriptionView.Location = new System.Drawing.Point(708, 862);
             this.DescriptionView.Name = "DescriptionView";
             this.DescriptionView.Size = new System.Drawing.Size(109, 25);
             this.DescriptionView.TabIndex = 19;
@@ -906,36 +910,37 @@
             this.DescriptionViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DescriptionViewTextBox.FormattingEnabled = true;
             this.DescriptionViewTextBox.Items.AddRange(new object[] {
+            "Select Description",
             "Plasma",
             "Platelet",
             "Power Red",
             "Whole Blood"});
-            this.DescriptionViewTextBox.Location = new System.Drawing.Point(892, 858);
+            this.DescriptionViewTextBox.Location = new System.Drawing.Point(824, 858);
             this.DescriptionViewTextBox.Name = "DescriptionViewTextBox";
-            this.DescriptionViewTextBox.Size = new System.Drawing.Size(86, 33);
+            this.DescriptionViewTextBox.Size = new System.Drawing.Size(195, 33);
             this.DescriptionViewTextBox.TabIndex = 20;
             // 
             // ExplanationBox5
             // 
             this.ExplanationBox5.Location = new System.Drawing.Point(538, 949);
             this.ExplanationBox5.Name = "ExplanationBox5";
-            this.ExplanationBox5.Size = new System.Drawing.Size(230, 50);
+            this.ExplanationBox5.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox5.TabIndex = 21;
             this.ExplanationBox5.Text = "All Blood Donations for Specific Date and Facility";
             // 
             // FacilityIdViewTextBox5
             // 
             this.FacilityIdViewTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdViewTextBox5.Location = new System.Drawing.Point(892, 949);
+            this.FacilityIdViewTextBox5.Location = new System.Drawing.Point(824, 949);
             this.FacilityIdViewTextBox5.Name = "FacilityIdViewTextBox5";
-            this.FacilityIdViewTextBox5.Size = new System.Drawing.Size(86, 30);
+            this.FacilityIdViewTextBox5.Size = new System.Drawing.Size(195, 30);
             this.FacilityIdViewTextBox5.TabIndex = 23;
             // 
             // FacilityIdView5
             // 
             this.FacilityIdView5.AutoSize = true;
             this.FacilityIdView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdView5.Location = new System.Drawing.Point(776, 949);
+            this.FacilityIdView5.Location = new System.Drawing.Point(708, 949);
             this.FacilityIdView5.Name = "FacilityIdView5";
             this.FacilityIdView5.Size = new System.Drawing.Size(96, 25);
             this.FacilityIdView5.TabIndex = 22;
@@ -943,9 +948,9 @@
             // 
             // DateView
             // 
-            this.DateView.Location = new System.Drawing.Point(780, 985);
+            this.DateView.Location = new System.Drawing.Point(824, 985);
             this.DateView.Name = "DateView";
-            this.DateView.Size = new System.Drawing.Size(200, 26);
+            this.DateView.Size = new System.Drawing.Size(197, 26);
             this.DateView.TabIndex = 24;
             this.DateView.Value = new System.DateTime(2020, 3, 8, 0, 50, 1, 0);
             // 
@@ -953,7 +958,7 @@
             // 
             this.ExplanationBox6.Location = new System.Drawing.Point(538, 1046);
             this.ExplanationBox6.Name = "ExplanationBox6";
-            this.ExplanationBox6.Size = new System.Drawing.Size(230, 50);
+            this.ExplanationBox6.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox6.TabIndex = 25;
             this.ExplanationBox6.Text = "All Blood Donations for Blood Type";
             // 
@@ -963,6 +968,7 @@
             this.BloodTypeViewTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.BloodTypeViewTextBox6.FormattingEnabled = true;
             this.BloodTypeViewTextBox6.Items.AddRange(new object[] {
+            "Select Blood Type",
             "A-",
             "A+",
             "B-",
@@ -972,16 +978,16 @@
             "O-",
             "O+",
             "Unknown"});
-            this.BloodTypeViewTextBox6.Location = new System.Drawing.Point(892, 1054);
+            this.BloodTypeViewTextBox6.Location = new System.Drawing.Point(824, 1054);
             this.BloodTypeViewTextBox6.Name = "BloodTypeViewTextBox6";
-            this.BloodTypeViewTextBox6.Size = new System.Drawing.Size(86, 33);
+            this.BloodTypeViewTextBox6.Size = new System.Drawing.Size(195, 33);
             this.BloodTypeViewTextBox6.TabIndex = 27;
             // 
             // BloodTypeView6
             // 
             this.BloodTypeView6.AutoSize = true;
             this.BloodTypeView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BloodTypeView6.Location = new System.Drawing.Point(776, 1057);
+            this.BloodTypeView6.Location = new System.Drawing.Point(708, 1057);
             this.BloodTypeView6.Name = "BloodTypeView6";
             this.BloodTypeView6.Size = new System.Drawing.Size(112, 25);
             this.BloodTypeView6.TabIndex = 26;
@@ -992,7 +998,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(1772, 1165);
+            this.ClientSize = new System.Drawing.Size(1661, 1165);
             this.Controls.Add(this.BloodTypeViewTextBox6);
             this.Controls.Add(this.BloodTypeView6);
             this.Controls.Add(this.ExplanationBox6);
