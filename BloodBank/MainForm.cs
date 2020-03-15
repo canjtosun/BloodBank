@@ -261,13 +261,6 @@ namespace BloodBank
 
 
 
-            INSERT INTO Inventory(ID)
-            VALUES(last_insert_rowid());
-
-            UPDATE Facility
-            SET InventoryID = (last_insert_rowid())
-            WHERE ID = last_insert_rowid();
-
 
             Facility result = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
 
