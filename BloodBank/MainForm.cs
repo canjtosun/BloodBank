@@ -13,10 +13,6 @@ namespace BloodBank
 {
     public partial class MainForm : Form
     {
-        private const string GET_PERSON_COMMAND =
-            "SELECT * FROM Person WHERE FirstName = '{0}' and MiddleName = '{1}' " +
-            "and LastName = '{2}' and PhoneNumber = '{3}';";
-
         private const string INSERT_PERSON_COMMAND =
             "INSERT INTO Person (FirstName, MiddleName, LastName, PhoneNumber) VALUES ('{0}', '{1}', '{2}', '{3}');";
 
@@ -26,6 +22,16 @@ namespace BloodBank
         private const string INSERT_NURSE_COMMAND =
             "INSERT INTO Nurse (PersonID) VALUES ('{0}');";
 
+        private const string INSERT_FACILITY_COMMAND =
+            "INSERT INTO Facility (Address1, Address2, City, State, ZipCode, FacilityPhone) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
+
+        private const string INSERT_INVENTORY_COMMAND =
+            "INSERT INTO Inventory (ID) VALUES(last_insert_id());";
+
+        private const string GET_PERSON_COMMAND =
+            "SELECT * FROM Person WHERE FirstName = '{0}' and MiddleName = '{1}' " +
+            "and LastName = '{2}' and PhoneNumber = '{3}';";
+
         private const string GET_FACILITY_COMMAND =
             "SELECT * FROM Facility WHERE Address1 = '{0}' and Address2 = '{1}' and City = '{2}' and State = '{3}' and ZipCode = '{4}' and FacilityPhone = '{5}';";
 
@@ -34,6 +40,14 @@ namespace BloodBank
 
         private const string GET_NURSE_COMMAND =
         "SELECT Nurse.ID, Nurse.PersonID FROM Nurse JOIN Person ON (Person.ID = Nurse.PersonID) WHERE Person.ID = '{0}';";
+
+        //private const string GET_INVENTORY_COMMAND =
+        //"SELECT Inventory.ID, Nurse.PersonID FROM Nurse JOIN Person ON (Person.ID = Nurse.PersonID) WHERE Person.ID = '{0}';";
+
+        private const string UPDATE_FACILIY_COMMAND =
+        "UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id())";
+
+
 
         //****** BEGIN VIEW string queries  ********* 
 
@@ -336,35 +350,39 @@ namespace BloodBank
 
             return nurse;
         }
+
+        //end of person/donor/nurse relationship
+
+
+
+
+
         
 
 
 
         private int AddFacility(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
         {
-            string insert_facility_command =
-            "INSERT INTO Facility (Address1, Address2, City, State, ZipCode, FacilityPhone) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
+            Facility facility = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
 
-
-
-
-
-            Facility result = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
-
-            if (result.ID == 0)
+            if (facility.ID == 0)
             {
-                SQLCommand.CommandText = string.Format(insert_facility_command, Address1, Address2, City, State, ZipCode, FacilityPhone);
+                SQLCommand.CommandText = string.Format(INSERT_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
+                SQLCommand.ExecuteNonQuery();
+                SQLCommand.CommandText = string.Format(INSERT_INVENTORY_COMMAND, facility.ID);
+                SQLCommand.CommandText = string.Format(INSERT_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
+                SQLCommand.ExecuteNonQuery();
                 SQLCommand.ExecuteNonQuery();
                 MessageBox.Show("Success");
-                result = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
             }
 
-            return result.ID;
+            return facility.ID;
         }
+
 
         private Facility GetFacility(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
         {
-            Facility result = new Facility();
+            Facility facility = new Facility();
             int rowCount = 0;
 
             SQLCommand.CommandText = string.Format(GET_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
@@ -380,18 +398,56 @@ namespace BloodBank
                         throw new Exception("GetFacility returned too many rows");
                     }
 
-                    result.ID = (int)rows["ID"];
-                    result.Address1 = rows["Address1"].ToString();
-                    result.Address2 = rows["Address2"].ToString();
-                    result.City = rows["City"].ToString();
-                    result.State = rows["State"].ToString();
-                    result.ZipCode = rows["ZipCode"].ToString();
-                    result.FacilityPhone = rows["FacilityPhone"].ToString();
-                }
+                    facility.ID = (int)rows["ID"];
+
+                }               
             }
 
-            return result;
+            return facility;
         }
+
+        //private int AddInventory(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
+        //{
+
+        //    Facility facility = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
+
+        //    if (facility.ID == 0)
+        //    {
+        //        SQLCommand.CommandText = string.Format(INSERT_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
+        //        SQLCommand.ExecuteNonQuery();
+        //        facility = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
+        //        SQLCommand.CommandText = string.Format(INSERT_INVENTORY_COMMAND, facility.ID);
+        //        SQLCommand.ExecuteNonQuery();
+        //        MessageBox.Show("Success");
+        //    }
+
+        //    return facility.ID;
+        //}
+
+        //private Inventory GetInventory(int ID, int BLoodBagID)
+        //{
+        //    Inventory inventory = new Inventory();
+        //    int rowCount = 0;
+
+        //    SQLCommand.CommandText = string.Format(GET_INVENTORY_COMMAND, ID);
+
+        //    using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+        //    {
+        //        while (rows.Read())
+        //        {
+        //            rowCount++;
+
+        //            if (rowCount > 1)
+        //            {
+        //                throw new Exception("GetInventory returned too many rows");
+        //            }
+
+        //            inventory.ID = (int)rows["ID"];
+        //        }
+        //    }
+
+        //    return inventory;
+        //}
 
         private void DonorAddButton_Click(object sender, EventArgs e)
         {
@@ -492,10 +548,84 @@ namespace BloodBank
             }
         }
 
+        private void FacilityLookUpIdButton_Click(object sender, EventArgs e)
+        {
+            if (FacilityAddress1TextBox.Text == "" || FacilityCityTextBox.Text == "" ||
+               FacilityStateTextBox.Text == "" || FacilityZipCodeTextBox.Text == "")
+            {
+                MessageBox.Show("* field cannot be empty!");
+            }
+
+            else
+            {
+                Facility facility = GetFacility(FacilityAddress1TextBox.Text,
+                FacilityAddress2TextBox.Text,
+                FacilityCityTextBox.Text,
+                FacilityStateTextBox.Text,
+                FacilityZipCodeTextBox.Text,
+                FacilityFacilityPhoneTextBox.Text);
+
+                int facilityID = facility.ID;
+                if (facilityID != 0)
+                {
+                    Result.Items.Add("Facility ID: " + facilityID).ToString();
+                }
+            }
+        }
+
+
+
+
+
+
+
+        //view Buttons
 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
-        }       
+        }
+
+        private void Explanation1View_Click(object sender, EventArgs e)
+        {
+            string value = BloodTypeViewTextBox.SelectedItem.ToString();
+            string get_all_donors_info_with_blood_type =
+            "SELECT Donor.ID DonorID, Blood.Type BloodType, Person.FirstName FirstName, Person.MiddleName MiddleName, " +
+            "Person.LastName LastName,Person.PhoneNumber PhoneNumber" +
+            " FROM Donor" +
+            " JOIN Person ON(Donor.PersonID = Person.ID) JOIN Blood ON(Donor.BloodID = Blood.ID)" +
+            " WHERE Blood.Type = '" + value + "';";
+
+            SQLCommand.CommandText = string.Format(get_all_donors_info_with_blood_type);
+      
+
+            if (BloodTypeViewTextBox.Text == "")
+                MessageBox.Show("Please choose blood type!");
+
+            else
+            {   
+                using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+                {
+                    Result.Items.Clear();
+
+                    while (rows.Read())
+                    {
+                        
+                        Result.Items.Add("Donor ID : " + rows["DonorID"]).ToString();
+                        Result.Items.Add("First Name : " +rows["FirstName"]).ToString();
+                        Result.Items.Add("Middle Name : " + rows["MiddleName"]).ToString();
+                        Result.Items.Add("Last Name : " + rows["LastName"]).ToString();
+                        Result.Items.Add("Phone Number : " + rows["PhoneNumber"]).ToString();
+                        Result.Items.Add("Blood Type : " + rows["BloodType"]).ToString();
+                        Result.Items.Add("---------------------------").ToString();
+                        
+                    }
+                    
+                }
+            }
+        }
+
+
+
     }
 }

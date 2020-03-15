@@ -633,6 +633,7 @@
             this.FacilityLookUpIdButton.TabIndex = 23;
             this.FacilityLookUpIdButton.Text = "Look Up ID";
             this.FacilityLookUpIdButton.UseVisualStyleBackColor = true;
+            this.FacilityLookUpIdButton.Click += new System.EventHandler(this.FacilityLookUpIdButton_Click);
             // 
             // FacilityAddButton
             // 
@@ -762,6 +763,7 @@
             this.Explanation1View.TabIndex = 5;
             this.Explanation1View.Text = "View";
             this.Explanation1View.UseVisualStyleBackColor = true;
+            this.Explanation1View.Click += new System.EventHandler(this.Explanation1View_Click);
             // 
             // Explanation2View
             // 
@@ -839,7 +841,8 @@
             "AB-",
             "AB+",
             "O-",
-            "O+"});
+            "O+",
+            "Unknown"});
             this.BloodTypeViewTextBox.Location = new System.Drawing.Point(892, 560);
             this.BloodTypeViewTextBox.Name = "BloodTypeViewTextBox";
             this.BloodTypeViewTextBox.Size = new System.Drawing.Size(86, 33);
@@ -967,7 +970,8 @@
             "AB-",
             "AB+",
             "O-",
-            "O+"});
+            "O+",
+            "Unknown"});
             this.BloodTypeViewTextBox6.Location = new System.Drawing.Point(892, 1054);
             this.BloodTypeViewTextBox6.Name = "BloodTypeViewTextBox6";
             this.BloodTypeViewTextBox6.Size = new System.Drawing.Size(86, 33);
@@ -987,6 +991,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(1772, 1165);
             this.Controls.Add(this.BloodTypeViewTextBox6);
             this.Controls.Add(this.BloodTypeView6);
@@ -1016,6 +1021,7 @@
             this.Controls.Add(this.DonationBox);
             this.Controls.Add(this.NurseBox);
             this.Controls.Add(this.DonorBox);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "MainForm";
             this.Text = "Blood Bank Database";
             this.Load += new System.EventHandler(this.MainForm_Load);
