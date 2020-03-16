@@ -54,6 +54,8 @@ namespace BloodBank
 
         //****** BEGIN VIEW string queries  ********* 
 
+        
+
         //View blood donation information
         private const string VIEW_DONATION_INFO =
             "SELECT DInfo.*, NInfo.* " +
@@ -156,6 +158,7 @@ namespace BloodBank
             BloodTypeViewTextBox.Text = "Select Blood Type";
             DescriptionViewTextBox.Text = "Select Description";
             BloodTypeViewTextBox6.Text = "Select Blood Type";
+            DonationDonationTypeTextBox.Text = "Select Description";
         }
 
         /// <summary>
@@ -360,6 +363,7 @@ namespace BloodBank
             return nurse;
         }
 
+
         //end of person/donor/nurse relationship
 
 
@@ -395,12 +399,20 @@ namespace BloodBank
 
             SQLCommand.CommandText = string.Format(GET_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
 
-            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            if(facility.ID != 0)
             {
-                while (rows.Read())
+                using (MySqlDataReader rows = SQLCommand.ExecuteReader())
                 {
-                    facility.ID = (int)rows["ID"];
-                }               
+                    while (rows.Read())
+                    {
+                        facility.ID = (int)rows["ID"];
+                    }
+                }
+                MessageBox.Show("Look up of Facility ID is successful. See the output box.");
+            }        
+            else
+            {
+                MessageBox.Show("Couldn't find this facility in the database. Please try again!");
             }
 
             return facility;
@@ -505,6 +517,28 @@ namespace BloodBank
                 NursePhoneNumberTextBox.Text);
             }
 
+        }
+
+        private void DonorUpdateButton_Click(object sender, EventArgs e)
+        {
+            if (DonorFirstNameTextBox.Text == "" || DonorLastNameTextBox.Text == "" ||
+                DonorPhoneNumberTextBox.Text == "")
+                MessageBox.Show("* field cannot be empty!");
+
+            else
+            {
+                Donor donor = GetDonor(DonorFirstNameTextBox.Text,
+                DonorMiddleNameTextBox.Text,
+                DonorLastNameTextBox.Text,
+                DonorPhoneNumberTextBox.Text,
+                DonorBloodTypeBox.Text);
+
+                int donorID = donor.ID;
+                if (donorID != 0)
+                {
+                    Result.Items.Add("Donor ID: " + donorID).ToString();
+                }
+            }
         }
 
         private void NurseLookUpIdButton_Click(object sender, EventArgs e)
@@ -650,5 +684,7 @@ namespace BloodBank
                 }
             }
         }
+
+        
     }
 }
