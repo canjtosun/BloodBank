@@ -33,6 +33,19 @@ namespace BloodBank
         private const string INSERT_INVENTORY_COMMAND =
             "INSERT INTO Inventory (ID) VALUES(last_insert_id());";
 
+        private const string INSERT_DONATION_COMMAND =
+            "INSERT INTO Donation (DonorID, NurseID, DateTime, FacilityID, BloodBagId) " + 
+            "values ({0}, {1}, now(), {2}, {3});";
+
+        private const string INSERT_DONATIONTYPE_COMMAND =
+            "INSERT INTO DonationType (Description) VALUES ('{0}');";
+
+        private const string INSERT_BLOODBAG_COMMAND =
+            "INSERT INTO BloodBag (Status, DonationTypeID) VALUES ('{0}', {1});";
+
+        private const string GET_BLOODBAG_COMMAND =
+            "SELECT * FROM BloodBag WHERE Status = '{0}' AND DonationTypeID = {1};";
+
         private const string GET_PERSON_COMMAND =
             "SELECT * FROM Person WHERE FirstName = '{0}' and MiddleName = '{1}' " +
             "and LastName = '{2}' and PhoneNumber = '{3}';";
@@ -46,11 +59,17 @@ namespace BloodBank
         private const string GET_NURSE_COMMAND =
         "SELECT Nurse.ID, Nurse.PersonID FROM Nurse JOIN Person ON (Person.ID = Nurse.PersonID) WHERE Person.ID = '{0}';";
 
+        private const string GET_DONATION_COMMAND =
+            "SELECT * FROM Donation WHERE DonorID = {0} AND NurseID = {1} AND FacilityID = {2};";
+
+        private const string GET_DONATION_TYPE_COMMAND =
+            "SELECT * FROM DonationType WHERE Description = '{0}';";
+
         //private const string GET_INVENTORY_COMMAND =
         //"SELECT Inventory.ID, Nurse.PersonID FROM Nurse JOIN Person ON (Person.ID = Nurse.PersonID) WHERE Person.ID = '{0}';";
 
         private const string UPDATE_FACILIY_COMMAND =
-        "UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id())";
+            "UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id());";
 
         //private const string UPDATE_DONOR_COMMAND =
         //"UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id())";
@@ -251,7 +270,6 @@ namespace BloodBank
             Person result = new Person();
             int rowCount = 0;
 
-            
             SQLCommand.CommandText = string.Format(GET_PERSON_COMMAND, firstName, middleName, lastName, phoneNumber);
 
             using (MySqlDataReader rows = SQLCommand.ExecuteReader())
@@ -388,6 +406,37 @@ namespace BloodBank
                 }
             }
             return facility;
+        }
+
+        private Donation GetDonation(int donorID, int nurseID, int facilityID)
+        {
+            Donation result = new Donation();
+
+            int rowCount = 0;
+
+            SQLCommand.CommandText = string.Format(GET_DONATION_COMMAND, donorID, nurseID, facilityID);
+
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                while (rows.Read())
+                {
+                    rowCount++;
+
+                    if (rowCount > 1)
+                    {
+                        throw new Exception("GetDonation returned too many rows");
+                    }
+
+                    result.ID = (int)rows["ID"];
+                    result.DonorID = (int)rows["DonorID"];
+                    result.NurseID = (int)rows["NurseID"];
+                    result.DateTime = DateTime.Parse(rows["DateTime"].ToString());
+                    result.FacilityID = (int)rows["FacilityID"];
+                    result.BloodBagID = (int)rows["BloodBagID"];
+                }
+            }
+
+            return result;
         }
 
         //private int AddInventory(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
@@ -714,6 +763,124 @@ namespace BloodBank
                     Result.Items.Add("---------------------------").ToString();
                 }
             }
+        }
+
+        private void DonationAddButton_Click(object sender, EventArgs e)
+        {
+            int donorID = int.Parse(DonationDonorIDTextBox.Text);
+            int nurseID = int.Parse(DonationNurseIdTextBox.Text);
+            int facilityID = int.Parse(DonationFacilityIdTextBox.Text);
+            string donationTypeName = DonationDonationTypeTextBox.Text;
+
+            if (donorID < 1 || nurseID < 1 || facilityID < 1 ||
+                donationTypeName == string.Empty || donationTypeName == "Select Description") 
+            {
+                MessageBox.Show("* field cannot be empty!");
+            }
+            else
+            {
+                AddDonation(donorID, nurseID, facilityID, donationTypeName);
+            }
+        }
+
+        private int AddDonation(int donorID, int nurseID, int facilityID, string donationTypeName)
+        {
+            Donation result = GetDonation(donorID, nurseID, facilityID);
+
+            if (result.ID == 0)
+            {
+                DonationType donationType = AddOrGetDonationType(donationTypeName);
+                BloodBag bloodBag = AddBloodBag(donationType.ID);
+                SQLCommand.CommandText = string.Format(INSERT_DONATION_COMMAND, donorID, nurseID, facilityID, 
+                    bloodBag.ID);
+                SQLCommand.ExecuteNonQuery();
+                result = GetDonation(donorID, nurseID, facilityID);
+            }
+
+            return result.ID;
+        }
+
+        private BloodBag AddBloodBag(int donationTypeID)
+        {
+            BloodBag result = new BloodBag();
+
+            string status = Guid.NewGuid().ToString().Substring(0, 20);
+            SQLCommand.CommandText = string.Format(INSERT_BLOODBAG_COMMAND, status, donationTypeID);
+            SQLCommand.ExecuteNonQuery();
+
+            result = GetBloodBag(status, donationTypeID);
+
+            return result;
+        }
+
+        private BloodBag GetBloodBag(string status, int donationTypeID)
+        {
+            BloodBag result = new BloodBag();
+
+            int rowCount = 0;
+            SQLCommand.CommandText = string.Format(GET_BLOODBAG_COMMAND, status, donationTypeID);
+
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                while (rows.Read())
+                {
+                    rowCount++;
+
+                    if (rowCount > 1)
+                    {
+                        throw new Exception("BloodBag returned too many rows");
+                    }
+
+                    result.ID = (int)rows["ID"];
+                    result.Status = rows["Status"].ToString();
+                    result.DonationTypeID = (int)rows["DonationTypeID"];
+                }
+            }
+
+            return result;
+        }
+
+        private DonationType AddOrGetDonationType(string donationTypeName)
+        {
+            DonationType result = new DonationType();
+
+            result = GetDonationType(donationTypeName);
+
+            if (result.ID == 0)
+            {
+                SQLCommand.CommandText = string.Format(INSERT_DONATIONTYPE_COMMAND, donationTypeName);
+                SQLCommand.ExecuteNonQuery();
+                result = GetDonationType(donationTypeName);
+                MessageBox.Show("Success");
+            }
+
+            return result;
+        }
+
+        private DonationType GetDonationType(string donationTypeName)
+        {
+            DonationType result = new DonationType();
+
+            int rowCount = 0;
+            SQLCommand.CommandText = string.Format(GET_DONATION_TYPE_COMMAND, donationTypeName);
+
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                while (rows.Read())
+                {
+                    rowCount++;
+
+                    if (rowCount > 1)
+                    {
+                        throw new Exception("DonationType returned too many rows");
+                    }
+
+                    result.ID = (int)rows["ID"];                    
+                    result.Description = rows["Description"].ToString();
+                }
+            }
+
+            return result;
         }
     }
 }
