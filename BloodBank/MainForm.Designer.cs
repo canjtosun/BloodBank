@@ -55,6 +55,7 @@
             this.NurseFirstNameTextBox = new System.Windows.Forms.TextBox();
             this.NurseFirstName = new System.Windows.Forms.Label();
             this.DonationBox = new System.Windows.Forms.GroupBox();
+            this.DonationDonationTypeTextBox = new System.Windows.Forms.ComboBox();
             this.DonationDonationType = new System.Windows.Forms.Label();
             this.DonationLookUpIdButton = new System.Windows.Forms.Button();
             this.DonationUpdateButton = new System.Windows.Forms.Button();
@@ -82,7 +83,6 @@
             this.FacilityAddress1 = new System.Windows.Forms.Label();
             this.Result = new System.Windows.Forms.ListBox();
             this.Explanation1View = new System.Windows.Forms.Button();
-            this.Explanation2View = new System.Windows.Forms.Button();
             this.Explanation3View = new System.Windows.Forms.Button();
             this.Explanation4View = new System.Windows.Forms.Button();
             this.Explanation5View = new System.Windows.Forms.Button();
@@ -90,7 +90,6 @@
             this.ExplanationBox1 = new System.Windows.Forms.RichTextBox();
             this.BloodTypeView = new System.Windows.Forms.Label();
             this.BloodTypeViewTextBox = new System.Windows.Forms.ComboBox();
-            this.ExplanationBox2 = new System.Windows.Forms.RichTextBox();
             this.ExplanationBox3 = new System.Windows.Forms.RichTextBox();
             this.FacilityIdViewTextBox3 = new System.Windows.Forms.TextBox();
             this.FacilityIdView3 = new System.Windows.Forms.Label();
@@ -104,7 +103,9 @@
             this.ExplanationBox6 = new System.Windows.Forms.RichTextBox();
             this.BloodTypeViewTextBox6 = new System.Windows.Forms.ComboBox();
             this.BloodTypeView6 = new System.Windows.Forms.Label();
-            this.DonationDonationTypeTextBox = new System.Windows.Forms.ComboBox();
+            this.ShowAllDonorsButton = new System.Windows.Forms.Button();
+            this.ShowAllNursesButton = new System.Windows.Forms.Button();
+            this.ShowAllFacilitiesButton = new System.Windows.Forms.Button();
             this.DonorBox.SuspendLayout();
             this.NurseBox.SuspendLayout();
             this.DonationBox.SuspendLayout();
@@ -415,6 +416,22 @@
             this.DonationBox.TabIndex = 2;
             this.DonationBox.TabStop = false;
             this.DonationBox.Text = "Donation";
+            // 
+            // DonationDonationTypeTextBox
+            // 
+            this.DonationDonationTypeTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DonationDonationTypeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationDonationTypeTextBox.FormattingEnabled = true;
+            this.DonationDonationTypeTextBox.Items.AddRange(new object[] {
+            "Select Description",
+            "Plasma",
+            "Platelet",
+            "Power Red",
+            "Whole Blood"});
+            this.DonationDonationTypeTextBox.Location = new System.Drawing.Point(170, 235);
+            this.DonationDonationTypeTextBox.Name = "DonationDonationTypeTextBox";
+            this.DonationDonationTypeTextBox.Size = new System.Drawing.Size(222, 33);
+            this.DonationDonationTypeTextBox.TabIndex = 21;
             // 
             // DonationDonationType
             // 
@@ -738,16 +755,6 @@
             this.Explanation1View.UseVisualStyleBackColor = true;
             this.Explanation1View.Click += new System.EventHandler(this.Explanation1View_Click);
             // 
-            // Explanation2View
-            // 
-            this.Explanation2View.Location = new System.Drawing.Point(1040, 663);
-            this.Explanation2View.Name = "Explanation2View";
-            this.Explanation2View.Size = new System.Drawing.Size(70, 30);
-            this.Explanation2View.TabIndex = 6;
-            this.Explanation2View.Text = "Show";
-            this.Explanation2View.UseVisualStyleBackColor = true;
-            this.Explanation2View.Click += new System.EventHandler(this.Explanation2View_Click);
-            // 
             // Explanation3View
             // 
             this.Explanation3View.Location = new System.Drawing.Point(1040, 760);
@@ -822,14 +829,6 @@
             this.BloodTypeViewTextBox.Name = "BloodTypeViewTextBox";
             this.BloodTypeViewTextBox.Size = new System.Drawing.Size(195, 33);
             this.BloodTypeViewTextBox.TabIndex = 13;
-            // 
-            // ExplanationBox2
-            // 
-            this.ExplanationBox2.Location = new System.Drawing.Point(538, 655);
-            this.ExplanationBox2.Name = "ExplanationBox2";
-            this.ExplanationBox2.Size = new System.Drawing.Size(157, 50);
-            this.ExplanationBox2.TabIndex = 14;
-            this.ExplanationBox2.Text = "Blood donation facilities\n";
             // 
             // ExplanationBox3
             // 
@@ -964,21 +963,35 @@
             this.BloodTypeView6.TabIndex = 26;
             this.BloodTypeView6.Text = "Blood Type";
             // 
-            // DonationDonationTypeTextBox
+            // ShowAllDonorsButton
             // 
-            this.DonationDonationTypeTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DonationDonationTypeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationDonationTypeTextBox.FormattingEnabled = true;
-            this.DonationDonationTypeTextBox.Items.AddRange(new object[] {
-            "Select Description",
-            "Plasma",
-            "Platelet",
-            "Power Red",
-            "Whole Blood"});
-            this.DonationDonationTypeTextBox.Location = new System.Drawing.Point(170, 235);
-            this.DonationDonationTypeTextBox.Name = "DonationDonationTypeTextBox";
-            this.DonationDonationTypeTextBox.Size = new System.Drawing.Size(222, 33);
-            this.DonationDonationTypeTextBox.TabIndex = 21;
+            this.ShowAllDonorsButton.Location = new System.Drawing.Point(538, 654);
+            this.ShowAllDonorsButton.Name = "ShowAllDonorsButton";
+            this.ShowAllDonorsButton.Size = new System.Drawing.Size(157, 59);
+            this.ShowAllDonorsButton.TabIndex = 29;
+            this.ShowAllDonorsButton.Text = "Show All Donors";
+            this.ShowAllDonorsButton.UseVisualStyleBackColor = true;
+            this.ShowAllDonorsButton.Click += new System.EventHandler(this.ShowAllDonorsButton_Click);
+            // 
+            // ShowAllNursesButton
+            // 
+            this.ShowAllNursesButton.Location = new System.Drawing.Point(756, 654);
+            this.ShowAllNursesButton.Name = "ShowAllNursesButton";
+            this.ShowAllNursesButton.Size = new System.Drawing.Size(157, 59);
+            this.ShowAllNursesButton.TabIndex = 30;
+            this.ShowAllNursesButton.Text = "Show All Nurses";
+            this.ShowAllNursesButton.UseVisualStyleBackColor = true;
+            this.ShowAllNursesButton.Click += new System.EventHandler(this.ShowAllNursesButton_Click);
+            // 
+            // ShowAllFacilitiesButton
+            // 
+            this.ShowAllFacilitiesButton.Location = new System.Drawing.Point(953, 654);
+            this.ShowAllFacilitiesButton.Name = "ShowAllFacilitiesButton";
+            this.ShowAllFacilitiesButton.Size = new System.Drawing.Size(157, 59);
+            this.ShowAllFacilitiesButton.TabIndex = 31;
+            this.ShowAllFacilitiesButton.Text = "Show All Facilities";
+            this.ShowAllFacilitiesButton.UseVisualStyleBackColor = true;
+            this.ShowAllFacilitiesButton.Click += new System.EventHandler(this.ShowAllFacilitiesButton_Click);
             // 
             // MainForm
             // 
@@ -986,6 +999,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(1661, 1165);
+            this.Controls.Add(this.ShowAllFacilitiesButton);
+            this.Controls.Add(this.ShowAllNursesButton);
+            this.Controls.Add(this.ShowAllDonorsButton);
             this.Controls.Add(this.BloodTypeViewTextBox6);
             this.Controls.Add(this.BloodTypeView6);
             this.Controls.Add(this.ExplanationBox6);
@@ -999,7 +1015,6 @@
             this.Controls.Add(this.FacilityIdViewTextBox3);
             this.Controls.Add(this.FacilityIdView3);
             this.Controls.Add(this.ExplanationBox3);
-            this.Controls.Add(this.ExplanationBox2);
             this.Controls.Add(this.BloodTypeViewTextBox);
             this.Controls.Add(this.BloodTypeView);
             this.Controls.Add(this.ExplanationBox1);
@@ -1007,7 +1022,6 @@
             this.Controls.Add(this.Explanation5View);
             this.Controls.Add(this.Explanation4View);
             this.Controls.Add(this.Explanation3View);
-            this.Controls.Add(this.Explanation2View);
             this.Controls.Add(this.Explanation1View);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.FacilityBox);
@@ -1085,7 +1099,6 @@
         private System.Windows.Forms.Label FacilityAddress1;
         private System.Windows.Forms.ListBox Result;
         private System.Windows.Forms.Button Explanation1View;
-        private System.Windows.Forms.Button Explanation2View;
         private System.Windows.Forms.Button Explanation3View;
         private System.Windows.Forms.Button Explanation4View;
         private System.Windows.Forms.Button Explanation5View;
@@ -1093,7 +1106,6 @@
         private System.Windows.Forms.RichTextBox ExplanationBox1;
         private System.Windows.Forms.Label BloodTypeView;
         private System.Windows.Forms.ComboBox BloodTypeViewTextBox;
-        private System.Windows.Forms.RichTextBox ExplanationBox2;
         private System.Windows.Forms.RichTextBox ExplanationBox3;
         private System.Windows.Forms.TextBox FacilityIdViewTextBox3;
         private System.Windows.Forms.Label FacilityIdView3;
@@ -1110,6 +1122,9 @@
         private System.Windows.Forms.Label DonationDonationType;
         private System.Windows.Forms.Button DonorLookUpIdButton;
         private System.Windows.Forms.ComboBox DonationDonationTypeTextBox;
+        private System.Windows.Forms.Button ShowAllDonorsButton;
+        private System.Windows.Forms.Button ShowAllNursesButton;
+        private System.Windows.Forms.Button ShowAllFacilitiesButton;
     }
 }
 

@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Microsoft.VisualBasic;
+
 
 namespace BloodBank
 {
+    
     public partial class MainForm : Form
     {
-       
-
+        
 
         private const string INSERT_PERSON_COMMAND =
             "INSERT INTO Person (FirstName, MiddleName, LastName, PhoneNumber) VALUES ('{0}', '{1}', '{2}', '{3}');";
@@ -50,9 +52,8 @@ namespace BloodBank
         private const string UPDATE_FACILIY_COMMAND =
         "UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id())";
 
-
-
-        //****** BEGIN VIEW string queries  ********* 
+        //private const string UPDATE_DONOR_COMMAND =
+        //"UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id())";
 
         
 
@@ -102,23 +103,6 @@ namespace BloodBank
             "ORDER BY Blood.Type;";
 
 
-        // View donors by type of blood with phone number (ordered by bloodType).
-        private const string VIEW_DONORS_BY_BLOODTYPE =
-            "SELECT Blood.Type BloodType, Person.FirstName FirstName, " +
-                "Person.MiddleName MiddleName, Person.LastName LastName, " +
-                "Person.PhoneNumber PhoneNumber " +
-            "FROM Donor " +
-                "JOIN Person ON(Donor.PersonID = Person.ID) " +
-                "JOIN Blood ON(Donor.BloodID = Blood.ID) " +
-             "ORDER BY BloodType;";
-
-
-        // View blood donation Facilities
-        private const string VIEW_FACILITIES =
-            "SELECT Facility.Address1 Address1, Facility.Address2 Address2, Facility.City City, " +
-                "Facility.State State, Facility.ZipCode ZipCode, " +
-                "Facility.FacilityPhone FacilityPhone " +
-            "FROM Facility; ";
 
 
         //View inventory at all facilities
@@ -536,7 +520,10 @@ namespace BloodBank
                 int donorID = donor.ID;
                 if (donorID != 0)
                 {
-                    Result.Items.Add("Donor ID: " + donorID).ToString();
+                    Form2 f2 = new Form2();
+                    f2.ShowDialog();  
+                    
+                   
                 }
             }
         }
@@ -659,12 +646,68 @@ namespace BloodBank
             }
         }
 
-        private void Explanation2View_Click(object sender, EventArgs e)
+        private void ShowAllDonorsButton_Click(object sender, EventArgs e)
+        {
+            string view_all_donors_command =
+                    "SELECT Blood.ID BloodID, Blood.Type BloodType, Person.FirstName FirstName, " +
+                        "Person.MiddleName MiddleName, Person.LastName LastName, " +
+                        "Person.PhoneNumber PhoneNumber " +
+                    "FROM Donor " +
+                        "JOIN Person ON(Donor.PersonID = Person.ID) " +
+                        "JOIN Blood ON(Donor.BloodID = Blood.ID) " +
+                        "ORDER BY Blood.ID";
+
+            SQLCommand.CommandText = string.Format(view_all_donors_command);
+
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                Result.Items.Clear();
+
+                while (rows.Read())
+                {
+                    Result.Items.Add("First Name: " + rows["FirstName"]).ToString();
+                    Result.Items.Add("Middle Name: " + rows["MiddleName"]).ToString();
+                    Result.Items.Add("Last Name: " + rows["LastName"]).ToString();
+                    Result.Items.Add("Phone Number: " + rows["PhoneNumber"]).ToString();
+                    Result.Items.Add("Blood Type : " + rows["BloodType"]).ToString();
+                    Result.Items.Add("---------------------------").ToString();
+
+                }
+            }
+        }
+
+        private void ShowAllNursesButton_Click(object sender, EventArgs e)
+        {
+            string view_all_nurses_command =
+                    "SELECT Person.FirstName FirstName, " +
+                        "Person.MiddleName MiddleName, Person.LastName LastName, " +
+                        "Person.PhoneNumber PhoneNumber " +
+                    "FROM Nurse " +
+                        "JOIN Person ON(Nurse.PersonID = Person.ID) ";
+
+            SQLCommand.CommandText = string.Format(view_all_nurses_command);
+
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                Result.Items.Clear();
+
+                while (rows.Read())
+                {
+                    Result.Items.Add("First Name: " + rows["FirstName"]).ToString();
+                    Result.Items.Add("Middle Name: " + rows["MiddleName"]).ToString();
+                    Result.Items.Add("Last Name: " + rows["LastName"]).ToString();
+                    Result.Items.Add("Phone Number: " + rows["PhoneNumber"]).ToString();
+                    Result.Items.Add("---------------------------").ToString();
+                }
+            }
+        }
+
+        private void ShowAllFacilitiesButton_Click(object sender, EventArgs e)
         {
             string blood_donation_facilities =
-            "SELECT Facility.ID ID, Facility.Address1 Address1, Facility.Address2 Address2, Facility.City City," +
-            " Facility.State State, Facility.ZipCode ZipCode,Facility.FacilityPhone FacilityPhone " +
-            "From Facility; ";
+                "SELECT Facility.ID ID, Facility.Address1 Address1, Facility.Address2 Address2, Facility.City City," +
+                " Facility.State State, Facility.ZipCode ZipCode,Facility.FacilityPhone FacilityPhone " +
+                "From Facility; ";
 
             SQLCommand.CommandText = string.Format(blood_donation_facilities);
 
@@ -684,7 +727,5 @@ namespace BloodBank
                 }
             }
         }
-
-        
     }
 }
