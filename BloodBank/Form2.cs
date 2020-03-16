@@ -74,13 +74,8 @@ namespace BloodBank
         private void Form2DonorChangeButton_Click(object sender, EventArgs e)
         {
 
-            string update_donor_command =
-            "UPDATE Donor" +
-            " SET FirstName = " + DonorFirstNameTextBox.Text + " , " +
-            " MiddleName = " + DonorMiddleNameTextBox.Text + " , " +
-            " LastName = " + DonorLastNameTextBox.Text + " , " +
-            " PhoneNumber = " + DonorPhoneNumberTextBox.Text + ";";
-
+            string update_donor_command = "";
+            //i need the query here
 
 
 

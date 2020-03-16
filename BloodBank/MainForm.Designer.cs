@@ -138,6 +138,7 @@
             // DonorLookUpIdButton
             // 
             this.DonorLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorLookUpIdButton.ForeColor = System.Drawing.Color.Black;
             this.DonorLookUpIdButton.Location = new System.Drawing.Point(236, 349);
             this.DonorLookUpIdButton.Name = "DonorLookUpIdButton";
             this.DonorLookUpIdButton.Size = new System.Drawing.Size(156, 38);
@@ -149,6 +150,7 @@
             // DonorUpdateButton
             // 
             this.DonorUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorUpdateButton.ForeColor = System.Drawing.Color.Black;
             this.DonorUpdateButton.Location = new System.Drawing.Point(119, 349);
             this.DonorUpdateButton.Name = "DonorUpdateButton";
             this.DonorUpdateButton.Size = new System.Drawing.Size(98, 38);
@@ -160,6 +162,7 @@
             // DonorAddButton
             // 
             this.DonorAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorAddButton.ForeColor = System.Drawing.Color.Black;
             this.DonorAddButton.Location = new System.Drawing.Point(10, 349);
             this.DonorAddButton.Name = "DonorAddButton";
             this.DonorAddButton.Size = new System.Drawing.Size(82, 38);
@@ -295,6 +298,7 @@
             // NurseLookUpIdButton
             // 
             this.NurseLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseLookUpIdButton.ForeColor = System.Drawing.Color.Black;
             this.NurseLookUpIdButton.Location = new System.Drawing.Point(243, 349);
             this.NurseLookUpIdButton.Name = "NurseLookUpIdButton";
             this.NurseLookUpIdButton.Size = new System.Drawing.Size(149, 38);
@@ -306,6 +310,7 @@
             // NurseUpdateButton
             // 
             this.NurseUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseUpdateButton.ForeColor = System.Drawing.Color.Black;
             this.NurseUpdateButton.Location = new System.Drawing.Point(118, 349);
             this.NurseUpdateButton.Name = "NurseUpdateButton";
             this.NurseUpdateButton.Size = new System.Drawing.Size(98, 38);
@@ -316,6 +321,7 @@
             // NurseAddButton
             // 
             this.NurseAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseAddButton.ForeColor = System.Drawing.Color.Black;
             this.NurseAddButton.Location = new System.Drawing.Point(10, 349);
             this.NurseAddButton.Name = "NurseAddButton";
             this.NurseAddButton.Size = new System.Drawing.Size(82, 38);
@@ -446,6 +452,7 @@
             // DonationLookUpIdButton
             // 
             this.DonationLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationLookUpIdButton.ForeColor = System.Drawing.Color.Black;
             this.DonationLookUpIdButton.Location = new System.Drawing.Point(249, 349);
             this.DonationLookUpIdButton.Name = "DonationLookUpIdButton";
             this.DonationLookUpIdButton.Size = new System.Drawing.Size(143, 38);
@@ -456,6 +463,7 @@
             // DonationUpdateButton
             // 
             this.DonationUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationUpdateButton.ForeColor = System.Drawing.Color.Black;
             this.DonationUpdateButton.Location = new System.Drawing.Point(132, 349);
             this.DonationUpdateButton.Name = "DonationUpdateButton";
             this.DonationUpdateButton.Size = new System.Drawing.Size(98, 38);
@@ -466,6 +474,7 @@
             // DonationAddButton
             // 
             this.DonationAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationAddButton.ForeColor = System.Drawing.Color.Black;
             this.DonationAddButton.Location = new System.Drawing.Point(10, 349);
             this.DonationAddButton.Name = "DonationAddButton";
             this.DonationAddButton.Size = new System.Drawing.Size(82, 38);
@@ -617,6 +626,7 @@
             // FacilityLookUpIdButton
             // 
             this.FacilityLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityLookUpIdButton.ForeColor = System.Drawing.Color.Black;
             this.FacilityLookUpIdButton.Location = new System.Drawing.Point(196, 502);
             this.FacilityLookUpIdButton.Name = "FacilityLookUpIdButton";
             this.FacilityLookUpIdButton.Size = new System.Drawing.Size(120, 38);
@@ -628,6 +638,7 @@
             // FacilityAddButton
             // 
             this.FacilityAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityAddButton.ForeColor = System.Drawing.Color.Black;
             this.FacilityAddButton.Location = new System.Drawing.Point(68, 502);
             this.FacilityAddButton.Name = "FacilityAddButton";
             this.FacilityAddButton.Size = new System.Drawing.Size(82, 38);
@@ -747,6 +758,7 @@
             // 
             // Explanation1View
             // 
+            this.Explanation1View.ForeColor = System.Drawing.Color.Black;
             this.Explanation1View.Location = new System.Drawing.Point(1040, 560);
             this.Explanation1View.Name = "Explanation1View";
             this.Explanation1View.Size = new System.Drawing.Size(70, 30);
@@ -757,6 +769,7 @@
             // 
             // Explanation3View
             // 
+            this.Explanation3View.ForeColor = System.Drawing.Color.Black;
             this.Explanation3View.Location = new System.Drawing.Point(1040, 760);
             this.Explanation3View.Name = "Explanation3View";
             this.Explanation3View.Size = new System.Drawing.Size(70, 30);
@@ -766,6 +779,7 @@
             // 
             // Explanation4View
             // 
+            this.Explanation4View.ForeColor = System.Drawing.Color.Black;
             this.Explanation4View.Location = new System.Drawing.Point(1040, 859);
             this.Explanation4View.Name = "Explanation4View";
             this.Explanation4View.Size = new System.Drawing.Size(70, 30);
@@ -775,6 +789,7 @@
             // 
             // Explanation5View
             // 
+            this.Explanation5View.ForeColor = System.Drawing.Color.Black;
             this.Explanation5View.Location = new System.Drawing.Point(1040, 957);
             this.Explanation5View.Name = "Explanation5View";
             this.Explanation5View.Size = new System.Drawing.Size(70, 30);
@@ -784,6 +799,7 @@
             // 
             // Explanation6View
             // 
+            this.Explanation6View.ForeColor = System.Drawing.Color.Black;
             this.Explanation6View.Location = new System.Drawing.Point(1040, 1054);
             this.Explanation6View.Name = "Explanation6View";
             this.Explanation6View.Size = new System.Drawing.Size(70, 30);
@@ -965,6 +981,7 @@
             // 
             // ShowAllDonorsButton
             // 
+            this.ShowAllDonorsButton.ForeColor = System.Drawing.Color.Black;
             this.ShowAllDonorsButton.Location = new System.Drawing.Point(538, 654);
             this.ShowAllDonorsButton.Name = "ShowAllDonorsButton";
             this.ShowAllDonorsButton.Size = new System.Drawing.Size(157, 59);
@@ -975,6 +992,7 @@
             // 
             // ShowAllNursesButton
             // 
+            this.ShowAllNursesButton.ForeColor = System.Drawing.Color.Black;
             this.ShowAllNursesButton.Location = new System.Drawing.Point(756, 654);
             this.ShowAllNursesButton.Name = "ShowAllNursesButton";
             this.ShowAllNursesButton.Size = new System.Drawing.Size(157, 59);
@@ -985,6 +1003,7 @@
             // 
             // ShowAllFacilitiesButton
             // 
+            this.ShowAllFacilitiesButton.ForeColor = System.Drawing.Color.Black;
             this.ShowAllFacilitiesButton.Location = new System.Drawing.Point(953, 654);
             this.ShowAllFacilitiesButton.Name = "ShowAllFacilitiesButton";
             this.ShowAllFacilitiesButton.Size = new System.Drawing.Size(157, 59);
@@ -1028,7 +1047,7 @@
             this.Controls.Add(this.DonationBox);
             this.Controls.Add(this.NurseBox);
             this.Controls.Add(this.DonorBox);
-            this.ForeColor = System.Drawing.Color.Black;
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "MainForm";
             this.Text = "Blood Bank Database";
             this.Load += new System.EventHandler(this.MainForm_Load);

@@ -352,12 +352,6 @@ namespace BloodBank
 
 
 
-
-
-        
-
-
-
         private int AddFacility(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
         {
             Facility facility = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
@@ -366,9 +360,7 @@ namespace BloodBank
             {
                 SQLCommand.CommandText = string.Format(INSERT_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
                 SQLCommand.ExecuteNonQuery();
-                SQLCommand.CommandText = string.Format(INSERT_INVENTORY_COMMAND, facility.ID);
-                SQLCommand.CommandText = string.Format(INSERT_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
-                SQLCommand.ExecuteNonQuery();
+                SQLCommand.CommandText = string.Format(INSERT_INVENTORY_COMMAND, facility.ID);        
                 SQLCommand.ExecuteNonQuery();
                 MessageBox.Show("Success");
             }
@@ -380,25 +372,21 @@ namespace BloodBank
         private Facility GetFacility(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
         {
             Facility facility = new Facility();
-
             SQLCommand.CommandText = string.Format(GET_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
 
-            if(facility.ID != 0)
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
             {
-                using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+                while (rows.Read())
                 {
-                    while (rows.Read())
-                    {
-                        facility.ID = (int)rows["ID"];
-                    }
+                    facility.ID = (int)rows["ID"];
+                    facility.Address1 = rows["Address1"].ToString();
+                    facility.Address2 = rows["Address2"].ToString();
+                    facility.City = rows["City"].ToString();
+                    facility.State = rows["State"].ToString();
+                    facility.ZipCode = rows["ZipCode"].ToString();
+                    facility.FacilityPhone = rows["FacilityPhone"].ToString();
                 }
-                MessageBox.Show("Look up of Facility ID is successful. See the output box.");
-            }        
-            else
-            {
-                MessageBox.Show("Couldn't find this facility in the database. Please try again!");
             }
-
             return facility;
         }
 
