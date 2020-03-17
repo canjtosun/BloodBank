@@ -129,11 +129,9 @@
             this.DonorBox.Controls.Add(this.DonorFirstName);
             this.DonorBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonorBox.ForeColor = System.Drawing.Color.White;
-            this.DonorBox.Location = new System.Drawing.Point(43, 64);
-            this.DonorBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorBox.Location = new System.Drawing.Point(64, 98);
             this.DonorBox.Name = "DonorBox";
-            this.DonorBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DonorBox.Size = new System.Drawing.Size(270, 268);
+            this.DonorBox.Size = new System.Drawing.Size(405, 412);
             this.DonorBox.TabIndex = 0;
             this.DonorBox.TabStop = false;
             this.DonorBox.Text = "Donor";
@@ -142,10 +140,9 @@
             // 
             this.DonorLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonorLookUpIdButton.ForeColor = System.Drawing.Color.Black;
-            this.DonorLookUpIdButton.Location = new System.Drawing.Point(157, 227);
-            this.DonorLookUpIdButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorLookUpIdButton.Location = new System.Drawing.Point(236, 349);
             this.DonorLookUpIdButton.Name = "DonorLookUpIdButton";
-            this.DonorLookUpIdButton.Size = new System.Drawing.Size(104, 25);
+            this.DonorLookUpIdButton.Size = new System.Drawing.Size(156, 38);
             this.DonorLookUpIdButton.TabIndex = 12;
             this.DonorLookUpIdButton.Text = "Look Up ID";
             this.DonorLookUpIdButton.UseVisualStyleBackColor = true;
@@ -155,10 +152,9 @@
             // 
             this.DonorUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonorUpdateButton.ForeColor = System.Drawing.Color.Black;
-            this.DonorUpdateButton.Location = new System.Drawing.Point(79, 227);
-            this.DonorUpdateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorUpdateButton.Location = new System.Drawing.Point(118, 349);
             this.DonorUpdateButton.Name = "DonorUpdateButton";
-            this.DonorUpdateButton.Size = new System.Drawing.Size(65, 25);
+            this.DonorUpdateButton.Size = new System.Drawing.Size(98, 38);
             this.DonorUpdateButton.TabIndex = 11;
             this.DonorUpdateButton.Text = "Update";
             this.DonorUpdateButton.UseVisualStyleBackColor = true;
@@ -168,10 +164,9 @@
             // 
             this.DonorAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonorAddButton.ForeColor = System.Drawing.Color.Black;
-            this.DonorAddButton.Location = new System.Drawing.Point(7, 227);
-            this.DonorAddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorAddButton.Location = new System.Drawing.Point(10, 349);
             this.DonorAddButton.Name = "DonorAddButton";
-            this.DonorAddButton.Size = new System.Drawing.Size(55, 25);
+            this.DonorAddButton.Size = new System.Drawing.Size(82, 38);
             this.DonorAddButton.TabIndex = 10;
             this.DonorAddButton.Text = "Add";
             this.DonorAddButton.UseVisualStyleBackColor = true;
@@ -193,100 +188,90 @@
             "O-",
             "O+",
             "Unknown"});
-            this.DonorBloodTypeBox.Location = new System.Drawing.Point(113, 190);
-            this.DonorBloodTypeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorBloodTypeBox.Location = new System.Drawing.Point(170, 292);
             this.DonorBloodTypeBox.Name = "DonorBloodTypeBox";
-            this.DonorBloodTypeBox.Size = new System.Drawing.Size(149, 24);
+            this.DonorBloodTypeBox.Size = new System.Drawing.Size(222, 33);
             this.DonorBloodTypeBox.TabIndex = 9;
             // 
             // DonorBloodType
             // 
             this.DonorBloodType.AutoSize = true;
             this.DonorBloodType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorBloodType.Location = new System.Drawing.Point(4, 190);
-            this.DonorBloodType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonorBloodType.Location = new System.Drawing.Point(6, 292);
             this.DonorBloodType.Name = "DonorBloodType";
-            this.DonorBloodType.Size = new System.Drawing.Size(85, 17);
+            this.DonorBloodType.Size = new System.Drawing.Size(120, 25);
             this.DonorBloodType.TabIndex = 8;
             this.DonorBloodType.Text = "Blood Type*";
             // 
             // DonorPhoneNumberTextBox
             // 
             this.DonorPhoneNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorPhoneNumberTextBox.Location = new System.Drawing.Point(113, 153);
-            this.DonorPhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorPhoneNumberTextBox.Location = new System.Drawing.Point(170, 235);
             this.DonorPhoneNumberTextBox.Name = "DonorPhoneNumberTextBox";
-            this.DonorPhoneNumberTextBox.Size = new System.Drawing.Size(149, 23);
+            this.DonorPhoneNumberTextBox.Size = new System.Drawing.Size(222, 30);
             this.DonorPhoneNumberTextBox.TabIndex = 7;
             // 
             // DonorPhoneNumber
             // 
             this.DonorPhoneNumber.AutoSize = true;
             this.DonorPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorPhoneNumber.Location = new System.Drawing.Point(4, 153);
-            this.DonorPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonorPhoneNumber.Location = new System.Drawing.Point(6, 235);
             this.DonorPhoneNumber.Name = "DonorPhoneNumber";
-            this.DonorPhoneNumber.Size = new System.Drawing.Size(108, 17);
+            this.DonorPhoneNumber.Size = new System.Drawing.Size(151, 25);
             this.DonorPhoneNumber.TabIndex = 6;
             this.DonorPhoneNumber.Text = "Phone Number*";
             // 
             // DonorLastNameTextBox
             // 
             this.DonorLastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorLastNameTextBox.Location = new System.Drawing.Point(113, 117);
-            this.DonorLastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorLastNameTextBox.Location = new System.Drawing.Point(170, 180);
             this.DonorLastNameTextBox.Name = "DonorLastNameTextBox";
-            this.DonorLastNameTextBox.Size = new System.Drawing.Size(149, 23);
+            this.DonorLastNameTextBox.Size = new System.Drawing.Size(222, 30);
             this.DonorLastNameTextBox.TabIndex = 5;
             // 
             // DonorLastName
             // 
             this.DonorLastName.AutoSize = true;
             this.DonorLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorLastName.Location = new System.Drawing.Point(4, 117);
-            this.DonorLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonorLastName.Location = new System.Drawing.Point(6, 180);
             this.DonorLastName.Name = "DonorLastName";
-            this.DonorLastName.Size = new System.Drawing.Size(81, 17);
+            this.DonorLastName.Size = new System.Drawing.Size(114, 25);
             this.DonorLastName.TabIndex = 4;
             this.DonorLastName.Text = "Last Name*";
             // 
             // DonorMiddleNameTextBox
             // 
             this.DonorMiddleNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorMiddleNameTextBox.Location = new System.Drawing.Point(113, 83);
-            this.DonorMiddleNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorMiddleNameTextBox.Location = new System.Drawing.Point(170, 128);
             this.DonorMiddleNameTextBox.Name = "DonorMiddleNameTextBox";
-            this.DonorMiddleNameTextBox.Size = new System.Drawing.Size(149, 23);
+            this.DonorMiddleNameTextBox.Size = new System.Drawing.Size(222, 30);
             this.DonorMiddleNameTextBox.TabIndex = 3;
             // 
             // DonorMiddleName
             // 
             this.DonorMiddleName.AutoSize = true;
             this.DonorMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorMiddleName.Location = new System.Drawing.Point(4, 83);
-            this.DonorMiddleName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonorMiddleName.Location = new System.Drawing.Point(6, 128);
             this.DonorMiddleName.Name = "DonorMiddleName";
-            this.DonorMiddleName.Size = new System.Drawing.Size(86, 17);
+            this.DonorMiddleName.Size = new System.Drawing.Size(122, 25);
             this.DonorMiddleName.TabIndex = 2;
             this.DonorMiddleName.Text = "MiddleName";
             // 
             // DonorFirstNameTextBox
             // 
             this.DonorFirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorFirstNameTextBox.Location = new System.Drawing.Point(113, 47);
-            this.DonorFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonorFirstNameTextBox.Location = new System.Drawing.Point(170, 72);
             this.DonorFirstNameTextBox.Name = "DonorFirstNameTextBox";
-            this.DonorFirstNameTextBox.Size = new System.Drawing.Size(149, 23);
+            this.DonorFirstNameTextBox.Size = new System.Drawing.Size(222, 30);
             this.DonorFirstNameTextBox.TabIndex = 1;
             // 
             // DonorFirstName
             // 
             this.DonorFirstName.AutoSize = true;
             this.DonorFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonorFirstName.Location = new System.Drawing.Point(4, 47);
-            this.DonorFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonorFirstName.Location = new System.Drawing.Point(6, 72);
             this.DonorFirstName.Name = "DonorFirstName";
-            this.DonorFirstName.Size = new System.Drawing.Size(81, 17);
+            this.DonorFirstName.Size = new System.Drawing.Size(114, 25);
             this.DonorFirstName.TabIndex = 0;
             this.DonorFirstName.Text = "First Name*";
             // 
@@ -305,11 +290,9 @@
             this.NurseBox.Controls.Add(this.NurseFirstName);
             this.NurseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NurseBox.ForeColor = System.Drawing.Color.White;
-            this.NurseBox.Location = new System.Drawing.Point(359, 64);
-            this.NurseBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NurseBox.Location = new System.Drawing.Point(538, 98);
             this.NurseBox.Name = "NurseBox";
-            this.NurseBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.NurseBox.Size = new System.Drawing.Size(270, 268);
+            this.NurseBox.Size = new System.Drawing.Size(405, 412);
             this.NurseBox.TabIndex = 1;
             this.NurseBox.TabStop = false;
             this.NurseBox.Text = "Nurse";
@@ -318,10 +301,9 @@
             // 
             this.NurseLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NurseLookUpIdButton.ForeColor = System.Drawing.Color.Black;
-            this.NurseLookUpIdButton.Location = new System.Drawing.Point(162, 227);
-            this.NurseLookUpIdButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NurseLookUpIdButton.Location = new System.Drawing.Point(243, 349);
             this.NurseLookUpIdButton.Name = "NurseLookUpIdButton";
-            this.NurseLookUpIdButton.Size = new System.Drawing.Size(99, 25);
+            this.NurseLookUpIdButton.Size = new System.Drawing.Size(148, 38);
             this.NurseLookUpIdButton.TabIndex = 12;
             this.NurseLookUpIdButton.Text = "Look Up ID";
             this.NurseLookUpIdButton.UseVisualStyleBackColor = true;
@@ -331,10 +313,9 @@
             // 
             this.NurseUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NurseUpdateButton.ForeColor = System.Drawing.Color.Black;
-            this.NurseUpdateButton.Location = new System.Drawing.Point(79, 227);
-            this.NurseUpdateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NurseUpdateButton.Location = new System.Drawing.Point(118, 349);
             this.NurseUpdateButton.Name = "NurseUpdateButton";
-            this.NurseUpdateButton.Size = new System.Drawing.Size(65, 25);
+            this.NurseUpdateButton.Size = new System.Drawing.Size(98, 38);
             this.NurseUpdateButton.TabIndex = 11;
             this.NurseUpdateButton.Text = "Update";
             this.NurseUpdateButton.UseVisualStyleBackColor = true;
@@ -343,10 +324,9 @@
             // 
             this.NurseAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NurseAddButton.ForeColor = System.Drawing.Color.Black;
-            this.NurseAddButton.Location = new System.Drawing.Point(7, 227);
-            this.NurseAddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NurseAddButton.Location = new System.Drawing.Point(10, 349);
             this.NurseAddButton.Name = "NurseAddButton";
-            this.NurseAddButton.Size = new System.Drawing.Size(55, 25);
+            this.NurseAddButton.Size = new System.Drawing.Size(82, 38);
             this.NurseAddButton.TabIndex = 10;
             this.NurseAddButton.Text = "Add";
             this.NurseAddButton.UseVisualStyleBackColor = true;
@@ -355,80 +335,72 @@
             // NursePhoneNumberTextBox
             // 
             this.NursePhoneNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NursePhoneNumberTextBox.Location = new System.Drawing.Point(113, 153);
-            this.NursePhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NursePhoneNumberTextBox.Location = new System.Drawing.Point(170, 235);
             this.NursePhoneNumberTextBox.Name = "NursePhoneNumberTextBox";
-            this.NursePhoneNumberTextBox.Size = new System.Drawing.Size(149, 23);
+            this.NursePhoneNumberTextBox.Size = new System.Drawing.Size(222, 30);
             this.NursePhoneNumberTextBox.TabIndex = 7;
             // 
             // NursePhoneNumber
             // 
             this.NursePhoneNumber.AutoSize = true;
             this.NursePhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NursePhoneNumber.Location = new System.Drawing.Point(4, 153);
-            this.NursePhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NursePhoneNumber.Location = new System.Drawing.Point(6, 235);
             this.NursePhoneNumber.Name = "NursePhoneNumber";
-            this.NursePhoneNumber.Size = new System.Drawing.Size(108, 17);
+            this.NursePhoneNumber.Size = new System.Drawing.Size(151, 25);
             this.NursePhoneNumber.TabIndex = 6;
             this.NursePhoneNumber.Text = "Phone Number*";
             // 
             // NurseLastNameTextBox
             // 
             this.NurseLastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NurseLastNameTextBox.Location = new System.Drawing.Point(113, 117);
-            this.NurseLastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NurseLastNameTextBox.Location = new System.Drawing.Point(170, 180);
             this.NurseLastNameTextBox.Name = "NurseLastNameTextBox";
-            this.NurseLastNameTextBox.Size = new System.Drawing.Size(149, 23);
+            this.NurseLastNameTextBox.Size = new System.Drawing.Size(222, 30);
             this.NurseLastNameTextBox.TabIndex = 5;
             // 
             // NurseLastName
             // 
             this.NurseLastName.AutoSize = true;
             this.NurseLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NurseLastName.Location = new System.Drawing.Point(4, 117);
-            this.NurseLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NurseLastName.Location = new System.Drawing.Point(6, 180);
             this.NurseLastName.Name = "NurseLastName";
-            this.NurseLastName.Size = new System.Drawing.Size(81, 17);
+            this.NurseLastName.Size = new System.Drawing.Size(114, 25);
             this.NurseLastName.TabIndex = 4;
             this.NurseLastName.Text = "Last Name*";
             // 
             // NurseMiddleNameTextBox
             // 
             this.NurseMiddleNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NurseMiddleNameTextBox.Location = new System.Drawing.Point(113, 83);
-            this.NurseMiddleNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NurseMiddleNameTextBox.Location = new System.Drawing.Point(170, 128);
             this.NurseMiddleNameTextBox.Name = "NurseMiddleNameTextBox";
-            this.NurseMiddleNameTextBox.Size = new System.Drawing.Size(149, 23);
+            this.NurseMiddleNameTextBox.Size = new System.Drawing.Size(222, 30);
             this.NurseMiddleNameTextBox.TabIndex = 3;
             // 
             // NurseMiddleName
             // 
             this.NurseMiddleName.AutoSize = true;
             this.NurseMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NurseMiddleName.Location = new System.Drawing.Point(4, 83);
-            this.NurseMiddleName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NurseMiddleName.Location = new System.Drawing.Point(6, 128);
             this.NurseMiddleName.Name = "NurseMiddleName";
-            this.NurseMiddleName.Size = new System.Drawing.Size(86, 17);
+            this.NurseMiddleName.Size = new System.Drawing.Size(122, 25);
             this.NurseMiddleName.TabIndex = 2;
             this.NurseMiddleName.Text = "MiddleName";
             // 
             // NurseFirstNameTextBox
             // 
             this.NurseFirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NurseFirstNameTextBox.Location = new System.Drawing.Point(113, 47);
-            this.NurseFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NurseFirstNameTextBox.Location = new System.Drawing.Point(170, 72);
             this.NurseFirstNameTextBox.Name = "NurseFirstNameTextBox";
-            this.NurseFirstNameTextBox.Size = new System.Drawing.Size(149, 23);
+            this.NurseFirstNameTextBox.Size = new System.Drawing.Size(222, 30);
             this.NurseFirstNameTextBox.TabIndex = 1;
             // 
             // NurseFirstName
             // 
             this.NurseFirstName.AutoSize = true;
             this.NurseFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NurseFirstName.Location = new System.Drawing.Point(4, 47);
-            this.NurseFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NurseFirstName.Location = new System.Drawing.Point(6, 72);
             this.NurseFirstName.Name = "NurseFirstName";
-            this.NurseFirstName.Size = new System.Drawing.Size(81, 17);
+            this.NurseFirstName.Size = new System.Drawing.Size(114, 25);
             this.NurseFirstName.TabIndex = 0;
             this.NurseFirstName.Text = "First Name*";
             // 
@@ -447,11 +419,9 @@
             this.DonationBox.Controls.Add(this.DonationDonorId);
             this.DonationBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonationBox.ForeColor = System.Drawing.Color.White;
-            this.DonationBox.Location = new System.Drawing.Point(671, 64);
-            this.DonationBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonationBox.Location = new System.Drawing.Point(1006, 98);
             this.DonationBox.Name = "DonationBox";
-            this.DonationBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DonationBox.Size = new System.Drawing.Size(270, 268);
+            this.DonationBox.Size = new System.Drawing.Size(405, 412);
             this.DonationBox.TabIndex = 2;
             this.DonationBox.TabStop = false;
             this.DonationBox.Text = "Donation";
@@ -467,31 +437,28 @@
             "Platelet",
             "Power Red",
             "Whole Blood"});
-            this.DonationDonationTypeTextBox.Location = new System.Drawing.Point(113, 153);
-            this.DonationDonationTypeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonationDonationTypeTextBox.Location = new System.Drawing.Point(170, 235);
             this.DonationDonationTypeTextBox.Name = "DonationDonationTypeTextBox";
-            this.DonationDonationTypeTextBox.Size = new System.Drawing.Size(149, 24);
+            this.DonationDonationTypeTextBox.Size = new System.Drawing.Size(222, 33);
             this.DonationDonationTypeTextBox.TabIndex = 21;
             // 
             // DonationDonationType
             // 
             this.DonationDonationType.AutoSize = true;
             this.DonationDonationType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationDonationType.Location = new System.Drawing.Point(4, 153);
-            this.DonationDonationType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonationDonationType.Location = new System.Drawing.Point(6, 235);
             this.DonationDonationType.Name = "DonationDonationType";
-            this.DonationDonationType.Size = new System.Drawing.Size(101, 17);
+            this.DonationDonationType.Size = new System.Drawing.Size(148, 25);
             this.DonationDonationType.TabIndex = 13;
-            this.DonationDonationType.Text = "Donation Type";
+            this.DonationDonationType.Text = "Donation Type*";
             // 
             // DonationLookUpIdButton
             // 
             this.DonationLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonationLookUpIdButton.ForeColor = System.Drawing.Color.Black;
-            this.DonationLookUpIdButton.Location = new System.Drawing.Point(166, 227);
-            this.DonationLookUpIdButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonationLookUpIdButton.Location = new System.Drawing.Point(249, 349);
             this.DonationLookUpIdButton.Name = "DonationLookUpIdButton";
-            this.DonationLookUpIdButton.Size = new System.Drawing.Size(95, 25);
+            this.DonationLookUpIdButton.Size = new System.Drawing.Size(142, 38);
             this.DonationLookUpIdButton.TabIndex = 12;
             this.DonationLookUpIdButton.Text = "Look Up ID";
             this.DonationLookUpIdButton.UseVisualStyleBackColor = true;
@@ -500,10 +467,9 @@
             // 
             this.DonationUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonationUpdateButton.ForeColor = System.Drawing.Color.Black;
-            this.DonationUpdateButton.Location = new System.Drawing.Point(88, 227);
-            this.DonationUpdateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonationUpdateButton.Location = new System.Drawing.Point(132, 349);
             this.DonationUpdateButton.Name = "DonationUpdateButton";
-            this.DonationUpdateButton.Size = new System.Drawing.Size(65, 25);
+            this.DonationUpdateButton.Size = new System.Drawing.Size(98, 38);
             this.DonationUpdateButton.TabIndex = 11;
             this.DonationUpdateButton.Text = "Update";
             this.DonationUpdateButton.UseVisualStyleBackColor = true;
@@ -512,10 +478,9 @@
             // 
             this.DonationAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonationAddButton.ForeColor = System.Drawing.Color.Black;
-            this.DonationAddButton.Location = new System.Drawing.Point(7, 227);
-            this.DonationAddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonationAddButton.Location = new System.Drawing.Point(10, 349);
             this.DonationAddButton.Name = "DonationAddButton";
-            this.DonationAddButton.Size = new System.Drawing.Size(55, 25);
+            this.DonationAddButton.Size = new System.Drawing.Size(82, 38);
             this.DonationAddButton.TabIndex = 10;
             this.DonationAddButton.Text = "Add";
             this.DonationAddButton.UseVisualStyleBackColor = true;
@@ -524,62 +489,57 @@
             // DonationFacilityIdTextBox
             // 
             this.DonationFacilityIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationFacilityIdTextBox.Location = new System.Drawing.Point(113, 117);
-            this.DonationFacilityIdTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonationFacilityIdTextBox.Location = new System.Drawing.Point(170, 180);
             this.DonationFacilityIdTextBox.Name = "DonationFacilityIdTextBox";
-            this.DonationFacilityIdTextBox.Size = new System.Drawing.Size(149, 23);
+            this.DonationFacilityIdTextBox.Size = new System.Drawing.Size(222, 30);
             this.DonationFacilityIdTextBox.TabIndex = 5;
             // 
             // DonationFacilityId
             // 
             this.DonationFacilityId.AutoSize = true;
             this.DonationFacilityId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationFacilityId.Location = new System.Drawing.Point(4, 117);
-            this.DonationFacilityId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonationFacilityId.Location = new System.Drawing.Point(6, 180);
             this.DonationFacilityId.Name = "DonationFacilityId";
-            this.DonationFacilityId.Size = new System.Drawing.Size(68, 17);
+            this.DonationFacilityId.Size = new System.Drawing.Size(104, 25);
             this.DonationFacilityId.TabIndex = 4;
-            this.DonationFacilityId.Text = "Facility ID";
+            this.DonationFacilityId.Text = "Facility ID*";
             // 
             // DonationNurseIdTextBox
             // 
             this.DonationNurseIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationNurseIdTextBox.Location = new System.Drawing.Point(113, 83);
-            this.DonationNurseIdTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonationNurseIdTextBox.Location = new System.Drawing.Point(170, 128);
             this.DonationNurseIdTextBox.Name = "DonationNurseIdTextBox";
-            this.DonationNurseIdTextBox.Size = new System.Drawing.Size(149, 23);
+            this.DonationNurseIdTextBox.Size = new System.Drawing.Size(222, 30);
             this.DonationNurseIdTextBox.TabIndex = 3;
             // 
             // DonationNurseId
             // 
             this.DonationNurseId.AutoSize = true;
             this.DonationNurseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationNurseId.Location = new System.Drawing.Point(4, 83);
-            this.DonationNurseId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonationNurseId.Location = new System.Drawing.Point(6, 128);
             this.DonationNurseId.Name = "DonationNurseId";
-            this.DonationNurseId.Size = new System.Drawing.Size(59, 17);
+            this.DonationNurseId.Size = new System.Drawing.Size(91, 25);
             this.DonationNurseId.TabIndex = 2;
-            this.DonationNurseId.Text = "NurseID";
+            this.DonationNurseId.Text = "NurseID*";
             // 
             // DonationDonorIDTextBox
             // 
             this.DonationDonorIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationDonorIDTextBox.Location = new System.Drawing.Point(113, 47);
-            this.DonationDonorIDTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonationDonorIDTextBox.Location = new System.Drawing.Point(170, 72);
             this.DonationDonorIDTextBox.Name = "DonationDonorIDTextBox";
-            this.DonationDonorIDTextBox.Size = new System.Drawing.Size(149, 23);
+            this.DonationDonorIDTextBox.Size = new System.Drawing.Size(222, 30);
             this.DonationDonorIDTextBox.TabIndex = 1;
             // 
             // DonationDonorId
             // 
             this.DonationDonorId.AutoSize = true;
             this.DonationDonorId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonationDonorId.Location = new System.Drawing.Point(4, 47);
-            this.DonationDonorId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DonationDonorId.Location = new System.Drawing.Point(6, 72);
             this.DonationDonorId.Name = "DonationDonorId";
-            this.DonationDonorId.Size = new System.Drawing.Size(64, 17);
+            this.DonationDonorId.Size = new System.Drawing.Size(97, 25);
             this.DonationDonorId.TabIndex = 0;
-            this.DonationDonorId.Text = "Donor ID";
+            this.DonationDonorId.Text = "Donor ID*";
+            this.DonationDonorId.Click += new System.EventHandler(this.DonationDonorId_Click);
             // 
             // FacilityBox
             // 
@@ -599,11 +559,9 @@
             this.FacilityBox.Controls.Add(this.FacilityAddress1);
             this.FacilityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.FacilityBox.ForeColor = System.Drawing.Color.White;
-            this.FacilityBox.Location = new System.Drawing.Point(43, 349);
-            this.FacilityBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityBox.Location = new System.Drawing.Point(64, 537);
             this.FacilityBox.Name = "FacilityBox";
-            this.FacilityBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FacilityBox.Size = new System.Drawing.Size(270, 363);
+            this.FacilityBox.Size = new System.Drawing.Size(405, 558);
             this.FacilityBox.TabIndex = 3;
             this.FacilityBox.TabStop = false;
             this.FacilityBox.Text = "Facility";
@@ -666,20 +624,18 @@
             "WV",
             "WI",
             "WY"});
-            this.FacilityStateTextBox.Location = new System.Drawing.Point(113, 155);
-            this.FacilityStateTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityStateTextBox.Location = new System.Drawing.Point(170, 238);
             this.FacilityStateTextBox.Name = "FacilityStateTextBox";
-            this.FacilityStateTextBox.Size = new System.Drawing.Size(149, 24);
+            this.FacilityStateTextBox.Size = new System.Drawing.Size(222, 33);
             this.FacilityStateTextBox.TabIndex = 24;
             // 
             // FacilityLookUpIdButton
             // 
             this.FacilityLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityLookUpIdButton.ForeColor = System.Drawing.Color.Black;
-            this.FacilityLookUpIdButton.Location = new System.Drawing.Point(131, 326);
-            this.FacilityLookUpIdButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityLookUpIdButton.Location = new System.Drawing.Point(196, 502);
             this.FacilityLookUpIdButton.Name = "FacilityLookUpIdButton";
-            this.FacilityLookUpIdButton.Size = new System.Drawing.Size(80, 25);
+            this.FacilityLookUpIdButton.Size = new System.Drawing.Size(120, 38);
             this.FacilityLookUpIdButton.TabIndex = 23;
             this.FacilityLookUpIdButton.Text = "Look Up ID";
             this.FacilityLookUpIdButton.UseVisualStyleBackColor = true;
@@ -689,10 +645,9 @@
             // 
             this.FacilityAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityAddButton.ForeColor = System.Drawing.Color.Black;
-            this.FacilityAddButton.Location = new System.Drawing.Point(45, 326);
-            this.FacilityAddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityAddButton.Location = new System.Drawing.Point(68, 502);
             this.FacilityAddButton.Name = "FacilityAddButton";
-            this.FacilityAddButton.Size = new System.Drawing.Size(55, 25);
+            this.FacilityAddButton.Size = new System.Drawing.Size(82, 38);
             this.FacilityAddButton.TabIndex = 22;
             this.FacilityAddButton.Text = "Add";
             this.FacilityAddButton.UseVisualStyleBackColor = true;
@@ -701,40 +656,36 @@
             // FacilityFacilityPhoneTextBox
             // 
             this.FacilityFacilityPhoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityFacilityPhoneTextBox.Location = new System.Drawing.Point(113, 226);
-            this.FacilityFacilityPhoneTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityFacilityPhoneTextBox.Location = new System.Drawing.Point(170, 348);
             this.FacilityFacilityPhoneTextBox.Name = "FacilityFacilityPhoneTextBox";
-            this.FacilityFacilityPhoneTextBox.Size = new System.Drawing.Size(149, 23);
+            this.FacilityFacilityPhoneTextBox.Size = new System.Drawing.Size(222, 30);
             this.FacilityFacilityPhoneTextBox.TabIndex = 19;
             // 
             // FacilityFacilityPhone
             // 
             this.FacilityFacilityPhone.AutoSize = true;
             this.FacilityFacilityPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityFacilityPhone.Location = new System.Drawing.Point(4, 226);
-            this.FacilityFacilityPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FacilityFacilityPhone.Location = new System.Drawing.Point(6, 348);
             this.FacilityFacilityPhone.Name = "FacilityFacilityPhone";
-            this.FacilityFacilityPhone.Size = new System.Drawing.Size(96, 17);
+            this.FacilityFacilityPhone.Size = new System.Drawing.Size(134, 25);
             this.FacilityFacilityPhone.TabIndex = 18;
             this.FacilityFacilityPhone.Text = "Facility Phone";
             // 
             // FacilityZipCodeTextBox
             // 
             this.FacilityZipCodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityZipCodeTextBox.Location = new System.Drawing.Point(113, 192);
-            this.FacilityZipCodeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityZipCodeTextBox.Location = new System.Drawing.Point(170, 295);
             this.FacilityZipCodeTextBox.Name = "FacilityZipCodeTextBox";
-            this.FacilityZipCodeTextBox.Size = new System.Drawing.Size(149, 23);
+            this.FacilityZipCodeTextBox.Size = new System.Drawing.Size(222, 30);
             this.FacilityZipCodeTextBox.TabIndex = 17;
             // 
             // FacilityZipCode
             // 
             this.FacilityZipCode.AutoSize = true;
             this.FacilityZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityZipCode.Location = new System.Drawing.Point(4, 192);
-            this.FacilityZipCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FacilityZipCode.Location = new System.Drawing.Point(6, 295);
             this.FacilityZipCode.Name = "FacilityZipCode";
-            this.FacilityZipCode.Size = new System.Drawing.Size(66, 17);
+            this.FacilityZipCode.Size = new System.Drawing.Size(95, 25);
             this.FacilityZipCode.TabIndex = 16;
             this.FacilityZipCode.Text = "ZipCode*";
             // 
@@ -742,89 +693,81 @@
             // 
             this.FacilityState.AutoSize = true;
             this.FacilityState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityState.Location = new System.Drawing.Point(4, 157);
-            this.FacilityState.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FacilityState.Location = new System.Drawing.Point(6, 242);
             this.FacilityState.Name = "FacilityState";
-            this.FacilityState.Size = new System.Drawing.Size(46, 17);
+            this.FacilityState.Size = new System.Drawing.Size(66, 25);
             this.FacilityState.TabIndex = 14;
             this.FacilityState.Text = "State*";
             // 
             // FacilityCityTextBox
             // 
             this.FacilityCityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityCityTextBox.Location = new System.Drawing.Point(113, 120);
-            this.FacilityCityTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityCityTextBox.Location = new System.Drawing.Point(170, 185);
             this.FacilityCityTextBox.Name = "FacilityCityTextBox";
-            this.FacilityCityTextBox.Size = new System.Drawing.Size(149, 23);
+            this.FacilityCityTextBox.Size = new System.Drawing.Size(222, 30);
             this.FacilityCityTextBox.TabIndex = 13;
             // 
             // FacilityCity
             // 
             this.FacilityCity.AutoSize = true;
             this.FacilityCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityCity.Location = new System.Drawing.Point(4, 120);
-            this.FacilityCity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FacilityCity.Location = new System.Drawing.Point(6, 185);
             this.FacilityCity.Name = "FacilityCity";
-            this.FacilityCity.Size = new System.Drawing.Size(36, 17);
+            this.FacilityCity.Size = new System.Drawing.Size(54, 25);
             this.FacilityCity.TabIndex = 12;
             this.FacilityCity.Text = "City*";
             // 
             // FacilityAddress2TextBox
             // 
             this.FacilityAddress2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityAddress2TextBox.Location = new System.Drawing.Point(113, 86);
-            this.FacilityAddress2TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityAddress2TextBox.Location = new System.Drawing.Point(170, 132);
             this.FacilityAddress2TextBox.Name = "FacilityAddress2TextBox";
-            this.FacilityAddress2TextBox.Size = new System.Drawing.Size(149, 23);
+            this.FacilityAddress2TextBox.Size = new System.Drawing.Size(222, 30);
             this.FacilityAddress2TextBox.TabIndex = 11;
             // 
             // FacilityAddress2
             // 
             this.FacilityAddress2.AutoSize = true;
             this.FacilityAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityAddress2.Location = new System.Drawing.Point(4, 86);
-            this.FacilityAddress2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FacilityAddress2.Location = new System.Drawing.Point(6, 132);
             this.FacilityAddress2.Name = "FacilityAddress2";
-            this.FacilityAddress2.Size = new System.Drawing.Size(68, 17);
+            this.FacilityAddress2.Size = new System.Drawing.Size(96, 25);
             this.FacilityAddress2.TabIndex = 10;
             this.FacilityAddress2.Text = "Address2";
             // 
             // FacilityAddress1TextBox
             // 
             this.FacilityAddress1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityAddress1TextBox.Location = new System.Drawing.Point(113, 51);
-            this.FacilityAddress1TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityAddress1TextBox.Location = new System.Drawing.Point(170, 78);
             this.FacilityAddress1TextBox.Name = "FacilityAddress1TextBox";
-            this.FacilityAddress1TextBox.Size = new System.Drawing.Size(149, 23);
+            this.FacilityAddress1TextBox.Size = new System.Drawing.Size(222, 30);
             this.FacilityAddress1TextBox.TabIndex = 9;
             // 
             // FacilityAddress1
             // 
             this.FacilityAddress1.AutoSize = true;
             this.FacilityAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FacilityAddress1.Location = new System.Drawing.Point(4, 51);
-            this.FacilityAddress1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FacilityAddress1.Location = new System.Drawing.Point(6, 78);
             this.FacilityAddress1.Name = "FacilityAddress1";
-            this.FacilityAddress1.Size = new System.Drawing.Size(73, 17);
+            this.FacilityAddress1.Size = new System.Drawing.Size(104, 25);
             this.FacilityAddress1.TabIndex = 8;
             this.FacilityAddress1.Text = "Address1*";
             // 
             // Result
             // 
             this.Result.FormattingEnabled = true;
-            this.Result.Location = new System.Drawing.Point(759, 359);
-            this.Result.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Result.ItemHeight = 20;
+            this.Result.Location = new System.Drawing.Point(1138, 552);
             this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(183, 355);
+            this.Result.Size = new System.Drawing.Size(272, 544);
             this.Result.TabIndex = 4;
             // 
             // Explanation1View
             // 
             this.Explanation1View.ForeColor = System.Drawing.Color.Black;
-            this.Explanation1View.Location = new System.Drawing.Point(693, 364);
-            this.Explanation1View.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Explanation1View.Location = new System.Drawing.Point(1040, 560);
             this.Explanation1View.Name = "Explanation1View";
-            this.Explanation1View.Size = new System.Drawing.Size(47, 19);
+            this.Explanation1View.Size = new System.Drawing.Size(70, 29);
             this.Explanation1View.TabIndex = 5;
             this.Explanation1View.Text = "Show";
             this.Explanation1View.UseVisualStyleBackColor = true;
@@ -833,10 +776,9 @@
             // Explanation3View
             // 
             this.Explanation3View.ForeColor = System.Drawing.Color.Black;
-            this.Explanation3View.Location = new System.Drawing.Point(693, 494);
-            this.Explanation3View.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Explanation3View.Location = new System.Drawing.Point(1040, 760);
             this.Explanation3View.Name = "Explanation3View";
-            this.Explanation3View.Size = new System.Drawing.Size(47, 19);
+            this.Explanation3View.Size = new System.Drawing.Size(70, 29);
             this.Explanation3View.TabIndex = 7;
             this.Explanation3View.Text = "Show";
             this.Explanation3View.UseVisualStyleBackColor = true;
@@ -844,10 +786,9 @@
             // Explanation4View
             // 
             this.Explanation4View.ForeColor = System.Drawing.Color.Black;
-            this.Explanation4View.Location = new System.Drawing.Point(693, 558);
-            this.Explanation4View.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Explanation4View.Location = new System.Drawing.Point(1040, 858);
             this.Explanation4View.Name = "Explanation4View";
-            this.Explanation4View.Size = new System.Drawing.Size(47, 19);
+            this.Explanation4View.Size = new System.Drawing.Size(70, 29);
             this.Explanation4View.TabIndex = 8;
             this.Explanation4View.Text = "Show";
             this.Explanation4View.UseVisualStyleBackColor = true;
@@ -855,10 +796,9 @@
             // Explanation5View
             // 
             this.Explanation5View.ForeColor = System.Drawing.Color.Black;
-            this.Explanation5View.Location = new System.Drawing.Point(693, 622);
-            this.Explanation5View.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Explanation5View.Location = new System.Drawing.Point(1040, 957);
             this.Explanation5View.Name = "Explanation5View";
-            this.Explanation5View.Size = new System.Drawing.Size(47, 19);
+            this.Explanation5View.Size = new System.Drawing.Size(70, 29);
             this.Explanation5View.TabIndex = 9;
             this.Explanation5View.Text = "Show";
             this.Explanation5View.UseVisualStyleBackColor = true;
@@ -866,20 +806,18 @@
             // Explanation6View
             // 
             this.Explanation6View.ForeColor = System.Drawing.Color.Black;
-            this.Explanation6View.Location = new System.Drawing.Point(693, 685);
-            this.Explanation6View.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Explanation6View.Location = new System.Drawing.Point(1040, 1054);
             this.Explanation6View.Name = "Explanation6View";
-            this.Explanation6View.Size = new System.Drawing.Size(47, 19);
+            this.Explanation6View.Size = new System.Drawing.Size(70, 29);
             this.Explanation6View.TabIndex = 10;
             this.Explanation6View.Text = "Show";
             this.Explanation6View.UseVisualStyleBackColor = true;
             // 
             // ExplanationBox1
             // 
-            this.ExplanationBox1.Location = new System.Drawing.Point(359, 359);
-            this.ExplanationBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExplanationBox1.Location = new System.Drawing.Point(538, 552);
             this.ExplanationBox1.Name = "ExplanationBox1";
-            this.ExplanationBox1.Size = new System.Drawing.Size(106, 34);
+            this.ExplanationBox1.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox1.TabIndex = 11;
             this.ExplanationBox1.Text = "Donors with phone numbers for bloodtype";
             // 
@@ -887,10 +825,9 @@
             // 
             this.BloodTypeView.AutoSize = true;
             this.BloodTypeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BloodTypeView.Location = new System.Drawing.Point(472, 366);
-            this.BloodTypeView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BloodTypeView.Location = new System.Drawing.Point(708, 563);
             this.BloodTypeView.Name = "BloodTypeView";
-            this.BloodTypeView.Size = new System.Drawing.Size(80, 17);
+            this.BloodTypeView.Size = new System.Drawing.Size(112, 25);
             this.BloodTypeView.TabIndex = 12;
             this.BloodTypeView.Text = "Blood Type";
             // 
@@ -910,47 +847,42 @@
             "O-",
             "O+",
             "Unknown"});
-            this.BloodTypeViewTextBox.Location = new System.Drawing.Point(549, 364);
-            this.BloodTypeViewTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BloodTypeViewTextBox.Location = new System.Drawing.Point(824, 560);
             this.BloodTypeViewTextBox.Name = "BloodTypeViewTextBox";
-            this.BloodTypeViewTextBox.Size = new System.Drawing.Size(131, 24);
+            this.BloodTypeViewTextBox.Size = new System.Drawing.Size(194, 33);
             this.BloodTypeViewTextBox.TabIndex = 13;
             // 
             // ExplanationBox3
             // 
-            this.ExplanationBox3.Location = new System.Drawing.Point(359, 489);
-            this.ExplanationBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExplanationBox3.Location = new System.Drawing.Point(538, 752);
             this.ExplanationBox3.Name = "ExplanationBox3";
-            this.ExplanationBox3.Size = new System.Drawing.Size(106, 34);
+            this.ExplanationBox3.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox3.TabIndex = 15;
             this.ExplanationBox3.Text = "Inventory for Facility ID";
             // 
             // FacilityIdViewTextBox3
             // 
             this.FacilityIdViewTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdViewTextBox3.Location = new System.Drawing.Point(549, 493);
-            this.FacilityIdViewTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityIdViewTextBox3.Location = new System.Drawing.Point(824, 758);
             this.FacilityIdViewTextBox3.Name = "FacilityIdViewTextBox3";
-            this.FacilityIdViewTextBox3.Size = new System.Drawing.Size(131, 23);
+            this.FacilityIdViewTextBox3.Size = new System.Drawing.Size(194, 30);
             this.FacilityIdViewTextBox3.TabIndex = 17;
             // 
             // FacilityIdView3
             // 
             this.FacilityIdView3.AutoSize = true;
             this.FacilityIdView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdView3.Location = new System.Drawing.Point(472, 493);
-            this.FacilityIdView3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FacilityIdView3.Location = new System.Drawing.Point(708, 758);
             this.FacilityIdView3.Name = "FacilityIdView3";
-            this.FacilityIdView3.Size = new System.Drawing.Size(68, 17);
+            this.FacilityIdView3.Size = new System.Drawing.Size(96, 25);
             this.FacilityIdView3.TabIndex = 16;
             this.FacilityIdView3.Text = "Facility ID";
             // 
             // ExplanationBox4
             // 
-            this.ExplanationBox4.Location = new System.Drawing.Point(359, 553);
-            this.ExplanationBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExplanationBox4.Location = new System.Drawing.Point(538, 851);
             this.ExplanationBox4.Name = "ExplanationBox4";
-            this.ExplanationBox4.Size = new System.Drawing.Size(106, 34);
+            this.ExplanationBox4.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox4.TabIndex = 18;
             this.ExplanationBox4.Text = "All Blood Donations for Donation Type Description";
             // 
@@ -958,10 +890,9 @@
             // 
             this.DescriptionView.AutoSize = true;
             this.DescriptionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DescriptionView.Location = new System.Drawing.Point(472, 560);
-            this.DescriptionView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DescriptionView.Location = new System.Drawing.Point(708, 862);
             this.DescriptionView.Name = "DescriptionView";
-            this.DescriptionView.Size = new System.Drawing.Size(79, 17);
+            this.DescriptionView.Size = new System.Drawing.Size(109, 25);
             this.DescriptionView.TabIndex = 19;
             this.DescriptionView.Text = "Description";
             // 
@@ -976,56 +907,50 @@
             "Platelet",
             "Power Red",
             "Whole Blood"});
-            this.DescriptionViewTextBox.Location = new System.Drawing.Point(549, 558);
-            this.DescriptionViewTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DescriptionViewTextBox.Location = new System.Drawing.Point(824, 858);
             this.DescriptionViewTextBox.Name = "DescriptionViewTextBox";
-            this.DescriptionViewTextBox.Size = new System.Drawing.Size(131, 24);
+            this.DescriptionViewTextBox.Size = new System.Drawing.Size(194, 33);
             this.DescriptionViewTextBox.TabIndex = 20;
             // 
             // ExplanationBox5
             // 
-            this.ExplanationBox5.Location = new System.Drawing.Point(359, 617);
-            this.ExplanationBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExplanationBox5.Location = new System.Drawing.Point(538, 949);
             this.ExplanationBox5.Name = "ExplanationBox5";
-            this.ExplanationBox5.Size = new System.Drawing.Size(106, 34);
+            this.ExplanationBox5.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox5.TabIndex = 21;
             this.ExplanationBox5.Text = "All Blood Donations for Specific Date and Facility";
             // 
             // FacilityIdViewTextBox5
             // 
             this.FacilityIdViewTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdViewTextBox5.Location = new System.Drawing.Point(549, 617);
-            this.FacilityIdViewTextBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacilityIdViewTextBox5.Location = new System.Drawing.Point(824, 949);
             this.FacilityIdViewTextBox5.Name = "FacilityIdViewTextBox5";
-            this.FacilityIdViewTextBox5.Size = new System.Drawing.Size(131, 23);
+            this.FacilityIdViewTextBox5.Size = new System.Drawing.Size(194, 30);
             this.FacilityIdViewTextBox5.TabIndex = 23;
             // 
             // FacilityIdView5
             // 
             this.FacilityIdView5.AutoSize = true;
             this.FacilityIdView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdView5.Location = new System.Drawing.Point(472, 617);
-            this.FacilityIdView5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FacilityIdView5.Location = new System.Drawing.Point(708, 949);
             this.FacilityIdView5.Name = "FacilityIdView5";
-            this.FacilityIdView5.Size = new System.Drawing.Size(68, 17);
+            this.FacilityIdView5.Size = new System.Drawing.Size(96, 25);
             this.FacilityIdView5.TabIndex = 22;
             this.FacilityIdView5.Text = "Facility ID";
             // 
             // DateView
             // 
-            this.DateView.Location = new System.Drawing.Point(549, 640);
-            this.DateView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DateView.Location = new System.Drawing.Point(824, 985);
             this.DateView.Name = "DateView";
-            this.DateView.Size = new System.Drawing.Size(133, 20);
+            this.DateView.Size = new System.Drawing.Size(198, 26);
             this.DateView.TabIndex = 24;
             this.DateView.Value = new System.DateTime(2020, 3, 8, 0, 50, 1, 0);
             // 
             // ExplanationBox6
             // 
-            this.ExplanationBox6.Location = new System.Drawing.Point(359, 680);
-            this.ExplanationBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExplanationBox6.Location = new System.Drawing.Point(538, 1046);
             this.ExplanationBox6.Name = "ExplanationBox6";
-            this.ExplanationBox6.Size = new System.Drawing.Size(106, 34);
+            this.ExplanationBox6.Size = new System.Drawing.Size(157, 50);
             this.ExplanationBox6.TabIndex = 25;
             this.ExplanationBox6.Text = "All Blood Donations for Blood Type";
             // 
@@ -1045,30 +970,27 @@
             "O-",
             "O+",
             "Unknown"});
-            this.BloodTypeViewTextBox6.Location = new System.Drawing.Point(549, 685);
-            this.BloodTypeViewTextBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BloodTypeViewTextBox6.Location = new System.Drawing.Point(824, 1054);
             this.BloodTypeViewTextBox6.Name = "BloodTypeViewTextBox6";
-            this.BloodTypeViewTextBox6.Size = new System.Drawing.Size(131, 24);
+            this.BloodTypeViewTextBox6.Size = new System.Drawing.Size(194, 33);
             this.BloodTypeViewTextBox6.TabIndex = 27;
             // 
             // BloodTypeView6
             // 
             this.BloodTypeView6.AutoSize = true;
             this.BloodTypeView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BloodTypeView6.Location = new System.Drawing.Point(472, 687);
-            this.BloodTypeView6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BloodTypeView6.Location = new System.Drawing.Point(708, 1057);
             this.BloodTypeView6.Name = "BloodTypeView6";
-            this.BloodTypeView6.Size = new System.Drawing.Size(80, 17);
+            this.BloodTypeView6.Size = new System.Drawing.Size(112, 25);
             this.BloodTypeView6.TabIndex = 26;
             this.BloodTypeView6.Text = "Blood Type";
             // 
             // ShowAllDonorsButton
             // 
             this.ShowAllDonorsButton.ForeColor = System.Drawing.Color.Black;
-            this.ShowAllDonorsButton.Location = new System.Drawing.Point(359, 425);
-            this.ShowAllDonorsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAllDonorsButton.Location = new System.Drawing.Point(538, 654);
             this.ShowAllDonorsButton.Name = "ShowAllDonorsButton";
-            this.ShowAllDonorsButton.Size = new System.Drawing.Size(105, 38);
+            this.ShowAllDonorsButton.Size = new System.Drawing.Size(158, 58);
             this.ShowAllDonorsButton.TabIndex = 29;
             this.ShowAllDonorsButton.Text = "Show All Donors";
             this.ShowAllDonorsButton.UseVisualStyleBackColor = true;
@@ -1077,10 +999,9 @@
             // ShowAllNursesButton
             // 
             this.ShowAllNursesButton.ForeColor = System.Drawing.Color.Black;
-            this.ShowAllNursesButton.Location = new System.Drawing.Point(504, 425);
-            this.ShowAllNursesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAllNursesButton.Location = new System.Drawing.Point(756, 654);
             this.ShowAllNursesButton.Name = "ShowAllNursesButton";
-            this.ShowAllNursesButton.Size = new System.Drawing.Size(105, 38);
+            this.ShowAllNursesButton.Size = new System.Drawing.Size(158, 58);
             this.ShowAllNursesButton.TabIndex = 30;
             this.ShowAllNursesButton.Text = "Show All Nurses";
             this.ShowAllNursesButton.UseVisualStyleBackColor = true;
@@ -1089,10 +1010,9 @@
             // ShowAllFacilitiesButton
             // 
             this.ShowAllFacilitiesButton.ForeColor = System.Drawing.Color.Black;
-            this.ShowAllFacilitiesButton.Location = new System.Drawing.Point(635, 425);
-            this.ShowAllFacilitiesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAllFacilitiesButton.Location = new System.Drawing.Point(952, 654);
             this.ShowAllFacilitiesButton.Name = "ShowAllFacilitiesButton";
-            this.ShowAllFacilitiesButton.Size = new System.Drawing.Size(105, 38);
+            this.ShowAllFacilitiesButton.Size = new System.Drawing.Size(158, 58);
             this.ShowAllFacilitiesButton.TabIndex = 31;
             this.ShowAllFacilitiesButton.Text = "Show All Facilities";
             this.ShowAllFacilitiesButton.UseVisualStyleBackColor = true;
@@ -1100,10 +1020,10 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(1107, 757);
+            this.ClientSize = new System.Drawing.Size(1660, 1165);
             this.Controls.Add(this.ShowAllFacilitiesButton);
             this.Controls.Add(this.ShowAllNursesButton);
             this.Controls.Add(this.ShowAllDonorsButton);
@@ -1134,7 +1054,6 @@
             this.Controls.Add(this.NurseBox);
             this.Controls.Add(this.DonorBox);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "Blood Bank Database";
             this.Load += new System.EventHandler(this.MainForm_Load);

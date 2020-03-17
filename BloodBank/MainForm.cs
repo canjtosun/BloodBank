@@ -825,10 +825,14 @@ namespace BloodBank
             {
                 DonationType donationType = AddOrGetDonationType(donationTypeName);
                 BloodBag bloodBag = AddBloodBag(donationType.ID);
-                SQLCommand.CommandText = string.Format(INSERT_DONATION_COMMAND, donorID, nurseID, facilityID, 
+                SQLCommand.CommandText = string.Format(INSERT_DONATION_COMMAND, donorID, nurseID, facilityID,
                     bloodBag.ID);
                 SQLCommand.ExecuteNonQuery();
                 result = GetDonation(donorID, nurseID, facilityID);
+                MessageBox.Show("Successfully added a donation!");
+            }
+            else {
+                MessageBox.Show("This donation already exists!"); // currently doesn't check for donationTypeName, though it should
             }
 
             return result.ID;
@@ -838,7 +842,8 @@ namespace BloodBank
         {
             BloodBag result = new BloodBag();
 
-            string status = Guid.NewGuid().ToString().Substring(0, 20);
+            // string status = Guid.NewGuid().ToString().Substring(0, 20);
+            string status = "Donated";
             SQLCommand.CommandText = string.Format(INSERT_BLOODBAG_COMMAND, status, donationTypeID);
             SQLCommand.ExecuteNonQuery();
 
@@ -915,6 +920,11 @@ namespace BloodBank
             }
 
             return result;
+        }
+
+        private void DonationDonorId_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
