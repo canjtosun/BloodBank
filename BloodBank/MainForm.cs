@@ -30,12 +30,9 @@ namespace BloodBank
         private const string INSERT_FACILITY_COMMAND =
             "INSERT INTO Facility (Address1, Address2, City, State, ZipCode, FacilityPhone) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
 
-        //private const string INSERT_INVENTORY_COMMAND =
-        //    "INSERT INTO Inventory (ID) VALUES(last_insert_id());";
-
         private const string INSERT_DONATION_COMMAND =
-            "INSERT INTO Donation (DonorID, NurseID, DateTime, FacilityID, BloodBagId) " + 
-            "values ({0}, {1}, now(), {2}, {3});";
+            "INSERT INTO Donation (DonorID, NurseID, DateTime, FacilityID, BloodBagId) " +
+            "values ({0}, {1}, now(), {2}, last_insert_id());";
 
         private const string INSERT_DONATIONTYPE_COMMAND =
             "INSERT INTO DonationType (Description) VALUES ('{0}');";
@@ -43,8 +40,9 @@ namespace BloodBank
         private const string INSERT_BLOODBAG_COMMAND =
             "INSERT INTO BloodBag (Status, DonationTypeID) VALUES ('{0}', {1});";
 
-        private const string GET_BLOODBAG_COMMAND =
-            "SELECT * FROM BloodBag WHERE Status = '{0}' AND DonationTypeID = {1};";
+        private const string UPDATE_INVENTORY_AFTER_DONATION_ADD = 
+            "UPDATE Inventory SET BloodBagID = (SELECT Donation.BloodBagID FROM Donation WHERE Donation.ID = last_insert_id())" +
+            "WHERE ID IN(SELECT Facility.InventoryID FROM Facility WHERE Facility.ID = '{0}');";
 
         private const string GET_PERSON_COMMAND =
             "SELECT * FROM Person WHERE FirstName = '{0}' and MiddleName = '{1}' " +
@@ -435,7 +433,7 @@ namespace BloodBank
             return facility;
         }
 
-        private Donation GetDonation(int donorID, int nurseID, int facilityID)
+        private Donation GetDonation(int donorID, int nurseID, int facilityID) // currently doesn't check for donationTypeName, though it should
         {
             Donation result = new Donation();
 
@@ -465,49 +463,6 @@ namespace BloodBank
 
             return result;
         }
-
-        //private int AddInventory(string Address1, string Address2, string City, string State, string ZipCode, string FacilityPhone)
-        //{
-
-        //    Facility facility = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
-
-        //    if (facility.ID == 0)
-        //    {
-        //        SQLCommand.CommandText = string.Format(INSERT_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
-        //        SQLCommand.ExecuteNonQuery();
-        //        facility = GetFacility(Address1, Address2, City, State, ZipCode, FacilityPhone);
-        //        SQLCommand.CommandText = string.Format(INSERT_INVENTORY_COMMAND, facility.ID);
-        //        SQLCommand.ExecuteNonQuery();
-        //        MessageBox.Show("Success");
-        //    }
-
-        //    return facility.ID;
-        //}
-
-        //private Inventory GetInventory(int ID, int BLoodBagID)
-        //{
-        //    Inventory inventory = new Inventory();
-        //    int rowCount = 0;
-
-        //    SQLCommand.CommandText = string.Format(GET_INVENTORY_COMMAND, ID);
-
-        //    using (MySqlDataReader rows = SQLCommand.ExecuteReader())
-        //    {
-        //        while (rows.Read())
-        //        {
-        //            rowCount++;
-
-        //            if (rowCount > 1)
-        //            {
-        //                throw new Exception("GetInventory returned too many rows");
-        //            }
-
-        //            inventory.ID = (int)rows["ID"];
-        //        }
-        //    }
-
-        //    return inventory;
-        //}
 
         private void DonorAddButton_Click(object sender, EventArgs e)
         {
@@ -820,67 +775,34 @@ namespace BloodBank
             }
         }
 
-        private int AddDonation(int donorID, int nurseID, int facilityID, string donationTypeName)
+        private void AddDonation(int donorID, int nurseID, int facilityID, string donationTypeName)
         {
             Donation result = GetDonation(donorID, nurseID, facilityID);
 
             if (result.ID == 0)
             {
                 DonationType donationType = AddOrGetDonationType(donationTypeName);
-                BloodBag bloodBag = AddBloodBag(donationType.ID);
-                SQLCommand.CommandText = string.Format(INSERT_DONATION_COMMAND, donorID, nurseID, facilityID,
-                    bloodBag.ID);
+                AddBloodBag(donationType.ID);
+                SQLCommand.CommandText = string.Format(INSERT_DONATION_COMMAND, donorID, nurseID, facilityID);
                 SQLCommand.ExecuteNonQuery();
-                result = GetDonation(donorID, nurseID, facilityID);
+
+                SQLCommand.CommandText = string.Format(UPDATE_INVENTORY_AFTER_DONATION_ADD, facilityID);
+                SQLCommand.ExecuteNonQuery();
                 MessageBox.Show("Successfully added a donation!");
             }
             else {
                 MessageBox.Show("This donation already exists!"); // currently doesn't check for donationTypeName, though it should
             }
 
-            return result.ID;
         }
 
-        private BloodBag AddBloodBag(int donationTypeID)
+        private void AddBloodBag(int donationTypeID)
         {
-            BloodBag result = new BloodBag();
-
-            // string status = Guid.NewGuid().ToString().Substring(0, 20);
             string status = "Donated";
             SQLCommand.CommandText = string.Format(INSERT_BLOODBAG_COMMAND, status, donationTypeID);
             SQLCommand.ExecuteNonQuery();
-
-            result = GetBloodBag(status, donationTypeID);
-
-            return result;
         }
 
-        private BloodBag GetBloodBag(string status, int donationTypeID)
-        {
-            BloodBag result = new BloodBag();
-
-            int rowCount = 0;
-            SQLCommand.CommandText = string.Format(GET_BLOODBAG_COMMAND, status, donationTypeID);
-
-            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
-            {
-                while (rows.Read())
-                {
-                    rowCount++;
-
-                    if (rowCount > 1)
-                    {
-                        throw new Exception("BloodBag returned too many rows");
-                    }
-
-                    result.ID = (int)rows["ID"];
-                    result.Status = rows["Status"].ToString();
-                    result.DonationTypeID = (int)rows["DonationTypeID"];
-                }
-            }
-
-            return result;
-        }
 
         private DonationType AddOrGetDonationType(string donationTypeName)
         {
