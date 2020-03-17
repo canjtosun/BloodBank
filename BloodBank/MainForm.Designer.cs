@@ -83,7 +83,7 @@
             this.FacilityAddress1 = new System.Windows.Forms.Label();
             this.Result = new System.Windows.Forms.ListBox();
             this.Explanation1View = new System.Windows.Forms.Button();
-            this.Explanation3View = new System.Windows.Forms.Button();
+            this.ViewInventoryAtFacility = new System.Windows.Forms.Button();
             this.Explanation4View = new System.Windows.Forms.Button();
             this.Explanation5View = new System.Windows.Forms.Button();
             this.Explanation6View = new System.Windows.Forms.Button();
@@ -91,7 +91,7 @@
             this.BloodTypeView = new System.Windows.Forms.Label();
             this.BloodTypeViewTextBox = new System.Windows.Forms.ComboBox();
             this.ExplanationBox3 = new System.Windows.Forms.RichTextBox();
-            this.FacilityIdViewTextBox3 = new System.Windows.Forms.TextBox();
+            this.FacilityIdInputBox = new System.Windows.Forms.TextBox();
             this.FacilityIdView3 = new System.Windows.Forms.Label();
             this.ExplanationBox4 = new System.Windows.Forms.RichTextBox();
             this.DescriptionView = new System.Windows.Forms.Label();
@@ -773,15 +773,16 @@
             this.Explanation1View.UseVisualStyleBackColor = true;
             this.Explanation1View.Click += new System.EventHandler(this.Explanation1View_Click);
             // 
-            // Explanation3View
+            // ViewInventoryAtFacility
             // 
-            this.Explanation3View.ForeColor = System.Drawing.Color.Black;
-            this.Explanation3View.Location = new System.Drawing.Point(1040, 760);
-            this.Explanation3View.Name = "Explanation3View";
-            this.Explanation3View.Size = new System.Drawing.Size(70, 29);
-            this.Explanation3View.TabIndex = 7;
-            this.Explanation3View.Text = "Show";
-            this.Explanation3View.UseVisualStyleBackColor = true;
+            this.ViewInventoryAtFacility.ForeColor = System.Drawing.Color.Black;
+            this.ViewInventoryAtFacility.Location = new System.Drawing.Point(1040, 760);
+            this.ViewInventoryAtFacility.Name = "ViewInventoryAtFacility";
+            this.ViewInventoryAtFacility.Size = new System.Drawing.Size(70, 29);
+            this.ViewInventoryAtFacility.TabIndex = 7;
+            this.ViewInventoryAtFacility.Text = "Show";
+            this.ViewInventoryAtFacility.UseVisualStyleBackColor = true;
+            this.ViewInventoryAtFacility.Click += new System.EventHandler(this.ViewInventoryAtFacility_Click);
             // 
             // Explanation4View
             // 
@@ -860,13 +861,13 @@
             this.ExplanationBox3.TabIndex = 15;
             this.ExplanationBox3.Text = "Inventory for Facility ID";
             // 
-            // FacilityIdViewTextBox3
+            // FacilityIdInputBox
             // 
-            this.FacilityIdViewTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdViewTextBox3.Location = new System.Drawing.Point(824, 758);
-            this.FacilityIdViewTextBox3.Name = "FacilityIdViewTextBox3";
-            this.FacilityIdViewTextBox3.Size = new System.Drawing.Size(194, 30);
-            this.FacilityIdViewTextBox3.TabIndex = 17;
+            this.FacilityIdInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityIdInputBox.Location = new System.Drawing.Point(824, 758);
+            this.FacilityIdInputBox.Name = "FacilityIdInputBox";
+            this.FacilityIdInputBox.Size = new System.Drawing.Size(194, 30);
+            this.FacilityIdInputBox.TabIndex = 17;
             // 
             // FacilityIdView3
             // 
@@ -1037,7 +1038,7 @@
             this.Controls.Add(this.DescriptionViewTextBox);
             this.Controls.Add(this.DescriptionView);
             this.Controls.Add(this.ExplanationBox4);
-            this.Controls.Add(this.FacilityIdViewTextBox3);
+            this.Controls.Add(this.FacilityIdInputBox);
             this.Controls.Add(this.FacilityIdView3);
             this.Controls.Add(this.ExplanationBox3);
             this.Controls.Add(this.BloodTypeViewTextBox);
@@ -1046,7 +1047,7 @@
             this.Controls.Add(this.Explanation6View);
             this.Controls.Add(this.Explanation5View);
             this.Controls.Add(this.Explanation4View);
-            this.Controls.Add(this.Explanation3View);
+            this.Controls.Add(this.ViewInventoryAtFacility);
             this.Controls.Add(this.Explanation1View);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.FacilityBox);
@@ -1124,7 +1125,7 @@
         private System.Windows.Forms.Label FacilityAddress1;
         private System.Windows.Forms.ListBox Result;
         private System.Windows.Forms.Button Explanation1View;
-        private System.Windows.Forms.Button Explanation3View;
+        private System.Windows.Forms.Button ViewInventoryAtFacility;
         private System.Windows.Forms.Button Explanation4View;
         private System.Windows.Forms.Button Explanation5View;
         private System.Windows.Forms.Button Explanation6View;
@@ -1132,7 +1133,7 @@
         private System.Windows.Forms.Label BloodTypeView;
         private System.Windows.Forms.ComboBox BloodTypeViewTextBox;
         private System.Windows.Forms.RichTextBox ExplanationBox3;
-        private System.Windows.Forms.TextBox FacilityIdViewTextBox3;
+        private System.Windows.Forms.TextBox FacilityIdInputBox;
         private System.Windows.Forms.Label FacilityIdView3;
         private System.Windows.Forms.RichTextBox ExplanationBox4;
         private System.Windows.Forms.Label DescriptionView;

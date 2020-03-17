@@ -750,6 +750,50 @@ namespace BloodBank
                     Result.Items.Add("Adress1: " + rows["Address1"]).ToString();
                     Result.Items.Add("Adress2: " + rows["Address2"]).ToString();
                     Result.Items.Add("City: " + rows["City"]).ToString();
+                    Result.Items.Add("State: " + rows["State"]).ToString();
+                    Result.Items.Add("ZipCode: " + rows["ZipCode"]).ToString();
+                    Result.Items.Add("Facility Phone: " + rows["FacilityPhone"]).ToString();
+                    Result.Items.Add("---------------------------").ToString();
+                }
+            }
+        }
+
+        private void ViewInventoryAtFacility_Click(object sender, EventArgs e)
+        {
+            string facilityID = FacilityIdInputBox.Text;
+            string view_inventory_at_facility =
+            "SELECT COUNT(DonationType.Description) Count, Blood.Type BloodType, " +
+                "DonationType.Description Description, " +
+                "BloodBag.Status Status, Facility.Address1 Address1, " +
+                "Facility.Address2 Address2, Facility.City City, " +
+                "Facility.State State, Facility.ZipCode ZipCode, " +
+                "Facility.FacilityPhone FacilityPhone " +
+            "FROM Facility " +
+                "JOIN Inventory ON(Facility.InventoryID = Inventory.ID) " +
+                "LEFT JOIN BloodBag ON(Inventory.BloodBagID = BloodBag.ID) " +
+                "LEFT JOIN DonationType ON(BloodBag.DonationTypeID = DonationType.ID) " +
+                "LEFT JOIN Donation ON(BloodBag.ID = Donation.BloodBagID) " +
+                "LEFT JOIN Donor ON(Donation.DonorID = Donor.ID) " +
+                "LEFT JOIN Blood ON(Donor.BloodID = Blood.ID) " +
+            "WHERE Facility.ID = '{0}'" +
+            "GROUP BY Facility.ID, Blood.Type, DonationType.Description, DonationType.Description;";
+
+            SQLCommand.CommandText = string.Format(view_inventory_at_facility, facilityID);
+
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                Result.Items.Clear();
+
+                while (rows.Read())
+                {
+                    Result.Items.Add("Count: " + rows["Count"]).ToString();
+                    Result.Items.Add("BloodType: " + rows["BloodType"]).ToString();
+                    Result.Items.Add("DonationType: " + rows["Description"]).ToString();
+                    Result.Items.Add("BloodBag Status: " + rows["Status"]).ToString();
+                    Result.Items.Add("Adress1: " + rows["Address1"]).ToString();
+                    Result.Items.Add("Adress2: " + rows["Address2"]).ToString();
+                    Result.Items.Add("City: " + rows["City"]).ToString();
+                    Result.Items.Add("State: " + rows["State"]).ToString();
                     Result.Items.Add("ZipCode: " + rows["ZipCode"]).ToString();
                     Result.Items.Add("Facility Phone: " + rows["FacilityPhone"]).ToString();
                     Result.Items.Add("---------------------------").ToString();
@@ -786,7 +830,9 @@ namespace BloodBank
                 SQLCommand.CommandText = string.Format(INSERT_DONATION_COMMAND, donorID, nurseID, facilityID);
                 SQLCommand.ExecuteNonQuery();
 
-                SQLCommand.CommandText = string.Format(UPDATE_INVENTORY_AFTER_DONATION_ADD, facilityID);
+                //SQLCommand.CommandText = string.Format(UPDATE_INVENTORY_AFTER_DONATION_ADD, facilityID);
+                string update_inventory = "INSERT INTO Inventory(ID, BloodBagID) VALUES ('{0}', (SELECT Donation.BloodBagID FROM Donation WHERE Donation.ID = last_insert_id()))";
+                SQLCommand.CommandText = string.Format(update_inventory, facilityID);
                 SQLCommand.ExecuteNonQuery();
                 MessageBox.Show("Successfully added a donation!");
             }
