@@ -245,6 +245,22 @@ namespace BloodBank
                 MessageBox.Show("Success");
             }
 
+            else
+            {
+
+                Donor donor = GetDonor(firstName, middleName, lastName, phoneNumber, bloodType);
+                if (donor.ID != 0)
+                {
+                    MessageBox.Show("This donor already exists!");
+                }
+                else
+                {
+                    SQLCommand.CommandText = string.Format(INSERT_DONOR_COMMAND, person.ID, bloodType);
+                    SQLCommand.ExecuteNonQuery();
+                    MessageBox.Show("Successfully added a donor");
+                }
+            }
+
             return person.ID;
         }
 
@@ -260,6 +276,20 @@ namespace BloodBank
                 SQLCommand.CommandText = string.Format(INSERT_NURSE_COMMAND, person.ID);
                 SQLCommand.ExecuteNonQuery();
                 MessageBox.Show("Success");
+            }
+
+            else {
+
+                Nurse nurse = GetNurse(firstName, middleName, lastName, phoneNumber);
+                if (nurse.ID != 0)
+                {
+                    MessageBox.Show("This nurse already exists!");
+                }
+                else {
+                    SQLCommand.CommandText = string.Format(INSERT_NURSE_COMMAND, person.ID);
+                    SQLCommand.ExecuteNonQuery();
+                    MessageBox.Show("Successfully added a nurse");
+                }
             }
 
             return person.ID;
@@ -320,11 +350,6 @@ namespace BloodBank
                         donor.BloodID = (int)rows["BloodID"];
                     }
                 }
-                MessageBox.Show("Look up of DonorID is successful. See the output box.");
-            }
-            else
-            {
-                MessageBox.Show("Couldn't find this donor in the database. Please try again!");
             }
 
             return donor;
@@ -355,11 +380,6 @@ namespace BloodBank
                         nurse.PersonID = (int)rows["PersonID"];                    
                     }
                 }
-                MessageBox.Show("Look up of NurseID is successful. See the output box.");
-            }
-            else
-            {
-                MessageBox.Show("Couldn't find this nurse in the database. Please try again!");
             }
 
             return nurse;
@@ -381,6 +401,10 @@ namespace BloodBank
                 SQLCommand.CommandText = string.Format(INSERT_INVENTORY_COMMAND, facility.ID);        
                 SQLCommand.ExecuteNonQuery();
                 MessageBox.Show("Success");
+            }
+            else
+            {
+                MessageBox.Show("This Facility already exists!");
             }
 
             return facility.ID;
@@ -517,7 +541,12 @@ namespace BloodBank
                 int donorID = donor.ID;
                 if (donorID != 0)
                 {
+                    MessageBox.Show("Look up of DonorID is successful. See the output box.");
+                    Result.Items.Clear();
                     Result.Items.Add("Donor ID: " + donorID).ToString();
+                }
+                else {
+                    MessageBox.Show("Couldn't find this donor in the database. Please try again!");
                 }
             }
 
@@ -581,7 +610,12 @@ namespace BloodBank
                 int nurseID = nurse.ID;
                 if (nurseID != 0)
                 {
+                    MessageBox.Show("Look up of NurseID is successful. See the output box.");
+                    Result.Items.Clear();
                     Result.Items.Add("Nurse ID: " + nurseID).ToString();
+                }
+                else {
+                    MessageBox.Show("Couldn't find this nurse in the database. Please try again!");
                 }
             }
         }
