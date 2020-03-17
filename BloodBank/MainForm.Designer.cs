@@ -635,7 +635,7 @@
             this.FacilityLookUpIdButton.ForeColor = System.Drawing.Color.Black;
             this.FacilityLookUpIdButton.Location = new System.Drawing.Point(196, 502);
             this.FacilityLookUpIdButton.Name = "FacilityLookUpIdButton";
-            this.FacilityLookUpIdButton.Size = new System.Drawing.Size(120, 38);
+            this.FacilityLookUpIdButton.Size = new System.Drawing.Size(156, 38);
             this.FacilityLookUpIdButton.TabIndex = 23;
             this.FacilityLookUpIdButton.Text = "Look Up ID";
             this.FacilityLookUpIdButton.UseVisualStyleBackColor = true;

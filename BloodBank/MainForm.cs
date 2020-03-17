@@ -30,8 +30,8 @@ namespace BloodBank
         private const string INSERT_FACILITY_COMMAND =
             "INSERT INTO Facility (Address1, Address2, City, State, ZipCode, FacilityPhone) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
 
-        private const string INSERT_INVENTORY_COMMAND =
-            "INSERT INTO Inventory (ID) VALUES(last_insert_id());";
+        //private const string INSERT_INVENTORY_COMMAND =
+        //    "INSERT INTO Inventory (ID) VALUES(last_insert_id());";
 
         private const string INSERT_DONATION_COMMAND =
             "INSERT INTO Donation (DonorID, NurseID, DateTime, FacilityID, BloodBagId) " + 
@@ -68,8 +68,8 @@ namespace BloodBank
         //private const string GET_INVENTORY_COMMAND =
         //"SELECT Inventory.ID, Nurse.PersonID FROM Nurse JOIN Person ON (Person.ID = Nurse.PersonID) WHERE Person.ID = '{0}';";
 
-        private const string UPDATE_FACILIY_COMMAND =
-            "UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id());";
+        // private const string UPDATE_FACILIY_COMMAND =
+           // "UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id());";
 
         //private const string UPDATE_DONOR_COMMAND =
         //"UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id())";
@@ -398,9 +398,12 @@ namespace BloodBank
             {
                 SQLCommand.CommandText = string.Format(INSERT_FACILITY_COMMAND, Address1, Address2, City, State, ZipCode, FacilityPhone);
                 SQLCommand.ExecuteNonQuery();
-                SQLCommand.CommandText = string.Format(INSERT_INVENTORY_COMMAND, facility.ID);        
+                // SQLCommand.CommandText = string.Format(INSERT_INVENTORY_COMMAND, facility.ID);
+                SQLCommand.CommandText = "INSERT INTO Inventory (ID) VALUES(last_insert_id());";
                 SQLCommand.ExecuteNonQuery();
-                MessageBox.Show("Success");
+                SQLCommand.CommandText = "UPDATE Facility SET InventoryID = (last_insert_id()) WHERE ID = (last_insert_id());";
+                SQLCommand.ExecuteNonQuery();
+                MessageBox.Show("Successfully added a new facility!");
             }
             else
             {
