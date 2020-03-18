@@ -880,6 +880,7 @@
             this.ShowDonationForDate.TabIndex = 9;
             this.ShowDonationForDate.Text = "Show";
             this.ShowDonationForDate.UseVisualStyleBackColor = true;
+            this.ShowDonationForDate.Click += new System.EventHandler(this.ShowDonationForDate_Click);
             // 
             // Explanation6View
             // 

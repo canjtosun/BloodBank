@@ -927,5 +927,46 @@ namespace BloodBank
         {
 
         }
+
+        private void ShowDonationForDate_Click(object sender, EventArgs e)
+        {
+            if (FacilityIdViewTextBox5.Text == "" || DateInput.Text == "" )
+            {
+                MessageBox.Show("facility id and date fields cannot be empty!");
+            }
+
+            string show_donation_for_date =
+                "SELECT Person.FirstName DonorFirstName, Person.LastName DonorLastName, Blood.Type AS BloodType, DonationType.Description DonationType, " +
+                "Donation.NurseID as NurseID, BloodBag.status AS status, Donation.DateTime AS DateTime " +
+                "FROM Facility " +
+                "JOIN Donation ON(Facility.ID = Donation.FacilityID) " +
+                "JOIN Donor ON(Donation.DonorID = Donor.ID) " +
+                "JOIN Person ON(Donor.PersonID = Person.ID) " +
+                "JOIN Blood ON(Donor.BloodID = Blood.ID) " +
+                "JOIN BloodBag ON(Donation.BloodBagID = BloodBag.ID) " +
+                "JOIN DonationType ON(BloodBag.DonationTypeID = DonationType.ID) " +
+                "WHERE Facility.ID = '{0}' AND DATE(Donation.DateTime) IN('{1}');";
+
+            int facility_id = int.Parse(FacilityIdViewTextBox5.Text);
+            string date = DateInput.Text;
+            SQLCommand.CommandText = string.Format(show_donation_for_date, facility_id, date);
+
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
+                Result.Items.Clear();
+
+                while (rows.Read())
+                {
+                    Result.Items.Add("Donor First Name: " + rows["DonorFirstName"]).ToString();
+                    Result.Items.Add("Donor Last Name: " + rows["DonorLastName"]).ToString();
+                    Result.Items.Add("Blood Type: " + rows["BloodType"]).ToString();
+                    Result.Items.Add("Donation Type: " + rows["DonationType"]).ToString();
+                    Result.Items.Add("Nurse ID: " + rows["NurseID"]).ToString();
+                    Result.Items.Add("Donation Status: " + rows["status"]).ToString();
+                    Result.Items.Add("Date and Time: " + rows["DateTime"]).ToString();
+                    Result.Items.Add("---------------------------").ToString();
+                }
+            }
+        }
     }
 }
