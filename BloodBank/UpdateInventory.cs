@@ -16,6 +16,20 @@ namespace BloodBank
     {
         static string connectionString = "SERVER=sql3.freemysqlhosting.net;PORT=3306;DATABASE=sql3326494;UID=sql3326494;PASSWORD=qwlhf4VVam";
 
+        private const string GET_DONATED_BLOODBAG_IDS =
+            "SELECT BloodBag.ID as BloodBagId, Blood.Type BloodType, DonationType.Description DonationType, BloodBag.Status AS Status " +
+            "FROM Facility " +
+            "JOIN Inventory ON(Facility.InventoryID = Inventory.ID) " +
+            "LEFT JOIN Donation ON(Donation.FacilityID = Facility.ID) " +
+            "LEFT JOIN BloodBag ON(Donation.BloodBagId = BloodBag.ID) " +
+            "LEFT JOIN DonationType ON(BloodBag.DonationTypeID = DonationType.ID) " +
+            "LEFT JOIN Donor ON(Donation.DonorID = Donor.ID) " +
+            "LEFT JOIN Blood ON(Donor.BloodID = Blood.ID) " +
+            "WHERE Facility.ID = '{0}' AND DonationType.Description = '{1}' AND BloodBag.Status = 'Donated' AND Blood.Type = '{2}';";
+
+
+        static int FacilityID;
+
         private MySqlConnection dbConnection;
         private MySqlCommand sqlCommand;
 
@@ -75,26 +89,70 @@ namespace BloodBank
 
         }
 
-        public void setFacilityID(string facilityID) {
+        public void setFacilityID(int facilityID) {
 
-            return;
+            FacilityID = facilityID;
 
         }
 
-        //private void Form2DonorChangeButton_Click(object sender, EventArgs e)
-        //{
+        private void UpdateInventoryFormFinalButton_Click(object sender, EventArgs e)
+        {
+            int number_of_units_used = int.Parse(InputUnitsUsedTextBox.Text);
 
-        //    string update_donor_command = "";
-        //    //i need the query here
+            int total_deleted = 0;
+            for (int i = 0; i < number_of_units_used; i ++)
+            {
+                int bloodbagid = GetBloodBagIdToDelete();
+                if (bloodbagid == 0)
+                {
+                    MessageBox.Show("No more blood bags of this blood type and donation type left, could use only " + total_deleted + " bloodbags.");
+                }
+                else
+                {
+                    SetBloodBagAsUsed(bloodbagid);
+                    total_deleted++;
+                }
+                
+            }
 
+        }
 
+        private int GetBloodBagIdToDelete()
+        {
+            int facility_id = FacilityID;
+            string blood_type_used = InventorySelectBloodTypeBox.Text;
+            string donation_type_used = InventorySelectDonationTypeBox.Text;
+            SQLCommand.CommandText = string.Format(GET_DONATED_BLOODBAG_IDS, facility_id, donation_type_used, blood_type_used);
 
-        //    SQLCommand.CommandText = string.Format(update_donor_command);
-        //    SQLCommand.ExecuteNonQuery();
+            int blood_bag_id_result = 0;
+            int rowCount = 0;
+            using (MySqlDataReader rows = SQLCommand.ExecuteReader())
+            {
 
+                while (rows.Read())
+                {
+                    rowCount++;
 
+                    if (rowCount > 1)
+                    {
+                        break;
+                    }
 
+                    blood_bag_id_result = (int)rows["BloodBagId"];
+                }
+            }
+            return blood_bag_id_result;
+        }
 
-        //}
+        private void SetBloodBagAsUsed(int bloodbagid)
+        {
+            string UPDATE_BLOODBAG_COMMAND =
+            "UPDATE BloodBag " +
+            "SET Status=('Used') " +
+            "WHERE ID = {0}; ";
+
+            SQLCommand.CommandText = string.Format(UPDATE_BLOODBAG_COMMAND, bloodbagid);
+            SQLCommand.ExecuteNonQuery();
+        }
     }
 }

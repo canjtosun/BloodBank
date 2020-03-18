@@ -559,11 +559,11 @@ namespace BloodBank
 
             else
             {
-                string facility_id_to_update = InputFacilityIdForUpdate.Text;
+                int facility_id_to_update = int.Parse(InputFacilityIdForUpdate.Text);
 
                     UpdateInventory update_inventory_form = new UpdateInventory();
-                    update_inventory_form.ShowDialog();
                     update_inventory_form.setFacilityID(facility_id_to_update);
+                    update_inventory_form.ShowDialog();
 
             }
         }

@@ -148,6 +148,7 @@
             this.UpdateInventoryFormFinalButton.TabIndex = 5;
             this.UpdateInventoryFormFinalButton.Text = "Update";
             this.UpdateInventoryFormFinalButton.UseVisualStyleBackColor = true;
+            this.UpdateInventoryFormFinalButton.Click += new System.EventHandler(UpdateInventoryFormFinalButton_Click);
             // 
             // UpdateInventory
             // 
