@@ -128,7 +128,7 @@
             this.DonorBox.Controls.Add(this.DonorFirstNameTextBox);
             this.DonorBox.Controls.Add(this.DonorFirstName);
             this.DonorBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonorBox.ForeColor = System.Drawing.Color.White;
+            this.DonorBox.ForeColor = System.Drawing.Color.Indigo;
             this.DonorBox.Location = new System.Drawing.Point(64, 98);
             this.DonorBox.Name = "DonorBox";
             this.DonorBox.Size = new System.Drawing.Size(405, 412);
@@ -139,7 +139,7 @@
             // DonorLookUpIdButton
             // 
             this.DonorLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorLookUpIdButton.ForeColor = System.Drawing.Color.Black;
+            this.DonorLookUpIdButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorLookUpIdButton.Location = new System.Drawing.Point(236, 349);
             this.DonorLookUpIdButton.Name = "DonorLookUpIdButton";
             this.DonorLookUpIdButton.Size = new System.Drawing.Size(156, 38);
@@ -151,7 +151,7 @@
             // DonorUpdateButton
             // 
             this.DonorUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorUpdateButton.ForeColor = System.Drawing.Color.Black;
+            this.DonorUpdateButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorUpdateButton.Location = new System.Drawing.Point(118, 349);
             this.DonorUpdateButton.Name = "DonorUpdateButton";
             this.DonorUpdateButton.Size = new System.Drawing.Size(98, 38);
@@ -163,7 +163,7 @@
             // DonorAddButton
             // 
             this.DonorAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonorAddButton.ForeColor = System.Drawing.Color.Black;
+            this.DonorAddButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorAddButton.Location = new System.Drawing.Point(10, 349);
             this.DonorAddButton.Name = "DonorAddButton";
             this.DonorAddButton.Size = new System.Drawing.Size(82, 38);
@@ -174,8 +174,10 @@
             // 
             // DonorBloodTypeBox
             // 
+            this.DonorBloodTypeBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonorBloodTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DonorBloodTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorBloodTypeBox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorBloodTypeBox.FormattingEnabled = true;
             this.DonorBloodTypeBox.Items.AddRange(new object[] {
             "Select Blood Type",
@@ -197,6 +199,7 @@
             // 
             this.DonorBloodType.AutoSize = true;
             this.DonorBloodType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorBloodType.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorBloodType.Location = new System.Drawing.Point(6, 292);
             this.DonorBloodType.Name = "DonorBloodType";
             this.DonorBloodType.Size = new System.Drawing.Size(120, 25);
@@ -205,6 +208,7 @@
             // 
             // DonorPhoneNumberTextBox
             // 
+            this.DonorPhoneNumberTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonorPhoneNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonorPhoneNumberTextBox.Location = new System.Drawing.Point(170, 235);
             this.DonorPhoneNumberTextBox.Name = "DonorPhoneNumberTextBox";
@@ -215,6 +219,7 @@
             // 
             this.DonorPhoneNumber.AutoSize = true;
             this.DonorPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorPhoneNumber.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorPhoneNumber.Location = new System.Drawing.Point(6, 235);
             this.DonorPhoneNumber.Name = "DonorPhoneNumber";
             this.DonorPhoneNumber.Size = new System.Drawing.Size(151, 25);
@@ -223,6 +228,7 @@
             // 
             // DonorLastNameTextBox
             // 
+            this.DonorLastNameTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonorLastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonorLastNameTextBox.Location = new System.Drawing.Point(170, 180);
             this.DonorLastNameTextBox.Name = "DonorLastNameTextBox";
@@ -233,6 +239,7 @@
             // 
             this.DonorLastName.AutoSize = true;
             this.DonorLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorLastName.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorLastName.Location = new System.Drawing.Point(6, 180);
             this.DonorLastName.Name = "DonorLastName";
             this.DonorLastName.Size = new System.Drawing.Size(114, 25);
@@ -241,6 +248,7 @@
             // 
             // DonorMiddleNameTextBox
             // 
+            this.DonorMiddleNameTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonorMiddleNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonorMiddleNameTextBox.Location = new System.Drawing.Point(170, 128);
             this.DonorMiddleNameTextBox.Name = "DonorMiddleNameTextBox";
@@ -251,6 +259,7 @@
             // 
             this.DonorMiddleName.AutoSize = true;
             this.DonorMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonorMiddleName.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorMiddleName.Location = new System.Drawing.Point(6, 128);
             this.DonorMiddleName.Name = "DonorMiddleName";
             this.DonorMiddleName.Size = new System.Drawing.Size(122, 25);
@@ -259,6 +268,7 @@
             // 
             // DonorFirstNameTextBox
             // 
+            this.DonorFirstNameTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonorFirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonorFirstNameTextBox.Location = new System.Drawing.Point(170, 72);
             this.DonorFirstNameTextBox.Name = "DonorFirstNameTextBox";
@@ -269,6 +279,7 @@
             // 
             this.DonorFirstName.AutoSize = true;
             this.DonorFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonorFirstName.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonorFirstName.Location = new System.Drawing.Point(6, 72);
             this.DonorFirstName.Name = "DonorFirstName";
             this.DonorFirstName.Size = new System.Drawing.Size(114, 25);
@@ -289,7 +300,7 @@
             this.NurseBox.Controls.Add(this.NurseFirstNameTextBox);
             this.NurseBox.Controls.Add(this.NurseFirstName);
             this.NurseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NurseBox.ForeColor = System.Drawing.Color.White;
+            this.NurseBox.ForeColor = System.Drawing.Color.Indigo;
             this.NurseBox.Location = new System.Drawing.Point(538, 98);
             this.NurseBox.Name = "NurseBox";
             this.NurseBox.Size = new System.Drawing.Size(405, 412);
@@ -300,7 +311,7 @@
             // NurseLookUpIdButton
             // 
             this.NurseLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NurseLookUpIdButton.ForeColor = System.Drawing.Color.Black;
+            this.NurseLookUpIdButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.NurseLookUpIdButton.Location = new System.Drawing.Point(243, 349);
             this.NurseLookUpIdButton.Name = "NurseLookUpIdButton";
             this.NurseLookUpIdButton.Size = new System.Drawing.Size(148, 38);
@@ -312,7 +323,7 @@
             // NurseUpdateButton
             // 
             this.NurseUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NurseUpdateButton.ForeColor = System.Drawing.Color.Black;
+            this.NurseUpdateButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.NurseUpdateButton.Location = new System.Drawing.Point(118, 349);
             this.NurseUpdateButton.Name = "NurseUpdateButton";
             this.NurseUpdateButton.Size = new System.Drawing.Size(98, 38);
@@ -323,7 +334,7 @@
             // NurseAddButton
             // 
             this.NurseAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NurseAddButton.ForeColor = System.Drawing.Color.Black;
+            this.NurseAddButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.NurseAddButton.Location = new System.Drawing.Point(10, 349);
             this.NurseAddButton.Name = "NurseAddButton";
             this.NurseAddButton.Size = new System.Drawing.Size(82, 38);
@@ -334,6 +345,7 @@
             // 
             // NursePhoneNumberTextBox
             // 
+            this.NursePhoneNumberTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.NursePhoneNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NursePhoneNumberTextBox.Location = new System.Drawing.Point(170, 235);
             this.NursePhoneNumberTextBox.Name = "NursePhoneNumberTextBox";
@@ -344,6 +356,7 @@
             // 
             this.NursePhoneNumber.AutoSize = true;
             this.NursePhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NursePhoneNumber.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.NursePhoneNumber.Location = new System.Drawing.Point(6, 235);
             this.NursePhoneNumber.Name = "NursePhoneNumber";
             this.NursePhoneNumber.Size = new System.Drawing.Size(151, 25);
@@ -352,6 +365,7 @@
             // 
             // NurseLastNameTextBox
             // 
+            this.NurseLastNameTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.NurseLastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NurseLastNameTextBox.Location = new System.Drawing.Point(170, 180);
             this.NurseLastNameTextBox.Name = "NurseLastNameTextBox";
@@ -362,6 +376,7 @@
             // 
             this.NurseLastName.AutoSize = true;
             this.NurseLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseLastName.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.NurseLastName.Location = new System.Drawing.Point(6, 180);
             this.NurseLastName.Name = "NurseLastName";
             this.NurseLastName.Size = new System.Drawing.Size(114, 25);
@@ -370,6 +385,7 @@
             // 
             // NurseMiddleNameTextBox
             // 
+            this.NurseMiddleNameTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.NurseMiddleNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NurseMiddleNameTextBox.Location = new System.Drawing.Point(170, 128);
             this.NurseMiddleNameTextBox.Name = "NurseMiddleNameTextBox";
@@ -380,6 +396,7 @@
             // 
             this.NurseMiddleName.AutoSize = true;
             this.NurseMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NurseMiddleName.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.NurseMiddleName.Location = new System.Drawing.Point(6, 128);
             this.NurseMiddleName.Name = "NurseMiddleName";
             this.NurseMiddleName.Size = new System.Drawing.Size(122, 25);
@@ -388,6 +405,7 @@
             // 
             // NurseFirstNameTextBox
             // 
+            this.NurseFirstNameTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.NurseFirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NurseFirstNameTextBox.Location = new System.Drawing.Point(170, 72);
             this.NurseFirstNameTextBox.Name = "NurseFirstNameTextBox";
@@ -398,6 +416,7 @@
             // 
             this.NurseFirstName.AutoSize = true;
             this.NurseFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NurseFirstName.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.NurseFirstName.Location = new System.Drawing.Point(6, 72);
             this.NurseFirstName.Name = "NurseFirstName";
             this.NurseFirstName.Size = new System.Drawing.Size(114, 25);
@@ -418,7 +437,7 @@
             this.DonationBox.Controls.Add(this.DonationDonorIDTextBox);
             this.DonationBox.Controls.Add(this.DonationDonorId);
             this.DonationBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonationBox.ForeColor = System.Drawing.Color.White;
+            this.DonationBox.ForeColor = System.Drawing.Color.Indigo;
             this.DonationBox.Location = new System.Drawing.Point(1006, 98);
             this.DonationBox.Name = "DonationBox";
             this.DonationBox.Size = new System.Drawing.Size(405, 412);
@@ -428,8 +447,10 @@
             // 
             // DonationDonationTypeTextBox
             // 
+            this.DonationDonationTypeTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonationDonationTypeTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DonationDonationTypeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationDonationTypeTextBox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonationDonationTypeTextBox.FormattingEnabled = true;
             this.DonationDonationTypeTextBox.Items.AddRange(new object[] {
             "Select Description",
@@ -446,6 +467,7 @@
             // 
             this.DonationDonationType.AutoSize = true;
             this.DonationDonationType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationDonationType.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonationDonationType.Location = new System.Drawing.Point(6, 235);
             this.DonationDonationType.Name = "DonationDonationType";
             this.DonationDonationType.Size = new System.Drawing.Size(148, 25);
@@ -455,7 +477,7 @@
             // DonationLookUpIdButton
             // 
             this.DonationLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationLookUpIdButton.ForeColor = System.Drawing.Color.Black;
+            this.DonationLookUpIdButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonationLookUpIdButton.Location = new System.Drawing.Point(249, 349);
             this.DonationLookUpIdButton.Name = "DonationLookUpIdButton";
             this.DonationLookUpIdButton.Size = new System.Drawing.Size(142, 38);
@@ -466,7 +488,7 @@
             // DonationUpdateButton
             // 
             this.DonationUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationUpdateButton.ForeColor = System.Drawing.Color.Black;
+            this.DonationUpdateButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonationUpdateButton.Location = new System.Drawing.Point(132, 349);
             this.DonationUpdateButton.Name = "DonationUpdateButton";
             this.DonationUpdateButton.Size = new System.Drawing.Size(98, 38);
@@ -477,7 +499,7 @@
             // DonationAddButton
             // 
             this.DonationAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DonationAddButton.ForeColor = System.Drawing.Color.Black;
+            this.DonationAddButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonationAddButton.Location = new System.Drawing.Point(10, 349);
             this.DonationAddButton.Name = "DonationAddButton";
             this.DonationAddButton.Size = new System.Drawing.Size(82, 38);
@@ -488,6 +510,7 @@
             // 
             // DonationFacilityIdTextBox
             // 
+            this.DonationFacilityIdTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonationFacilityIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonationFacilityIdTextBox.Location = new System.Drawing.Point(170, 180);
             this.DonationFacilityIdTextBox.Name = "DonationFacilityIdTextBox";
@@ -498,6 +521,7 @@
             // 
             this.DonationFacilityId.AutoSize = true;
             this.DonationFacilityId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationFacilityId.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonationFacilityId.Location = new System.Drawing.Point(6, 180);
             this.DonationFacilityId.Name = "DonationFacilityId";
             this.DonationFacilityId.Size = new System.Drawing.Size(104, 25);
@@ -506,6 +530,7 @@
             // 
             // DonationNurseIdTextBox
             // 
+            this.DonationNurseIdTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonationNurseIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonationNurseIdTextBox.Location = new System.Drawing.Point(170, 128);
             this.DonationNurseIdTextBox.Name = "DonationNurseIdTextBox";
@@ -516,6 +541,7 @@
             // 
             this.DonationNurseId.AutoSize = true;
             this.DonationNurseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DonationNurseId.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonationNurseId.Location = new System.Drawing.Point(6, 128);
             this.DonationNurseId.Name = "DonationNurseId";
             this.DonationNurseId.Size = new System.Drawing.Size(91, 25);
@@ -524,6 +550,7 @@
             // 
             // DonationDonorIDTextBox
             // 
+            this.DonationDonorIDTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DonationDonorIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DonationDonorIDTextBox.Location = new System.Drawing.Point(170, 72);
             this.DonationDonorIDTextBox.Name = "DonationDonorIDTextBox";
@@ -534,6 +561,7 @@
             // 
             this.DonationDonorId.AutoSize = true;
             this.DonationDonorId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonationDonorId.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DonationDonorId.Location = new System.Drawing.Point(6, 72);
             this.DonationDonorId.Name = "DonationDonorId";
             this.DonationDonorId.Size = new System.Drawing.Size(97, 25);
@@ -558,7 +586,7 @@
             this.FacilityBox.Controls.Add(this.FacilityAddress1TextBox);
             this.FacilityBox.Controls.Add(this.FacilityAddress1);
             this.FacilityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.FacilityBox.ForeColor = System.Drawing.Color.White;
+            this.FacilityBox.ForeColor = System.Drawing.Color.Indigo;
             this.FacilityBox.Location = new System.Drawing.Point(64, 537);
             this.FacilityBox.Name = "FacilityBox";
             this.FacilityBox.Size = new System.Drawing.Size(405, 558);
@@ -568,8 +596,10 @@
             // 
             // FacilityStateTextBox
             // 
+            this.FacilityStateTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityStateTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FacilityStateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityStateTextBox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityStateTextBox.FormattingEnabled = true;
             this.FacilityStateTextBox.Items.AddRange(new object[] {
             "Select State",
@@ -632,7 +662,7 @@
             // FacilityLookUpIdButton
             // 
             this.FacilityLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityLookUpIdButton.ForeColor = System.Drawing.Color.Black;
+            this.FacilityLookUpIdButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityLookUpIdButton.Location = new System.Drawing.Point(196, 502);
             this.FacilityLookUpIdButton.Name = "FacilityLookUpIdButton";
             this.FacilityLookUpIdButton.Size = new System.Drawing.Size(156, 38);
@@ -644,7 +674,7 @@
             // FacilityAddButton
             // 
             this.FacilityAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityAddButton.ForeColor = System.Drawing.Color.Black;
+            this.FacilityAddButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityAddButton.Location = new System.Drawing.Point(68, 502);
             this.FacilityAddButton.Name = "FacilityAddButton";
             this.FacilityAddButton.Size = new System.Drawing.Size(82, 38);
@@ -655,6 +685,7 @@
             // 
             // FacilityFacilityPhoneTextBox
             // 
+            this.FacilityFacilityPhoneTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityFacilityPhoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityFacilityPhoneTextBox.Location = new System.Drawing.Point(170, 348);
             this.FacilityFacilityPhoneTextBox.Name = "FacilityFacilityPhoneTextBox";
@@ -665,6 +696,7 @@
             // 
             this.FacilityFacilityPhone.AutoSize = true;
             this.FacilityFacilityPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityFacilityPhone.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityFacilityPhone.Location = new System.Drawing.Point(6, 348);
             this.FacilityFacilityPhone.Name = "FacilityFacilityPhone";
             this.FacilityFacilityPhone.Size = new System.Drawing.Size(134, 25);
@@ -673,6 +705,7 @@
             // 
             // FacilityZipCodeTextBox
             // 
+            this.FacilityZipCodeTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityZipCodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityZipCodeTextBox.Location = new System.Drawing.Point(170, 295);
             this.FacilityZipCodeTextBox.Name = "FacilityZipCodeTextBox";
@@ -683,6 +716,7 @@
             // 
             this.FacilityZipCode.AutoSize = true;
             this.FacilityZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityZipCode.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityZipCode.Location = new System.Drawing.Point(6, 295);
             this.FacilityZipCode.Name = "FacilityZipCode";
             this.FacilityZipCode.Size = new System.Drawing.Size(95, 25);
@@ -693,6 +727,7 @@
             // 
             this.FacilityState.AutoSize = true;
             this.FacilityState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityState.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityState.Location = new System.Drawing.Point(6, 242);
             this.FacilityState.Name = "FacilityState";
             this.FacilityState.Size = new System.Drawing.Size(66, 25);
@@ -701,6 +736,7 @@
             // 
             // FacilityCityTextBox
             // 
+            this.FacilityCityTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityCityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityCityTextBox.Location = new System.Drawing.Point(170, 185);
             this.FacilityCityTextBox.Name = "FacilityCityTextBox";
@@ -711,6 +747,7 @@
             // 
             this.FacilityCity.AutoSize = true;
             this.FacilityCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityCity.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityCity.Location = new System.Drawing.Point(6, 185);
             this.FacilityCity.Name = "FacilityCity";
             this.FacilityCity.Size = new System.Drawing.Size(54, 25);
@@ -719,6 +756,7 @@
             // 
             // FacilityAddress2TextBox
             // 
+            this.FacilityAddress2TextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityAddress2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityAddress2TextBox.Location = new System.Drawing.Point(170, 132);
             this.FacilityAddress2TextBox.Name = "FacilityAddress2TextBox";
@@ -729,6 +767,7 @@
             // 
             this.FacilityAddress2.AutoSize = true;
             this.FacilityAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityAddress2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityAddress2.Location = new System.Drawing.Point(6, 132);
             this.FacilityAddress2.Name = "FacilityAddress2";
             this.FacilityAddress2.Size = new System.Drawing.Size(96, 25);
@@ -737,6 +776,7 @@
             // 
             // FacilityAddress1TextBox
             // 
+            this.FacilityAddress1TextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityAddress1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityAddress1TextBox.Location = new System.Drawing.Point(170, 78);
             this.FacilityAddress1TextBox.Name = "FacilityAddress1TextBox";
@@ -747,6 +787,7 @@
             // 
             this.FacilityAddress1.AutoSize = true;
             this.FacilityAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FacilityAddress1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityAddress1.Location = new System.Drawing.Point(6, 78);
             this.FacilityAddress1.Name = "FacilityAddress1";
             this.FacilityAddress1.Size = new System.Drawing.Size(104, 25);
@@ -755,6 +796,8 @@
             // 
             // Result
             // 
+            this.Result.BackColor = System.Drawing.Color.Gainsboro;
+            this.Result.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.Result.FormattingEnabled = true;
             this.Result.ItemHeight = 20;
             this.Result.Location = new System.Drawing.Point(1138, 552);
@@ -764,7 +807,7 @@
             // 
             // Explanation1View
             // 
-            this.Explanation1View.ForeColor = System.Drawing.Color.Black;
+            this.Explanation1View.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.Explanation1View.Location = new System.Drawing.Point(1040, 560);
             this.Explanation1View.Name = "Explanation1View";
             this.Explanation1View.Size = new System.Drawing.Size(70, 29);
@@ -775,7 +818,7 @@
             // 
             // ViewInventoryAtFacility
             // 
-            this.ViewInventoryAtFacility.ForeColor = System.Drawing.Color.Black;
+            this.ViewInventoryAtFacility.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ViewInventoryAtFacility.Location = new System.Drawing.Point(1040, 760);
             this.ViewInventoryAtFacility.Name = "ViewInventoryAtFacility";
             this.ViewInventoryAtFacility.Size = new System.Drawing.Size(70, 29);
@@ -786,7 +829,7 @@
             // 
             // Explanation4View
             // 
-            this.Explanation4View.ForeColor = System.Drawing.Color.Black;
+            this.Explanation4View.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.Explanation4View.Location = new System.Drawing.Point(1040, 858);
             this.Explanation4View.Name = "Explanation4View";
             this.Explanation4View.Size = new System.Drawing.Size(70, 29);
@@ -796,7 +839,7 @@
             // 
             // Explanation5View
             // 
-            this.Explanation5View.ForeColor = System.Drawing.Color.Black;
+            this.Explanation5View.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.Explanation5View.Location = new System.Drawing.Point(1040, 957);
             this.Explanation5View.Name = "Explanation5View";
             this.Explanation5View.Size = new System.Drawing.Size(70, 29);
@@ -806,7 +849,7 @@
             // 
             // Explanation6View
             // 
-            this.Explanation6View.ForeColor = System.Drawing.Color.Black;
+            this.Explanation6View.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.Explanation6View.Location = new System.Drawing.Point(1040, 1054);
             this.Explanation6View.Name = "Explanation6View";
             this.Explanation6View.Size = new System.Drawing.Size(70, 29);
@@ -816,6 +859,8 @@
             // 
             // ExplanationBox1
             // 
+            this.ExplanationBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.ExplanationBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ExplanationBox1.Location = new System.Drawing.Point(538, 552);
             this.ExplanationBox1.Name = "ExplanationBox1";
             this.ExplanationBox1.Size = new System.Drawing.Size(157, 50);
@@ -826,6 +871,7 @@
             // 
             this.BloodTypeView.AutoSize = true;
             this.BloodTypeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeView.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.BloodTypeView.Location = new System.Drawing.Point(708, 563);
             this.BloodTypeView.Name = "BloodTypeView";
             this.BloodTypeView.Size = new System.Drawing.Size(112, 25);
@@ -834,6 +880,7 @@
             // 
             // BloodTypeViewTextBox
             // 
+            this.BloodTypeViewTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.BloodTypeViewTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BloodTypeViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.BloodTypeViewTextBox.FormattingEnabled = true;
@@ -855,6 +902,8 @@
             // 
             // ExplanationBox3
             // 
+            this.ExplanationBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.ExplanationBox3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ExplanationBox3.Location = new System.Drawing.Point(538, 752);
             this.ExplanationBox3.Name = "ExplanationBox3";
             this.ExplanationBox3.Size = new System.Drawing.Size(157, 50);
@@ -863,6 +912,7 @@
             // 
             // FacilityIdInputBox
             // 
+            this.FacilityIdInputBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityIdInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityIdInputBox.Location = new System.Drawing.Point(824, 758);
             this.FacilityIdInputBox.Name = "FacilityIdInputBox";
@@ -873,6 +923,7 @@
             // 
             this.FacilityIdView3.AutoSize = true;
             this.FacilityIdView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityIdView3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityIdView3.Location = new System.Drawing.Point(708, 758);
             this.FacilityIdView3.Name = "FacilityIdView3";
             this.FacilityIdView3.Size = new System.Drawing.Size(96, 25);
@@ -881,6 +932,8 @@
             // 
             // ExplanationBox4
             // 
+            this.ExplanationBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.ExplanationBox4.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ExplanationBox4.Location = new System.Drawing.Point(538, 851);
             this.ExplanationBox4.Name = "ExplanationBox4";
             this.ExplanationBox4.Size = new System.Drawing.Size(157, 50);
@@ -891,6 +944,7 @@
             // 
             this.DescriptionView.AutoSize = true;
             this.DescriptionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DescriptionView.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DescriptionView.Location = new System.Drawing.Point(708, 862);
             this.DescriptionView.Name = "DescriptionView";
             this.DescriptionView.Size = new System.Drawing.Size(109, 25);
@@ -899,8 +953,10 @@
             // 
             // DescriptionViewTextBox
             // 
+            this.DescriptionViewTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DescriptionViewTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DescriptionViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DescriptionViewTextBox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DescriptionViewTextBox.FormattingEnabled = true;
             this.DescriptionViewTextBox.Items.AddRange(new object[] {
             "Select Description",
@@ -915,6 +971,8 @@
             // 
             // ExplanationBox5
             // 
+            this.ExplanationBox5.BackColor = System.Drawing.Color.Gainsboro;
+            this.ExplanationBox5.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ExplanationBox5.Location = new System.Drawing.Point(538, 949);
             this.ExplanationBox5.Name = "ExplanationBox5";
             this.ExplanationBox5.Size = new System.Drawing.Size(157, 50);
@@ -923,6 +981,7 @@
             // 
             // FacilityIdViewTextBox5
             // 
+            this.FacilityIdViewTextBox5.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityIdViewTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityIdViewTextBox5.Location = new System.Drawing.Point(824, 949);
             this.FacilityIdViewTextBox5.Name = "FacilityIdViewTextBox5";
@@ -933,6 +992,7 @@
             // 
             this.FacilityIdView5.AutoSize = true;
             this.FacilityIdView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityIdView5.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityIdView5.Location = new System.Drawing.Point(708, 949);
             this.FacilityIdView5.Name = "FacilityIdView5";
             this.FacilityIdView5.Size = new System.Drawing.Size(96, 25);
@@ -941,6 +1001,9 @@
             // 
             // DateView
             // 
+            this.DateView.CalendarForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.DateView.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
+            this.DateView.CalendarTitleForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DateView.Location = new System.Drawing.Point(824, 985);
             this.DateView.Name = "DateView";
             this.DateView.Size = new System.Drawing.Size(198, 26);
@@ -949,6 +1012,8 @@
             // 
             // ExplanationBox6
             // 
+            this.ExplanationBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.ExplanationBox6.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ExplanationBox6.Location = new System.Drawing.Point(538, 1046);
             this.ExplanationBox6.Name = "ExplanationBox6";
             this.ExplanationBox6.Size = new System.Drawing.Size(157, 50);
@@ -957,6 +1022,7 @@
             // 
             // BloodTypeViewTextBox6
             // 
+            this.BloodTypeViewTextBox6.BackColor = System.Drawing.Color.Gainsboro;
             this.BloodTypeViewTextBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BloodTypeViewTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.BloodTypeViewTextBox6.FormattingEnabled = true;
@@ -980,6 +1046,7 @@
             // 
             this.BloodTypeView6.AutoSize = true;
             this.BloodTypeView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeView6.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.BloodTypeView6.Location = new System.Drawing.Point(708, 1057);
             this.BloodTypeView6.Name = "BloodTypeView6";
             this.BloodTypeView6.Size = new System.Drawing.Size(112, 25);
@@ -988,7 +1055,7 @@
             // 
             // ShowAllDonorsButton
             // 
-            this.ShowAllDonorsButton.ForeColor = System.Drawing.Color.Black;
+            this.ShowAllDonorsButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ShowAllDonorsButton.Location = new System.Drawing.Point(538, 654);
             this.ShowAllDonorsButton.Name = "ShowAllDonorsButton";
             this.ShowAllDonorsButton.Size = new System.Drawing.Size(158, 58);
@@ -999,7 +1066,7 @@
             // 
             // ShowAllNursesButton
             // 
-            this.ShowAllNursesButton.ForeColor = System.Drawing.Color.Black;
+            this.ShowAllNursesButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ShowAllNursesButton.Location = new System.Drawing.Point(756, 654);
             this.ShowAllNursesButton.Name = "ShowAllNursesButton";
             this.ShowAllNursesButton.Size = new System.Drawing.Size(158, 58);
@@ -1010,7 +1077,7 @@
             // 
             // ShowAllFacilitiesButton
             // 
-            this.ShowAllFacilitiesButton.ForeColor = System.Drawing.Color.Black;
+            this.ShowAllFacilitiesButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.ShowAllFacilitiesButton.Location = new System.Drawing.Point(952, 654);
             this.ShowAllFacilitiesButton.Name = "ShowAllFacilitiesButton";
             this.ShowAllFacilitiesButton.Size = new System.Drawing.Size(158, 58);
@@ -1023,7 +1090,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1660, 1165);
             this.Controls.Add(this.ShowAllFacilitiesButton);
             this.Controls.Add(this.ShowAllNursesButton);
@@ -1054,7 +1121,8 @@
             this.Controls.Add(this.DonationBox);
             this.Controls.Add(this.NurseBox);
             this.Controls.Add(this.DonorBox);
-            this.ForeColor = System.Drawing.Color.White;
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.Name = "MainForm";
             this.Text = "Blood Bank Database";
             this.Load += new System.EventHandler(this.MainForm_Load);
