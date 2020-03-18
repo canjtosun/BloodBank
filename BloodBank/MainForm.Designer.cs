@@ -67,6 +67,9 @@
             this.DonationDonorIDTextBox = new System.Windows.Forms.TextBox();
             this.DonationDonorId = new System.Windows.Forms.Label();
             this.FacilityBox = new System.Windows.Forms.GroupBox();
+            this.UpdateInventoryButton = new System.Windows.Forms.Button();
+            this.InputFacilityIdForUpdate = new System.Windows.Forms.TextBox();
+            this.UpdateInventoryInFacilityMainFormLabel = new System.Windows.Forms.Label();
             this.FacilityStateTextBox = new System.Windows.Forms.ComboBox();
             this.FacilityLookUpIdButton = new System.Windows.Forms.Button();
             this.FacilityAddButton = new System.Windows.Forms.Button();
@@ -571,6 +574,9 @@
             // 
             // FacilityBox
             // 
+            this.FacilityBox.Controls.Add(this.UpdateInventoryButton);
+            this.FacilityBox.Controls.Add(this.InputFacilityIdForUpdate);
+            this.FacilityBox.Controls.Add(this.UpdateInventoryInFacilityMainFormLabel);
             this.FacilityBox.Controls.Add(this.FacilityStateTextBox);
             this.FacilityBox.Controls.Add(this.FacilityLookUpIdButton);
             this.FacilityBox.Controls.Add(this.FacilityAddButton);
@@ -593,6 +599,38 @@
             this.FacilityBox.TabIndex = 3;
             this.FacilityBox.TabStop = false;
             this.FacilityBox.Text = "Facility";
+            // 
+            // UpdateInventoryButton
+            // 
+            this.UpdateInventoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateInventoryButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.UpdateInventoryButton.Location = new System.Drawing.Point(268, 501);
+            this.UpdateInventoryButton.Name = "UpdateInventoryButton";
+            this.UpdateInventoryButton.Size = new System.Drawing.Size(124, 42);
+            this.UpdateInventoryButton.TabIndex = 27;
+            this.UpdateInventoryButton.Text = "Update";
+            this.UpdateInventoryButton.UseVisualStyleBackColor = true;
+            this.UpdateInventoryButton.Click += new System.EventHandler(this.UpdateInventoryButton_Click);
+            // 
+            // InputFacilityIdForUpdate
+            // 
+            this.InputFacilityIdForUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.InputFacilityIdForUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InputFacilityIdForUpdate.Location = new System.Drawing.Point(328, 460);
+            this.InputFacilityIdForUpdate.Name = "InputFacilityIdForUpdate";
+            this.InputFacilityIdForUpdate.Size = new System.Drawing.Size(64, 30);
+            this.InputFacilityIdForUpdate.TabIndex = 26;
+            // 
+            // UpdateInventoryInFacilityMainFormLabel
+            // 
+            this.UpdateInventoryInFacilityMainFormLabel.AutoSize = true;
+            this.UpdateInventoryInFacilityMainFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateInventoryInFacilityMainFormLabel.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.UpdateInventoryInFacilityMainFormLabel.Location = new System.Drawing.Point(16, 463);
+            this.UpdateInventoryInFacilityMainFormLabel.Name = "UpdateInventoryInFacilityMainFormLabel";
+            this.UpdateInventoryInFacilityMainFormLabel.Size = new System.Drawing.Size(264, 25);
+            this.UpdateInventoryInFacilityMainFormLabel.TabIndex = 25;
+            this.UpdateInventoryInFacilityMainFormLabel.Text = "Update inventory for facility id";
             // 
             // FacilityStateTextBox
             // 
@@ -663,7 +701,7 @@
             // 
             this.FacilityLookUpIdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityLookUpIdButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.FacilityLookUpIdButton.Location = new System.Drawing.Point(196, 502);
+            this.FacilityLookUpIdButton.Location = new System.Drawing.Point(187, 399);
             this.FacilityLookUpIdButton.Name = "FacilityLookUpIdButton";
             this.FacilityLookUpIdButton.Size = new System.Drawing.Size(156, 38);
             this.FacilityLookUpIdButton.TabIndex = 23;
@@ -675,7 +713,7 @@
             // 
             this.FacilityAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityAddButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.FacilityAddButton.Location = new System.Drawing.Point(68, 502);
+            this.FacilityAddButton.Location = new System.Drawing.Point(75, 399);
             this.FacilityAddButton.Name = "FacilityAddButton";
             this.FacilityAddButton.Size = new System.Drawing.Size(82, 38);
             this.FacilityAddButton.TabIndex = 22;
@@ -1219,6 +1257,9 @@
         private System.Windows.Forms.Button ShowAllDonorsButton;
         private System.Windows.Forms.Button ShowAllNursesButton;
         private System.Windows.Forms.Button ShowAllFacilitiesButton;
+        private System.Windows.Forms.Label UpdateInventoryInFacilityMainFormLabel;
+        private System.Windows.Forms.Button UpdateInventoryButton;
+        private System.Windows.Forms.TextBox InputFacilityIdForUpdate;
     }
 }
 

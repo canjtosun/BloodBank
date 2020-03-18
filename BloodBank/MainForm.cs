@@ -552,6 +552,22 @@ namespace BloodBank
             }
         }
 
+        private void UpdateInventoryButton_Click(object sender, EventArgs e) // modify here
+        {
+            if (InputFacilityIdForUpdate.Text == "")
+                MessageBox.Show("facility id field cannot be empty!");
+
+            else
+            {
+                string facility_id_to_update = InputFacilityIdForUpdate.Text;
+
+                    UpdateInventory update_inventory_form = new UpdateInventory();
+                    update_inventory_form.ShowDialog();
+                    update_inventory_form.setFacilityID(facility_id_to_update);
+
+            }
+        }
+
         private void NurseLookUpIdButton_Click(object sender, EventArgs e)
         {
             if (NurseFirstNameTextBox.Text == "" || NurseLastNameTextBox.Text == "" ||
@@ -888,6 +904,11 @@ namespace BloodBank
         }
 
         private void FacilityIdView3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
