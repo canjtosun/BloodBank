@@ -788,7 +788,7 @@ namespace BloodBank
                 "LEFT JOIN DonationType ON(BloodBag.DonationTypeID = DonationType.ID) " +
                 "LEFT JOIN Donor ON(Donation.DonorID = Donor.ID) " +
                 "LEFT JOIN Blood ON(Donor.BloodID = Blood.ID) " +
-            "WHERE Facility.ID = '{0}'" +
+            "WHERE Facility.ID = '{0}' AND BloodBag.Status = 'Donated'" +
             "GROUP BY Blood.Type, DonationType.Description;";
 
             SQLCommand.CommandText = string.Format(view_inventory_at_facility, facilityID);
