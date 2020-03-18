@@ -922,5 +922,10 @@ namespace BloodBank
         {
 
         }
+
+        private void BloodTypeView_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

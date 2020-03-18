@@ -894,19 +894,21 @@
             // BloodTypeView
             // 
             this.BloodTypeView.AutoSize = true;
-            this.BloodTypeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BloodTypeView.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.BloodTypeView.Location = new System.Drawing.Point(533, 564);
             this.BloodTypeView.Name = "BloodTypeView";
-            this.BloodTypeView.Size = new System.Drawing.Size(377, 25);
+            this.BloodTypeView.Size = new System.Drawing.Size(348, 22);
             this.BloodTypeView.TabIndex = 12;
             this.BloodTypeView.Text = "Donors with phone numbers for blood type";
+            this.BloodTypeView.Click += new System.EventHandler(this.BloodTypeView_Click);
             // 
             // BloodTypeViewTextBox
             // 
             this.BloodTypeViewTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.BloodTypeViewTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BloodTypeViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BloodTypeViewTextBox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.BloodTypeViewTextBox.FormattingEnabled = true;
             this.BloodTypeViewTextBox.Items.AddRange(new object[] {
             "Select Blood Type",
@@ -921,26 +923,26 @@
             "Unknown"});
             this.BloodTypeViewTextBox.Location = new System.Drawing.Point(915, 561);
             this.BloodTypeViewTextBox.Name = "BloodTypeViewTextBox";
-            this.BloodTypeViewTextBox.Size = new System.Drawing.Size(194, 33);
+            this.BloodTypeViewTextBox.Size = new System.Drawing.Size(194, 28);
             this.BloodTypeViewTextBox.TabIndex = 13;
             // 
             // FacilityIdInputBox
             // 
             this.FacilityIdInputBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityIdInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdInputBox.Location = new System.Drawing.Point(756, 758);
+            this.FacilityIdInputBox.Location = new System.Drawing.Point(781, 758);
             this.FacilityIdInputBox.Name = "FacilityIdInputBox";
-            this.FacilityIdInputBox.Size = new System.Drawing.Size(262, 30);
+            this.FacilityIdInputBox.Size = new System.Drawing.Size(237, 30);
             this.FacilityIdInputBox.TabIndex = 17;
             // 
             // FacilityIdView3
             // 
             this.FacilityIdView3.AutoSize = true;
-            this.FacilityIdView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityIdView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FacilityIdView3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityIdView3.Location = new System.Drawing.Point(533, 758);
             this.FacilityIdView3.Name = "FacilityIdView3";
-            this.FacilityIdView3.Size = new System.Drawing.Size(208, 25);
+            this.FacilityIdView3.Size = new System.Drawing.Size(192, 22);
             this.FacilityIdView3.TabIndex = 16;
             this.FacilityIdView3.Text = "Inventory for Facility ID";
             this.FacilityIdView3.Click += new System.EventHandler(this.FacilityIdView3_Click_1);
@@ -948,11 +950,11 @@
             // DescriptionView
             // 
             this.DescriptionView.AutoSize = true;
-            this.DescriptionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DescriptionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescriptionView.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DescriptionView.Location = new System.Drawing.Point(533, 862);
             this.DescriptionView.Name = "DescriptionView";
-            this.DescriptionView.Size = new System.Drawing.Size(273, 25);
+            this.DescriptionView.Size = new System.Drawing.Size(252, 22);
             this.DescriptionView.TabIndex = 19;
             this.DescriptionView.Text = "All donations for donation type";
             // 
@@ -960,7 +962,7 @@
             // 
             this.DescriptionViewTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.DescriptionViewTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DescriptionViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DescriptionViewTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescriptionViewTextBox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.DescriptionViewTextBox.FormattingEnabled = true;
             this.DescriptionViewTextBox.Items.AddRange(new object[] {
@@ -971,7 +973,7 @@
             "Whole Blood"});
             this.DescriptionViewTextBox.Location = new System.Drawing.Point(824, 858);
             this.DescriptionViewTextBox.Name = "DescriptionViewTextBox";
-            this.DescriptionViewTextBox.Size = new System.Drawing.Size(194, 33);
+            this.DescriptionViewTextBox.Size = new System.Drawing.Size(194, 28);
             this.DescriptionViewTextBox.TabIndex = 20;
             // 
             // FacilityIdViewTextBox5
@@ -986,11 +988,11 @@
             // FacilityIdView5
             // 
             this.FacilityIdView5.AutoSize = true;
-            this.FacilityIdView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FacilityIdView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FacilityIdView5.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FacilityIdView5.Location = new System.Drawing.Point(533, 952);
             this.FacilityIdView5.Name = "FacilityIdView5";
-            this.FacilityIdView5.Size = new System.Drawing.Size(293, 25);
+            this.FacilityIdView5.Size = new System.Drawing.Size(271, 22);
             this.FacilityIdView5.TabIndex = 22;
             this.FacilityIdView5.Text = "All blood donations for Facility ID";
             // 
@@ -998,7 +1000,8 @@
             // 
             this.BloodTypeViewTextBox6.BackColor = System.Drawing.Color.Gainsboro;
             this.BloodTypeViewTextBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BloodTypeViewTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeViewTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BloodTypeViewTextBox6.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.BloodTypeViewTextBox6.FormattingEnabled = true;
             this.BloodTypeViewTextBox6.Items.AddRange(new object[] {
             "Select Blood Type",
@@ -1013,17 +1016,17 @@
             "Unknown"});
             this.BloodTypeViewTextBox6.Location = new System.Drawing.Point(824, 1054);
             this.BloodTypeViewTextBox6.Name = "BloodTypeViewTextBox6";
-            this.BloodTypeViewTextBox6.Size = new System.Drawing.Size(194, 33);
+            this.BloodTypeViewTextBox6.Size = new System.Drawing.Size(194, 28);
             this.BloodTypeViewTextBox6.TabIndex = 27;
             // 
             // BloodTypeView6
             // 
             this.BloodTypeView6.AutoSize = true;
-            this.BloodTypeView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BloodTypeView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BloodTypeView6.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.BloodTypeView6.Location = new System.Drawing.Point(533, 1054);
             this.BloodTypeView6.Name = "BloodTypeView6";
-            this.BloodTypeView6.Size = new System.Drawing.Size(246, 25);
+            this.BloodTypeView6.Size = new System.Drawing.Size(227, 22);
             this.BloodTypeView6.TabIndex = 26;
             this.BloodTypeView6.Text = "All donations for blood type";
             // 
@@ -1063,10 +1066,10 @@
             // DateLabel
             // 
             this.DateLabel.AutoSize = true;
-            this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.Location = new System.Drawing.Point(533, 987);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(216, 25);
+            this.DateLabel.Size = new System.Drawing.Size(193, 22);
             this.DateLabel.TabIndex = 32;
             this.DateLabel.Text = "And Date(yyyy-mm-dd)";
             this.DateLabel.Click += new System.EventHandler(this.label1_Click_1);
