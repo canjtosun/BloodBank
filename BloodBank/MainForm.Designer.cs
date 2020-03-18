@@ -88,27 +88,23 @@
             this.Explanation1View = new System.Windows.Forms.Button();
             this.ViewInventoryAtFacility = new System.Windows.Forms.Button();
             this.Explanation4View = new System.Windows.Forms.Button();
-            this.Explanation5View = new System.Windows.Forms.Button();
+            this.ShowDonationForDate = new System.Windows.Forms.Button();
             this.Explanation6View = new System.Windows.Forms.Button();
-            this.ExplanationBox1 = new System.Windows.Forms.RichTextBox();
             this.BloodTypeView = new System.Windows.Forms.Label();
             this.BloodTypeViewTextBox = new System.Windows.Forms.ComboBox();
-            this.ExplanationBox3 = new System.Windows.Forms.RichTextBox();
             this.FacilityIdInputBox = new System.Windows.Forms.TextBox();
             this.FacilityIdView3 = new System.Windows.Forms.Label();
-            this.ExplanationBox4 = new System.Windows.Forms.RichTextBox();
             this.DescriptionView = new System.Windows.Forms.Label();
             this.DescriptionViewTextBox = new System.Windows.Forms.ComboBox();
-            this.ExplanationBox5 = new System.Windows.Forms.RichTextBox();
             this.FacilityIdViewTextBox5 = new System.Windows.Forms.TextBox();
             this.FacilityIdView5 = new System.Windows.Forms.Label();
-            this.DateView = new System.Windows.Forms.DateTimePicker();
-            this.ExplanationBox6 = new System.Windows.Forms.RichTextBox();
             this.BloodTypeViewTextBox6 = new System.Windows.Forms.ComboBox();
             this.BloodTypeView6 = new System.Windows.Forms.Label();
             this.ShowAllDonorsButton = new System.Windows.Forms.Button();
             this.ShowAllNursesButton = new System.Windows.Forms.Button();
             this.ShowAllFacilitiesButton = new System.Windows.Forms.Button();
+            this.DateLabel = new System.Windows.Forms.Label();
+            this.DateInput = new System.Windows.Forms.TextBox();
             this.DonorBox.SuspendLayout();
             this.NurseBox.SuspendLayout();
             this.DonationBox.SuspendLayout();
@@ -846,7 +842,7 @@
             // Explanation1View
             // 
             this.Explanation1View.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.Explanation1View.Location = new System.Drawing.Point(1040, 560);
+            this.Explanation1View.Location = new System.Drawing.Point(1040, 600);
             this.Explanation1View.Name = "Explanation1View";
             this.Explanation1View.Size = new System.Drawing.Size(70, 29);
             this.Explanation1View.TabIndex = 5;
@@ -875,15 +871,15 @@
             this.Explanation4View.Text = "Show";
             this.Explanation4View.UseVisualStyleBackColor = true;
             // 
-            // Explanation5View
+            // ShowDonationForDate
             // 
-            this.Explanation5View.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.Explanation5View.Location = new System.Drawing.Point(1040, 957);
-            this.Explanation5View.Name = "Explanation5View";
-            this.Explanation5View.Size = new System.Drawing.Size(70, 29);
-            this.Explanation5View.TabIndex = 9;
-            this.Explanation5View.Text = "Show";
-            this.Explanation5View.UseVisualStyleBackColor = true;
+            this.ShowDonationForDate.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.ShowDonationForDate.Location = new System.Drawing.Point(1040, 946);
+            this.ShowDonationForDate.Name = "ShowDonationForDate";
+            this.ShowDonationForDate.Size = new System.Drawing.Size(70, 68);
+            this.ShowDonationForDate.TabIndex = 9;
+            this.ShowDonationForDate.Text = "Show";
+            this.ShowDonationForDate.UseVisualStyleBackColor = true;
             // 
             // Explanation6View
             // 
@@ -895,26 +891,16 @@
             this.Explanation6View.Text = "Show";
             this.Explanation6View.UseVisualStyleBackColor = true;
             // 
-            // ExplanationBox1
-            // 
-            this.ExplanationBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.ExplanationBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.ExplanationBox1.Location = new System.Drawing.Point(538, 552);
-            this.ExplanationBox1.Name = "ExplanationBox1";
-            this.ExplanationBox1.Size = new System.Drawing.Size(157, 50);
-            this.ExplanationBox1.TabIndex = 11;
-            this.ExplanationBox1.Text = "Donors with phone numbers for bloodtype";
-            // 
             // BloodTypeView
             // 
             this.BloodTypeView.AutoSize = true;
             this.BloodTypeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.BloodTypeView.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.BloodTypeView.Location = new System.Drawing.Point(708, 563);
+            this.BloodTypeView.Location = new System.Drawing.Point(533, 564);
             this.BloodTypeView.Name = "BloodTypeView";
-            this.BloodTypeView.Size = new System.Drawing.Size(112, 25);
+            this.BloodTypeView.Size = new System.Drawing.Size(377, 25);
             this.BloodTypeView.TabIndex = 12;
-            this.BloodTypeView.Text = "Blood Type";
+            this.BloodTypeView.Text = "Donors with phone numbers for blood type";
             // 
             // BloodTypeViewTextBox
             // 
@@ -933,28 +919,18 @@
             "O-",
             "O+",
             "Unknown"});
-            this.BloodTypeViewTextBox.Location = new System.Drawing.Point(824, 560);
+            this.BloodTypeViewTextBox.Location = new System.Drawing.Point(915, 561);
             this.BloodTypeViewTextBox.Name = "BloodTypeViewTextBox";
             this.BloodTypeViewTextBox.Size = new System.Drawing.Size(194, 33);
             this.BloodTypeViewTextBox.TabIndex = 13;
-            // 
-            // ExplanationBox3
-            // 
-            this.ExplanationBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.ExplanationBox3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.ExplanationBox3.Location = new System.Drawing.Point(538, 752);
-            this.ExplanationBox3.Name = "ExplanationBox3";
-            this.ExplanationBox3.Size = new System.Drawing.Size(157, 50);
-            this.ExplanationBox3.TabIndex = 15;
-            this.ExplanationBox3.Text = "Inventory for Facility ID";
             // 
             // FacilityIdInputBox
             // 
             this.FacilityIdInputBox.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityIdInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdInputBox.Location = new System.Drawing.Point(824, 758);
+            this.FacilityIdInputBox.Location = new System.Drawing.Point(756, 758);
             this.FacilityIdInputBox.Name = "FacilityIdInputBox";
-            this.FacilityIdInputBox.Size = new System.Drawing.Size(194, 30);
+            this.FacilityIdInputBox.Size = new System.Drawing.Size(262, 30);
             this.FacilityIdInputBox.TabIndex = 17;
             // 
             // FacilityIdView3
@@ -962,32 +938,23 @@
             this.FacilityIdView3.AutoSize = true;
             this.FacilityIdView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityIdView3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.FacilityIdView3.Location = new System.Drawing.Point(708, 758);
+            this.FacilityIdView3.Location = new System.Drawing.Point(533, 758);
             this.FacilityIdView3.Name = "FacilityIdView3";
-            this.FacilityIdView3.Size = new System.Drawing.Size(96, 25);
+            this.FacilityIdView3.Size = new System.Drawing.Size(208, 25);
             this.FacilityIdView3.TabIndex = 16;
-            this.FacilityIdView3.Text = "Facility ID";
-            // 
-            // ExplanationBox4
-            // 
-            this.ExplanationBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.ExplanationBox4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.ExplanationBox4.Location = new System.Drawing.Point(538, 851);
-            this.ExplanationBox4.Name = "ExplanationBox4";
-            this.ExplanationBox4.Size = new System.Drawing.Size(157, 50);
-            this.ExplanationBox4.TabIndex = 18;
-            this.ExplanationBox4.Text = "All Blood Donations for Donation Type Description";
+            this.FacilityIdView3.Text = "Inventory for Facility ID";
+            this.FacilityIdView3.Click += new System.EventHandler(this.FacilityIdView3_Click_1);
             // 
             // DescriptionView
             // 
             this.DescriptionView.AutoSize = true;
             this.DescriptionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.DescriptionView.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.DescriptionView.Location = new System.Drawing.Point(708, 862);
+            this.DescriptionView.Location = new System.Drawing.Point(533, 862);
             this.DescriptionView.Name = "DescriptionView";
-            this.DescriptionView.Size = new System.Drawing.Size(109, 25);
+            this.DescriptionView.Size = new System.Drawing.Size(273, 25);
             this.DescriptionView.TabIndex = 19;
-            this.DescriptionView.Text = "Description";
+            this.DescriptionView.Text = "All donations for donation type";
             // 
             // DescriptionViewTextBox
             // 
@@ -1007,23 +974,13 @@
             this.DescriptionViewTextBox.Size = new System.Drawing.Size(194, 33);
             this.DescriptionViewTextBox.TabIndex = 20;
             // 
-            // ExplanationBox5
-            // 
-            this.ExplanationBox5.BackColor = System.Drawing.Color.Gainsboro;
-            this.ExplanationBox5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.ExplanationBox5.Location = new System.Drawing.Point(538, 949);
-            this.ExplanationBox5.Name = "ExplanationBox5";
-            this.ExplanationBox5.Size = new System.Drawing.Size(157, 50);
-            this.ExplanationBox5.TabIndex = 21;
-            this.ExplanationBox5.Text = "All Blood Donations for Specific Date and Facility";
-            // 
             // FacilityIdViewTextBox5
             // 
             this.FacilityIdViewTextBox5.BackColor = System.Drawing.Color.Gainsboro;
             this.FacilityIdViewTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FacilityIdViewTextBox5.Location = new System.Drawing.Point(824, 949);
+            this.FacilityIdViewTextBox5.Location = new System.Drawing.Point(861, 952);
             this.FacilityIdViewTextBox5.Name = "FacilityIdViewTextBox5";
-            this.FacilityIdViewTextBox5.Size = new System.Drawing.Size(194, 30);
+            this.FacilityIdViewTextBox5.Size = new System.Drawing.Size(157, 30);
             this.FacilityIdViewTextBox5.TabIndex = 23;
             // 
             // FacilityIdView5
@@ -1031,32 +988,11 @@
             this.FacilityIdView5.AutoSize = true;
             this.FacilityIdView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FacilityIdView5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.FacilityIdView5.Location = new System.Drawing.Point(708, 949);
+            this.FacilityIdView5.Location = new System.Drawing.Point(533, 952);
             this.FacilityIdView5.Name = "FacilityIdView5";
-            this.FacilityIdView5.Size = new System.Drawing.Size(96, 25);
+            this.FacilityIdView5.Size = new System.Drawing.Size(293, 25);
             this.FacilityIdView5.TabIndex = 22;
-            this.FacilityIdView5.Text = "Facility ID";
-            // 
-            // DateView
-            // 
-            this.DateView.CalendarForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.DateView.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
-            this.DateView.CalendarTitleForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.DateView.Location = new System.Drawing.Point(824, 985);
-            this.DateView.Name = "DateView";
-            this.DateView.Size = new System.Drawing.Size(198, 26);
-            this.DateView.TabIndex = 24;
-            this.DateView.Value = new System.DateTime(2020, 3, 8, 0, 50, 1, 0);
-            // 
-            // ExplanationBox6
-            // 
-            this.ExplanationBox6.BackColor = System.Drawing.Color.Gainsboro;
-            this.ExplanationBox6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.ExplanationBox6.Location = new System.Drawing.Point(538, 1046);
-            this.ExplanationBox6.Name = "ExplanationBox6";
-            this.ExplanationBox6.Size = new System.Drawing.Size(157, 50);
-            this.ExplanationBox6.TabIndex = 25;
-            this.ExplanationBox6.Text = "All Blood Donations for Blood Type";
+            this.FacilityIdView5.Text = "All blood donations for Facility ID";
             // 
             // BloodTypeViewTextBox6
             // 
@@ -1085,11 +1021,11 @@
             this.BloodTypeView6.AutoSize = true;
             this.BloodTypeView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.BloodTypeView6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.BloodTypeView6.Location = new System.Drawing.Point(708, 1057);
+            this.BloodTypeView6.Location = new System.Drawing.Point(533, 1054);
             this.BloodTypeView6.Name = "BloodTypeView6";
-            this.BloodTypeView6.Size = new System.Drawing.Size(112, 25);
+            this.BloodTypeView6.Size = new System.Drawing.Size(246, 25);
             this.BloodTypeView6.TabIndex = 26;
-            this.BloodTypeView6.Text = "Blood Type";
+            this.BloodTypeView6.Text = "All donations for blood type";
             // 
             // ShowAllDonorsButton
             // 
@@ -1124,33 +1060,48 @@
             this.ShowAllFacilitiesButton.UseVisualStyleBackColor = true;
             this.ShowAllFacilitiesButton.Click += new System.EventHandler(this.ShowAllFacilitiesButton_Click);
             // 
+            // DateLabel
+            // 
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.Location = new System.Drawing.Point(533, 987);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(216, 25);
+            this.DateLabel.TabIndex = 32;
+            this.DateLabel.Text = "And Date(yyyy-mm-dd)";
+            this.DateLabel.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // DateInput
+            // 
+            this.DateInput.BackColor = System.Drawing.Color.Gainsboro;
+            this.DateInput.Location = new System.Drawing.Point(861, 988);
+            this.DateInput.Name = "DateInput";
+            this.DateInput.Size = new System.Drawing.Size(157, 26);
+            this.DateInput.TabIndex = 33;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1660, 1165);
+            this.Controls.Add(this.DateInput);
+            this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.ShowAllFacilitiesButton);
             this.Controls.Add(this.ShowAllNursesButton);
             this.Controls.Add(this.ShowAllDonorsButton);
             this.Controls.Add(this.BloodTypeViewTextBox6);
             this.Controls.Add(this.BloodTypeView6);
-            this.Controls.Add(this.ExplanationBox6);
-            this.Controls.Add(this.DateView);
             this.Controls.Add(this.FacilityIdViewTextBox5);
             this.Controls.Add(this.FacilityIdView5);
-            this.Controls.Add(this.ExplanationBox5);
             this.Controls.Add(this.DescriptionViewTextBox);
             this.Controls.Add(this.DescriptionView);
-            this.Controls.Add(this.ExplanationBox4);
             this.Controls.Add(this.FacilityIdInputBox);
             this.Controls.Add(this.FacilityIdView3);
-            this.Controls.Add(this.ExplanationBox3);
             this.Controls.Add(this.BloodTypeViewTextBox);
             this.Controls.Add(this.BloodTypeView);
-            this.Controls.Add(this.ExplanationBox1);
             this.Controls.Add(this.Explanation6View);
-            this.Controls.Add(this.Explanation5View);
+            this.Controls.Add(this.ShowDonationForDate);
             this.Controls.Add(this.Explanation4View);
             this.Controls.Add(this.ViewInventoryAtFacility);
             this.Controls.Add(this.Explanation1View);
@@ -1233,22 +1184,16 @@
         private System.Windows.Forms.Button Explanation1View;
         private System.Windows.Forms.Button ViewInventoryAtFacility;
         private System.Windows.Forms.Button Explanation4View;
-        private System.Windows.Forms.Button Explanation5View;
+        private System.Windows.Forms.Button ShowDonationForDate;
         private System.Windows.Forms.Button Explanation6View;
-        private System.Windows.Forms.RichTextBox ExplanationBox1;
         private System.Windows.Forms.Label BloodTypeView;
         private System.Windows.Forms.ComboBox BloodTypeViewTextBox;
-        private System.Windows.Forms.RichTextBox ExplanationBox3;
         private System.Windows.Forms.TextBox FacilityIdInputBox;
         private System.Windows.Forms.Label FacilityIdView3;
-        private System.Windows.Forms.RichTextBox ExplanationBox4;
         private System.Windows.Forms.Label DescriptionView;
         private System.Windows.Forms.ComboBox DescriptionViewTextBox;
-        private System.Windows.Forms.RichTextBox ExplanationBox5;
         private System.Windows.Forms.TextBox FacilityIdViewTextBox5;
         private System.Windows.Forms.Label FacilityIdView5;
-        private System.Windows.Forms.DateTimePicker DateView;
-        private System.Windows.Forms.RichTextBox ExplanationBox6;
         private System.Windows.Forms.ComboBox BloodTypeViewTextBox6;
         private System.Windows.Forms.Label BloodTypeView6;
         private System.Windows.Forms.Label DonationDonationType;
@@ -1260,6 +1205,8 @@
         private System.Windows.Forms.Label UpdateInventoryInFacilityMainFormLabel;
         private System.Windows.Forms.Button UpdateInventoryButton;
         private System.Windows.Forms.TextBox InputFacilityIdForUpdate;
+        private System.Windows.Forms.Label DateLabel;
+        private System.Windows.Forms.TextBox DateInput;
     }
 }
 

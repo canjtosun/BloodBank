@@ -912,5 +912,15 @@ namespace BloodBank
         {
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FacilityIdView3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
